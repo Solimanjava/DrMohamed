@@ -41,7 +41,7 @@
             background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy-primary) 100%);
             border-bottom: 4px solid var(--blue-accent);
             box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-            padding: 25px 0;
+            padding: 20px 0;
             position: relative;
         }
 
@@ -49,12 +49,12 @@
             font-weight: 800;
             color: #ffffff;
             letter-spacing: 0.5px;
-            font-size: 2.2rem;
+            font-size: 2rem;
         }
 
         .royal-subtitle {
             color: #94a3b8;
-            font-size: 1.1rem;
+            font-size: 1.05rem;
             font-weight: 600;
         }
 
@@ -63,11 +63,11 @@
             color: #93c5fd;
             border: 1px solid rgba(147, 197, 253, 0.3);
             display: inline-block;
-            padding: 4px 18px;
+            padding: 3px 16px;
             border-radius: 20px;
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             font-weight: 700;
-            margin-top: 10px;
+            margin-top: 8px;
         }
 
         /* Carousel Presentation Slide Card */
@@ -77,16 +77,16 @@
             border-top: 4px solid var(--blue-accent);
             border-radius: 12px;
             box-shadow: 0 10px 25px rgba(15, 23, 42, 0.05);
-            padding: 35px 40px;
-            min-height: 520px;
+            padding: 30px 35px;
+            min-height: 540px;
             position: relative;
         }
 
         .slide-title {
             color: var(--navy-primary);
             border-bottom: 2px solid #e2e8f0;
-            padding-bottom: 12px;
-            margin-bottom: 25px;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -94,14 +94,14 @@
 
         .slide-title h3 {
             font-weight: 700;
-            font-size: 1.4rem;
+            font-size: 1.35rem;
             margin: 0;
         }
 
         .slide-number {
             background-color: var(--navy-primary);
             color: #ffffff;
-            padding: 4px 16px;
+            padding: 4px 14px;
             border-radius: 20px;
             font-size: 0.85rem;
             font-weight: 700;
@@ -113,7 +113,7 @@
             border: 1px solid var(--border-color);
             border-right: 4px solid var(--blue-accent);
             border-radius: 8px;
-            padding: 20px;
+            padding: 15px;
             text-align: center;
             box-shadow: 0 2px 4px rgba(0,0,0,0.02);
             height: 100%;
@@ -121,13 +121,13 @@
 
         .metric-value {
             color: var(--navy-primary);
-            font-size: 1.6rem;
+            font-size: 1.5rem;
             font-weight: 800;
         }
 
         .metric-label {
             color: var(--text-muted);
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             font-weight: 600;
         }
 
@@ -138,11 +138,11 @@
             border-top: 1px solid var(--border-color);
             border-left: 1px solid var(--border-color);
             border-bottom: 1px solid var(--border-color);
-            padding: 16px 20px;
+            padding: 14px 18px;
             border-radius: 6px;
-            margin-bottom: 16px;
+            margin-bottom: 14px;
             font-size: 0.95rem;
-            line-height: 1.8;
+            line-height: 1.7;
         }
 
         .luxury-quote-title {
@@ -152,13 +152,13 @@
             margin-bottom: 6px;
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 8px;
         }
 
         /* Controls / Slide Navigation */
         .carousel-control-prev, .carousel-control-next {
-            width: 48px;
-            height: 48px;
+            width: 45px;
+            height: 45px;
             background-color: var(--navy-primary);
             border: 1px solid var(--border-color);
             border-radius: 50%;
@@ -175,26 +175,37 @@
 
         .carousel-indicators [data-bs-target] {
             background-color: var(--navy-primary);
-            width: 12px;
-            height: 12px;
+            width: 10px;
+            height: 10px;
             border-radius: 50%;
         }
 
         .carousel-indicators .active {
             background-color: var(--blue-accent);
-            width: 28px;
+            width: 24px;
             border-radius: 8px;
         }
 
         .table-luxury {
             border: 1px solid var(--border-color);
-            font-size: 0.95rem;
+            font-size: 0.9rem;
         }
 
         .table-luxury thead {
             background-color: var(--navy-primary);
             color: #ffffff;
             font-weight: 700;
+        }
+
+        .comment-box {
+            background-color: #eff6ff;
+            border: 1px solid #bfdbfe;
+            border-right: 4px solid #2563eb;
+            border-radius: 8px;
+            padding: 14px 18px;
+            font-size: 0.95rem;
+            color: #1e3a8a;
+            margin-top: 15px;
         }
 
         .thank-you-card {
@@ -212,34 +223,24 @@
     <header class="presentation-header text-center">
         <div class="container">
             <h1 class="royal-title mb-1"><i class="fa-solid fa-building-columns text-primary me-2"></i>نادي 6 أكتوبر الرياضي</h1>
-            <p class="royal-subtitle mb-1">عرض استراتيجية تطوير الأكاديميات، اللوائح المالية، ومؤشرات الأداء النشاطي</p>
+            <p class="royal-subtitle mb-1">عرض استراتيجية تطوير الأكاديميات، اللوائح المالية، والتفاصيل الكاملة للألعاب الرياضية</p>
             <div class="author-tag"><i class="fa-solid fa-user-check me-2"></i>إعداد الدكتور / محمد عبد العزيز</div>
         </div>
     </header>
 
     <!-- Main Presentation Container -->
-    <main class="container my-5">
+    <main class="container my-4">
         
         <div id="luxuryPresentation" class="carousel slide carousel-fade" data-bs-ride="false">
             
-            <!-- Indicators -->
-            <div class="carousel-indicators mb-n4">
-                <button type="button" data-bs-target="#luxuryPresentation" data-bs-slide-to="0" class="active" aria-current="true" aria-label="الشرائح الرئيسية"></button>
-                <button type="button" data-bs-target="#luxuryPresentation" data-bs-slide-to="1" aria-label="اللائحة المالية"></button>
-                <button type="button" data-bs-target="#luxuryPresentation" data-bs-slide-to="2" aria-label="الهيكل والتصنيف"></button>
-                <button type="button" data-bs-target="#luxuryPresentation" data-bs-slide-to="3" aria-label="مقترح الأسعار"></button>
-                <button type="button" data-bs-target="#luxuryPresentation" data-bs-slide-to="4" aria-label="الإحصائيات والإيرادات"></button>
-                <button type="button" data-bs-target="#luxuryPresentation" data-bs-slide-to="5" aria-label="رسالة شكر"></button>
-            </div>
-
             <div class="carousel-inner">
-                
+
                 <!-- SLIDE 1: Executive Overview -->
                 <div class="carousel-item active">
                     <div class="slide-card">
                         <div class="slide-title">
                             <h3><i class="fa-solid fa-compass text-primary me-2"></i>النظرة العامة والمؤشرات الرئيسية</h3>
-                            <span class="slide-number">الشريحة 1 من 6</span>
+                            <span class="slide-number">الشريحة 1 من 31</span>
                         </div>
                         
                         <div class="row g-4 mb-4">
@@ -283,7 +284,7 @@
                     <div class="slide-card">
                         <div class="slide-title">
                             <h3><i class="fa-solid fa-vault text-primary me-2"></i>اللائحة المالية والدورة المستندية (اقتباسات مباشرة)</h3>
-                            <span class="slide-number">الشريحة 2 من 6</span>
+                            <span class="slide-number">الشريحة 2 من 31</span>
                         </div>
 
                         <div class="row g-3">
@@ -316,7 +317,7 @@
                     <div class="slide-card">
                         <div class="slide-title">
                             <h3><i class="fa-solid fa-sitemap text-primary me-2"></i>الهيكل التنظيمي وضوابط الاتحادات الرياضية</h3>
-                            <span class="slide-number">الشريحة 3 من 6</span>
+                            <span class="slide-number">الشريحة 3 من 31</span>
                         </div>
 
                         <div class="row g-3">
@@ -344,12 +345,12 @@
                     </div>
                 </div>
 
-                <!-- SLIDE 4: Pricing Proposals Table -->
+                <!-- SLIDE 4: Pricing Proposals Table Summary -->
                 <div class="carousel-item">
                     <div class="slide-card">
                         <div class="slide-title">
-                            <h3><i class="fa-solid fa-tags text-primary me-2"></i>جدول مقترح اشتراكات المدارس (موسم 2026 - 2027)</h3>
-                            <span class="slide-number">الشريحة 4 من 6</span>
+                            <h3><i class="fa-solid fa-tags text-primary me-2"></i>ملخص أسعار اشتراكات المدارس والتجهيزي (2026 - 2027)</h3>
+                            <span class="slide-number">الشريحة 4 من 31</span>
                         </div>
 
                         <div class="table-responsive">
@@ -414,8 +415,8 @@
                 <div class="carousel-item">
                     <div class="slide-card">
                         <div class="slide-title">
-                            <h3><i class="fa-solid fa-chart-line text-primary me-2"></i>الإحصائيات الشهرية وتحليل الإيرادات (2025 vs 2026)</h3>
-                            <span class="slide-number">الشريحة 5 من 6</span>
+                            <h3><i class="fa-solid fa-chart-line text-primary me-2"></i>الإحصائيات الشهرية وتحليل الإيرادات العامة (2025 vs 2026)</h3>
+                            <span class="slide-number">الشريحة 5 من 31</span>
                         </div>
 
                         <div class="row align-items-center">
@@ -435,12 +436,2287 @@
                     </div>
                 </div>
 
-                <!-- SLIDE 6: Thank You Slide -->
+                <!-- SLIDE 6: Game السباحة Details -->
+                <div class="carousel-item">
+                    <div class="slide-card">
+                        <div class="slide-title">
+                            <h3><i class="fa-solid fa-swimmer text-primary me-2"></i>بيانات لعبة: السباحة</h3>
+                            <span class="slide-number">الشريحة 6 من 31</span>
+                        </div>
+
+                        <!-- Price Comparison Sub-Table -->
+                        <div class="table-responsive mb-3">
+                            <table class="table table-luxury table-bordered text-center align-middle mb-0">
+                                <thead>
+                                    <tr>
+                                        <th>الفئة / البيان</th>
+                                        <th>اشتراك العضو</th>
+                                        <th>خارج النادي (مصري)</th>
+                                        <th>خارج النادي (غير مصري)</th>
+                                        <th>السعة / الملاحظات التنظيمية</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="fw-bold">السعر الحالي</td>
+                                        <td>500 ج.م</td>
+                                        <td>-- ج.م</td>
+                                        <td>-- ج.م</td>
+                                        <td rowspan="2" class="align-middle fw-bold text-navy">6 أفراد (12 حصة)<br><small class="text-muted">نسبة المعلم 31% والمدير الإداري والإشراف 8%</small></td>
+                                    </tr>
+                                    <tr class="table-primary">
+                                        <td class="fw-bold text-primary">السعر المقترح (2026-2027)</td>
+                                        <td class="fw-bold text-success">600 ج.م</td>
+                                        <td class="fw-bold text-success">-- ج.م</td>
+                                        <td class="fw-bold text-success">-- ج.م</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!-- Statistics Grid for Game -->
+                        <h6 class="fw-bold text-navy mb-2"><i class="fa-solid fa-chart-simple text-primary me-1"></i>الإحصائيات المقارنة (2025 vs 2026):</h6>
+                        <div class="table-responsive mb-2">
+                            <table class="table table-sm table-bordered text-center align-middle small">
+                                <thead class="table-dark">
+                                    <tr>
+                                        <th>الشهر / السنة</th>
+                                        <th>أعضاء النادي</th>
+                                        <th>غير الأعضاء</th>
+                                        <th>إجمالي المشاركين</th>
+                                        <th>المبالغ المحصلة (ج.م)</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="fw-bold">يونيو 2025</td>
+                                        <td>1726</td>
+                                        <td>164</td>
+                                        <td>1890</td>
+                                        <td>546,650 ج.م</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-bold">يونيو 2026</td>
+                                        <td>1281</td>
+                                        <td>2</td>
+                                        <td>1283</td>
+                                        <td>729,580 ج.م</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-bold">أغسطس 2025</td>
+                                        <td>1877</td>
+                                        <td>118</td>
+                                        <td>1995</td>
+                                        <td>1,011,295 ج.م</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-bold">أغسطس 2026</td>
+                                        <td>1522</td>
+                                        <td>2</td>
+                                        <td>1524</td>
+                                        <td>933,097 ج.م</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!-- Positive Analytical Comment -->
+                        <div class="comment-box">
+                            <i class="fa-solid fa-circle-check text-success me-2"></i><strong>الرأي والتحليل الفني:</strong> تُسجل رياضة السباحة إقبالاً استثنائياً مستقراً حيث تتصدر الإيرادات الشهرية للنادي بأكثر من 930 ألف جنيه في أغسطس 2026 مع تحول كامل تقريباً لنشاط الأعضاء بنسبة تجاوزت 99.8%.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SLIDE 7: Game كرة القدم Details -->
+                <div class="carousel-item">
+                    <div class="slide-card">
+                        <div class="slide-title">
+                            <h3><i class="fa-solid fa-futbol text-primary me-2"></i>بيانات لعبة: كرة القدم</h3>
+                            <span class="slide-number">الشريحة 7 من 31</span>
+                        </div>
+
+                        <!-- Price Comparison Sub-Table -->
+                        <div class="table-responsive mb-3">
+                            <table class="table table-luxury table-bordered text-center align-middle mb-0">
+                                <thead>
+                                    <tr>
+                                        <th>الفئة / البيان</th>
+                                        <th>اشتراك العضو</th>
+                                        <th>خارج النادي (مصري)</th>
+                                        <th>خارج النادي (غير مصري)</th>
+                                        <th>السعة / الملاحظات التنظيمية</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="fw-bold">السعر الحالي</td>
+                                        <td>500 ج.م</td>
+                                        <td>750 ج.م</td>
+                                        <td>1000 ج.م</td>
+                                        <td rowspan="2" class="align-middle fw-bold text-navy">20 لاعب<br><small class="text-muted">نسبة المعلم 30% والمدير الإداري والإشراف 7.5%</small></td>
+                                    </tr>
+                                    <tr class="table-primary">
+                                        <td class="fw-bold text-primary">السعر المقترح (2026-2027)</td>
+                                        <td class="fw-bold text-success">550 ج.م</td>
+                                        <td class="fw-bold text-success">800 ج.م</td>
+                                        <td class="fw-bold text-success">1100 ج.م</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!-- Statistics Grid for Game -->
+                        <h6 class="fw-bold text-navy mb-2"><i class="fa-solid fa-chart-simple text-primary me-1"></i>الإحصائيات المقارنة (2025 vs 2026):</h6>
+                        <div class="table-responsive mb-2">
+                            <table class="table table-sm table-bordered text-center align-middle small">
+                                <thead class="table-dark">
+                                    <tr>
+                                        <th>الشهر / السنة</th>
+                                        <th>أعضاء النادي</th>
+                                        <th>غير الأعضاء</th>
+                                        <th>إجمالي المشاركين</th>
+                                        <th>المبالغ المحصلة (ج.م)</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="fw-bold">يونيو 2025</td>
+                                        <td>489</td>
+                                        <td>124</td>
+                                        <td>613</td>
+                                        <td>260,945 ج.م</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-bold">يونيو 2026</td>
+                                        <td>637</td>
+                                        <td>160</td>
+                                        <td>797</td>
+                                        <td>425,797 ج.م</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-bold">أغسطس 2025</td>
+                                        <td>743</td>
+                                        <td>226</td>
+                                        <td>969</td>
+                                        <td>697,255 ج.م</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-bold">أغسطس 2026</td>
+                                        <td>843</td>
+                                        <td>193</td>
+                                        <td>1036</td>
+                                        <td>948,577 ج.م</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!-- Positive Analytical Comment -->
+                        <div class="comment-box">
+                            <i class="fa-solid fa-circle-check text-success me-2"></i><strong>الرأي والتحليل الفني:</strong> حققت أكاديمية كرة القدم قفزة قياسية في الإيرادات بنمو قارب 36% في أغسطس 2026 متجاوزة 1,000 مشارك، مما يعكس كفاءة الاستراتيجية الفنية والالتزام بمعايير اتحاد الكرة EFA.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SLIDE 8: Game كرة السلة Details -->
+                <div class="carousel-item">
+                    <div class="slide-card">
+                        <div class="slide-title">
+                            <h3><i class="fa-solid fa-basketball text-primary me-2"></i>بيانات لعبة: كرة السلة</h3>
+                            <span class="slide-number">الشريحة 8 من 31</span>
+                        </div>
+
+                        <!-- Price Comparison Sub-Table -->
+                        <div class="table-responsive mb-3">
+                            <table class="table table-luxury table-bordered text-center align-middle mb-0">
+                                <thead>
+                                    <tr>
+                                        <th>الفئة / البيان</th>
+                                        <th>اشتراك العضو</th>
+                                        <th>خارج النادي (مصري)</th>
+                                        <th>خارج النادي (غير مصري)</th>
+                                        <th>السعة / الملاحظات التنظيمية</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="fw-bold">السعر الحالي</td>
+                                        <td>450 ج.م</td>
+                                        <td>650 ج.م</td>
+                                        <td>750 ج.م</td>
+                                        <td rowspan="2" class="align-middle fw-bold text-navy">20 لاعب<br><small class="text-muted">نسبة المعلم 30% والمدير الإداري والإشراف 7.5%</small></td>
+                                    </tr>
+                                    <tr class="table-primary">
+                                        <td class="fw-bold text-primary">السعر المقترح (2026-2027)</td>
+                                        <td class="fw-bold text-success">550 ج.م</td>
+                                        <td class="fw-bold text-success">750 ج.م</td>
+                                        <td class="fw-bold text-success">850 ج.م</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!-- Statistics Grid for Game -->
+                        <h6 class="fw-bold text-navy mb-2"><i class="fa-solid fa-chart-simple text-primary me-1"></i>الإحصائيات المقارنة (2025 vs 2026):</h6>
+                        <div class="table-responsive mb-2">
+                            <table class="table table-sm table-bordered text-center align-middle small">
+                                <thead class="table-dark">
+                                    <tr>
+                                        <th>الشهر / السنة</th>
+                                        <th>أعضاء النادي</th>
+                                        <th>غير الأعضاء</th>
+                                        <th>إجمالي المشاركين</th>
+                                        <th>المبالغ المحصلة (ج.م)</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="fw-bold">يونيو 2025</td>
+                                        <td>145</td>
+                                        <td>66</td>
+                                        <td>211</td>
+                                        <td>92,980 ج.م</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-bold">يونيو 2026</td>
+                                        <td>220</td>
+                                        <td>42</td>
+                                        <td>262</td>
+                                        <td>141,985 ج.م</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-bold">أغسطس 2025</td>
+                                        <td>238</td>
+                                        <td>112</td>
+                                        <td>350</td>
+                                        <td>163,320 ج.م</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-bold">أغسطس 2026</td>
+                                        <td>186</td>
+                                        <td>0</td>
+                                        <td>186</td>
+                                        <td>101,240 ج.م</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!-- Positive Analytical Comment -->
+                        <div class="comment-box">
+                            <i class="fa-solid fa-circle-check text-success me-2"></i><strong>الرأي والتحليل الفني:</strong> تتمتع كرة السلة بقاعدة مشاركة متينة ومستقرة للأعضاء مع تطبيق منهجيات التطوير المهارية الفردية المصغرة للبراعم لضمان التدرج الفني السليم.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SLIDE 9: Game كرة اليد Details -->
+                <div class="carousel-item">
+                    <div class="slide-card">
+                        <div class="slide-title">
+                            <h3><i class="fa-solid fa-handball-ball text-primary me-2"></i>بيانات لعبة: كرة اليد</h3>
+                            <span class="slide-number">الشريحة 9 من 31</span>
+                        </div>
+
+                        <!-- Price Comparison Sub-Table -->
+                        <div class="table-responsive mb-3">
+                            <table class="table table-luxury table-bordered text-center align-middle mb-0">
+                                <thead>
+                                    <tr>
+                                        <th>الفئة / البيان</th>
+                                        <th>اشتراك العضو</th>
+                                        <th>خارج النادي (مصري)</th>
+                                        <th>خارج النادي (غير مصري)</th>
+                                        <th>السعة / الملاحظات التنظيمية</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="fw-bold">السعر الحالي</td>
+                                        <td>450 ج.م</td>
+                                        <td>650 ج.م</td>
+                                        <td>750 ج.م</td>
+                                        <td rowspan="2" class="align-middle fw-bold text-navy">20 لاعب<br><small class="text-muted">التجهيزي 600ج مقترح (500ج حالي)</small></td>
+                                    </tr>
+                                    <tr class="table-primary">
+                                        <td class="fw-bold text-primary">السعر المقترح (2026-2027)</td>
+                                        <td class="fw-bold text-success">550 ج.م</td>
+                                        <td class="fw-bold text-success">750 ج.م</td>
+                                        <td class="fw-bold text-success">850 ج.م</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!-- Statistics Grid for Game -->
+                        <h6 class="fw-bold text-navy mb-2"><i class="fa-solid fa-chart-simple text-primary me-1"></i>الإحصائيات المقارنة (2025 vs 2026):</h6>
+                        <div class="table-responsive mb-2">
+                            <table class="table table-sm table-bordered text-center align-middle small">
+                                <thead class="table-dark">
+                                    <tr>
+                                        <th>الشهر / السنة</th>
+                                        <th>أعضاء النادي</th>
+                                        <th>غير الأعضاء</th>
+                                        <th>إجمالي المشاركين</th>
+                                        <th>المبالغ المحصلة (ج.م)</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="fw-bold">يونيو 2025</td>
+                                        <td>89</td>
+                                        <td>23</td>
+                                        <td>112</td>
+                                        <td>37,212 ج.م</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-bold">يونيو 2026</td>
+                                        <td>116</td>
+                                        <td>2</td>
+                                        <td>118</td>
+                                        <td>60,005 ج.م</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-bold">أغسطس 2025</td>
+                                        <td>114</td>
+                                        <td>44</td>
+                                        <td>158</td>
+                                        <td>77,512 ج.م</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-bold">أغسطس 2026</td>
+                                        <td>133</td>
+                                        <td>0</td>
+                                        <td>133</td>
+                                        <td>66,550 ج.م</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!-- Positive Analytical Comment -->
+                        <div class="comment-box">
+                            <i class="fa-solid fa-circle-check text-success me-2"></i><strong>الرأي والتحليل الفني:</strong> تظهر إحصائيات كرة اليد نمواً ملحوظاً في مشاركة الأعضاء بزيادة تجاوزت 16% في أغسطس 2026، مدعومة ببرامج الانتقاء البدني والتوافق الحركي.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SLIDE 10: Game الكرة الطائرة Details -->
+                <div class="carousel-item">
+                    <div class="slide-card">
+                        <div class="slide-title">
+                            <h3><i class="fa-solid fa-volleyball text-primary me-2"></i>بيانات لعبة: الكرة الطائرة</h3>
+                            <span class="slide-number">الشريحة 10 من 31</span>
+                        </div>
+
+                        <!-- Price Comparison Sub-Table -->
+                        <div class="table-responsive mb-3">
+                            <table class="table table-luxury table-bordered text-center align-middle mb-0">
+                                <thead>
+                                    <tr>
+                                        <th>الفئة / البيان</th>
+                                        <th>اشتراك العضو</th>
+                                        <th>خارج النادي (مصري)</th>
+                                        <th>خارج النادي (غير مصري)</th>
+                                        <th>السعة / الملاحظات التنظيمية</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="fw-bold">السعر الحالي</td>
+                                        <td>450 ج.م</td>
+                                        <td>650 ج.م</td>
+                                        <td>750 ج.م</td>
+                                        <td rowspan="2" class="align-middle fw-bold text-navy">20 لاعب<br><small class="text-muted">تدريب خاص أكاديمية 1000ج مقترح</small></td>
+                                    </tr>
+                                    <tr class="table-primary">
+                                        <td class="fw-bold text-primary">السعر المقترح (2026-2027)</td>
+                                        <td class="fw-bold text-success">550 ج.م</td>
+                                        <td class="fw-bold text-success">750 ج.م</td>
+                                        <td class="fw-bold text-success">850 ج.م</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!-- Statistics Grid for Game -->
+                        <h6 class="fw-bold text-navy mb-2"><i class="fa-solid fa-chart-simple text-primary me-1"></i>الإحصائيات المقارنة (2025 vs 2026):</h6>
+                        <div class="table-responsive mb-2">
+                            <table class="table table-sm table-bordered text-center align-middle small">
+                                <thead class="table-dark">
+                                    <tr>
+                                        <th>الشهر / السنة</th>
+                                        <th>أعضاء النادي</th>
+                                        <th>غير الأعضاء</th>
+                                        <th>إجمالي المشاركين</th>
+                                        <th>المبالغ المحصلة (ج.م)</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="fw-bold">يونيو 2025</td>
+                                        <td>82</td>
+                                        <td>28</td>
+                                        <td>110</td>
+                                        <td>35,835 ج.م</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-bold">يونيو 2026</td>
+                                        <td>195</td>
+                                        <td>0</td>
+                                        <td>195</td>
+                                        <td>120,045 ج.م</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-bold">أغسطس 2025</td>
+                                        <td>138</td>
+                                        <td>33</td>
+                                        <td>171</td>
+                                        <td>86,630 ج.م</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-bold">أغسطس 2026</td>
+                                        <td>179</td>
+                                        <td>0</td>
+                                        <td>179</td>
+                                        <td>113,420 ج.م</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!-- Positive Analytical Comment -->
+                        <div class="comment-box">
+                            <i class="fa-solid fa-circle-check text-success me-2"></i><strong>الرأي والتحليل الفني:</strong> حققت الكرة الطائرة قفزة ممتازة في الإيرادات بنسبة نمو تجاوزت 30% في أغسطس 2026 مع اعتماد كامل على أعضاء النادي بنسبة 100%.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SLIDE 11: Game الكاراتيه Details -->
+                <div class="carousel-item">
+                    <div class="slide-card">
+                        <div class="slide-title">
+                            <h3><i class="fa-solid fa-person-mighty-force text-primary me-2"></i>بيانات لعبة: الكاراتيه</h3>
+                            <span class="slide-number">الشريحة 11 من 31</span>
+                        </div>
+
+                        <!-- Price Comparison Sub-Table -->
+                        <div class="table-responsive mb-3">
+                            <table class="table table-luxury table-bordered text-center align-middle mb-0">
+                                <thead>
+                                    <tr>
+                                        <th>الفئة / البيان</th>
+                                        <th>اشتراك العضو</th>
+                                        <th>خارج النادي (مصري)</th>
+                                        <th>خارج النادي (غير مصري)</th>
+                                        <th>السعة / الملاحظات التنظيمية</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="fw-bold">السعر الحالي</td>
+                                        <td>450 ج.م</td>
+                                        <td>650 ج.م</td>
+                                        <td>750 ج.م</td>
+                                        <td rowspan="2" class="align-middle fw-bold text-navy">20 لاعب<br><small class="text-muted">تجهيزي بني ثان/أسود 450ج - لياقة فرق 300ج</small></td>
+                                    </tr>
+                                    <tr class="table-primary">
+                                        <td class="fw-bold text-primary">السعر المقترح (2026-2027)</td>
+                                        <td class="fw-bold text-success">550 ج.م</td>
+                                        <td class="fw-bold text-success">750 ج.م</td>
+                                        <td class="fw-bold text-success">850 ج.م</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!-- Statistics Grid for Game -->
+                        <h6 class="fw-bold text-navy mb-2"><i class="fa-solid fa-chart-simple text-primary me-1"></i>الإحصائيات المقارنة (2025 vs 2026):</h6>
+                        <div class="table-responsive mb-2">
+                            <table class="table table-sm table-bordered text-center align-middle small">
+                                <thead class="table-dark">
+                                    <tr>
+                                        <th>الشهر / السنة</th>
+                                        <th>أعضاء النادي</th>
+                                        <th>غير الأعضاء</th>
+                                        <th>إجمالي المشاركين</th>
+                                        <th>المبالغ المحصلة (ج.م)</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="fw-bold">يونيو 2025</td>
+                                        <td>165</td>
+                                        <td>26</td>
+                                        <td>191</td>
+                                        <td>86,885 ج.م</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-bold">يونيو 2026</td>
+                                        <td>191</td>
+                                        <td>1</td>
+                                        <td>192</td>
+                                        <td>94,882 ج.م</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-bold">أغسطس 2025</td>
+                                        <td>200</td>
+                                        <td>29</td>
+                                        <td>229</td>
+                                        <td>98,435 ج.م</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-bold">أغسطس 2026</td>
+                                        <td>165</td>
+                                        <td>0</td>
+                                        <td>165</td>
+                                        <td>78,117 ج.م</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!-- Positive Analytical Comment -->
+                        <div class="comment-box">
+                            <i class="fa-solid fa-circle-check text-success me-2"></i><strong>الرأي والتحليل الفني:</strong> رياضة الكاراتيه تعد من الروافد الأساسية لقطاع المنازلات بالنادي وتتميز بانتظام مشاركة الأعضاء والانضباط السلوكي والبدني المرتفع.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SLIDE 12: Game التايكوندو Details -->
+                <div class="carousel-item">
+                    <div class="slide-card">
+                        <div class="slide-title">
+                            <h3><i class="fa-solid fa-child-combat text-primary me-2"></i>بيانات لعبة: التايكوندو</h3>
+                            <span class="slide-number">الشريحة 12 من 31</span>
+                        </div>
+
+                        <!-- Price Comparison Sub-Table -->
+                        <div class="table-responsive mb-3">
+                            <table class="table table-luxury table-bordered text-center align-middle mb-0">
+                                <thead>
+                                    <tr>
+                                        <th>الفئة / البيان</th>
+                                        <th>اشتراك العضو</th>
+                                        <th>خارج النادي (مصري)</th>
+                                        <th>خارج النادي (غير مصري)</th>
+                                        <th>السعة / الملاحظات التنظيمية</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="fw-bold">السعر الحالي</td>
+                                        <td>450 ج.م</td>
+                                        <td>650 ج.م</td>
+                                        <td>750 ج.م</td>
+                                        <td rowspan="2" class="align-middle fw-bold text-navy">20 لاعب<br><small class="text-muted">تجهيزي 600ج مقترح (500ج حالي)</small></td>
+                                    </tr>
+                                    <tr class="table-primary">
+                                        <td class="fw-bold text-primary">السعر المقترح (2026-2027)</td>
+                                        <td class="fw-bold text-success">550 ج.م</td>
+                                        <td class="fw-bold text-success">750 ج.م</td>
+                                        <td class="fw-bold text-success">850 ج.م</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!-- Statistics Grid for Game -->
+                        <h6 class="fw-bold text-navy mb-2"><i class="fa-solid fa-chart-simple text-primary me-1"></i>الإحصائيات المقارنة (2025 vs 2026):</h6>
+                        <div class="table-responsive mb-2">
+                            <table class="table table-sm table-bordered text-center align-middle small">
+                                <thead class="table-dark">
+                                    <tr>
+                                        <th>الشهر / السنة</th>
+                                        <th>أعضاء النادي</th>
+                                        <th>غير الأعضاء</th>
+                                        <th>إجمالي المشاركين</th>
+                                        <th>المبالغ المحصلة (ج.م)</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="fw-bold">يونيو 2025</td>
+                                        <td>48</td>
+                                        <td>7</td>
+                                        <td>55</td>
+                                        <td>43,605 ج.م</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-bold">يونيو 2026</td>
+                                        <td>61</td>
+                                        <td>0</td>
+                                        <td>61</td>
+                                        <td>31,790 ج.م</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-bold">أغسطس 2025</td>
+                                        <td>69</td>
+                                        <td>14</td>
+                                        <td>83</td>
+                                        <td>38,970 ج.م</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-bold">أغسطس 2026</td>
+                                        <td>98</td>
+                                        <td>0</td>
+                                        <td>98</td>
+                                        <td>39,185 ج.م</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!-- Positive Analytical Comment -->
+                        <div class="comment-box">
+                            <i class="fa-solid fa-circle-check text-success me-2"></i><strong>الرأي والتحليل الفني:</strong> سجلت رياضة التايكوندو ارتفاعاً ملحوظاً في عدد المشاركين من الأعضاء ليصل إلى 98 مشاركاً في أغسطس 2026 مع ادخال واقيات التحكيم الإلكتروني.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SLIDE 13: Game الكونغ فو Details -->
+                <div class="carousel-item">
+                    <div class="slide-card">
+                        <div class="slide-title">
+                            <h3><i class="fa-solid fa-hand-fist text-primary me-2"></i>بيانات لعبة: الكونغ فو</h3>
+                            <span class="slide-number">الشريحة 13 من 31</span>
+                        </div>
+
+                        <!-- Price Comparison Sub-Table -->
+                        <div class="table-responsive mb-3">
+                            <table class="table table-luxury table-bordered text-center align-middle mb-0">
+                                <thead>
+                                    <tr>
+                                        <th>الفئة / البيان</th>
+                                        <th>اشتراك العضو</th>
+                                        <th>خارج النادي (مصري)</th>
+                                        <th>خارج النادي (غير مصري)</th>
+                                        <th>السعة / الملاحظات التنظيمية</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="fw-bold">السعر الحالي</td>
+                                        <td>500 ج.م</td>
+                                        <td>700 ج.م</td>
+                                        <td>750 ج.م</td>
+                                        <td rowspan="2" class="align-middle fw-bold text-navy">20 لاعب<br><small class="text-muted">تجهيزي 600ج مقترح (500ج حالي)</small></td>
+                                    </tr>
+                                    <tr class="table-primary">
+                                        <td class="fw-bold text-primary">السعر المقترح (2026-2027)</td>
+                                        <td class="fw-bold text-success">600 ج.م</td>
+                                        <td class="fw-bold text-success">800 ج.م</td>
+                                        <td class="fw-bold text-success">850 ج.م</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!-- Statistics Grid for Game -->
+                        <h6 class="fw-bold text-navy mb-2"><i class="fa-solid fa-chart-simple text-primary me-1"></i>الإحصائيات المقارنة (2025 vs 2026):</h6>
+                        <div class="table-responsive mb-2">
+                            <table class="table table-sm table-bordered text-center align-middle small">
+                                <thead class="table-dark">
+                                    <tr>
+                                        <th>الشهر / السنة</th>
+                                        <th>أعضاء النادي</th>
+                                        <th>غير الأعضاء</th>
+                                        <th>إجمالي المشاركين</th>
+                                        <th>المبالغ المحصلة (ج.م)</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="fw-bold">يونيو 2025</td>
+                                        <td>72</td>
+                                        <td>26</td>
+                                        <td>98</td>
+                                        <td>45,375 ج.م</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-bold">يونيو 2026</td>
+                                        <td>125</td>
+                                        <td>0</td>
+                                        <td>125</td>
+                                        <td>67,680 ج.م</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-bold">أغسطس 2025</td>
+                                        <td>98</td>
+                                        <td>14</td>
+                                        <td>112</td>
+                                        <td>54,875 ج.م</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-bold">أغسطس 2026</td>
+                                        <td>157</td>
+                                        <td>0</td>
+                                        <td>157</td>
+                                        <td>89,850 ج.م</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!-- Positive Analytical Comment -->
+                        <div class="comment-box">
+                            <i class="fa-solid fa-circle-check text-success me-2"></i><strong>الرأي والتحليل الفني:</strong> قفز إيراد الكونغ فو بنسبة نمو تجاوزت 63% في أغسطس 2026 ليصل إلى 89,850 جنيه مع زيادة كبيرة في الإقبال والالتحاق بين البراعم.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SLIDE 14: Game ألعاب القوى Details -->
+                <div class="carousel-item">
+                    <div class="slide-card">
+                        <div class="slide-title">
+                            <h3><i class="fa-solid fa-person-running text-primary me-2"></i>بيانات لعبة: ألعاب القوى</h3>
+                            <span class="slide-number">الشريحة 14 من 31</span>
+                        </div>
+
+                        <!-- Price Comparison Sub-Table -->
+                        <div class="table-responsive mb-3">
+                            <table class="table table-luxury table-bordered text-center align-middle mb-0">
+                                <thead>
+                                    <tr>
+                                        <th>الفئة / البيان</th>
+                                        <th>اشتراك العضو</th>
+                                        <th>خارج النادي (مصري)</th>
+                                        <th>خارج النادي (غير مصري)</th>
+                                        <th>السعة / الملاحظات التنظيمية</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="fw-bold">السعر الحالي</td>
+                                        <td>450 ج.م</td>
+                                        <td>650 ج.م</td>
+                                        <td>750 ج.م</td>
+                                        <td rowspan="2" class="align-middle fw-bold text-navy">20 لاعب<br><small class="text-muted">تجهيزي 650ج مقترح (550ج حالي)</small></td>
+                                    </tr>
+                                    <tr class="table-primary">
+                                        <td class="fw-bold text-primary">السعر المقترح (2026-2027)</td>
+                                        <td class="fw-bold text-success">550 ج.م</td>
+                                        <td class="fw-bold text-success">750 ج.م</td>
+                                        <td class="fw-bold text-success">850 ج.م</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!-- Statistics Grid for Game -->
+                        <h6 class="fw-bold text-navy mb-2"><i class="fa-solid fa-chart-simple text-primary me-1"></i>الإحصائيات المقارنة (2025 vs 2026):</h6>
+                        <div class="table-responsive mb-2">
+                            <table class="table table-sm table-bordered text-center align-middle small">
+                                <thead class="table-dark">
+                                    <tr>
+                                        <th>الشهر / السنة</th>
+                                        <th>أعضاء النادي</th>
+                                        <th>غير الأعضاء</th>
+                                        <th>إجمالي المشاركين</th>
+                                        <th>المبالغ المحصلة (ج.م)</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="fw-bold">يونيو 2025</td>
+                                        <td>52</td>
+                                        <td>20</td>
+                                        <td>72</td>
+                                        <td>26,940 ج.م</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-bold">يونيو 2026</td>
+                                        <td>86</td>
+                                        <td>0</td>
+                                        <td>86</td>
+                                        <td>42,790 ج.م</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-bold">أغسطس 2025</td>
+                                        <td>75</td>
+                                        <td>27</td>
+                                        <td>102</td>
+                                        <td>47,242 ج.م</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-bold">أغسطس 2026</td>
+                                        <td>76</td>
+                                        <td>0</td>
+                                        <td>76</td>
+                                        <td>38,225 ج.م</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!-- Positive Analytical Comment -->
+                        <div class="comment-box">
+                            <i class="fa-solid fa-circle-check text-success me-2"></i><strong>الرأي والتحليل الفني:</strong> تشهد ألعاب القوى استقراراً فنياً مميزاً بتركيز تام على القياسات الرقمية الفردية وتصعيد المواهب الشابة للتجهيزي والفرق الرسمية.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SLIDE 15: Game التنس الأرضي Details -->
+                <div class="carousel-item">
+                    <div class="slide-card">
+                        <div class="slide-title">
+                            <h3><i class="fa-solid fa-baseball-bat-ball text-primary me-2"></i>بيانات لعبة: التنس الأرضي</h3>
+                            <span class="slide-number">الشريحة 15 من 31</span>
+                        </div>
+
+                        <!-- Price Comparison Sub-Table -->
+                        <div class="table-responsive mb-3">
+                            <table class="table table-luxury table-bordered text-center align-middle mb-0">
+                                <thead>
+                                    <tr>
+                                        <th>الفئة / البيان</th>
+                                        <th>اشتراك العضو</th>
+                                        <th>خارج النادي (مصري)</th>
+                                        <th>خارج النادي (غير مصري)</th>
+                                        <th>السعة / الملاحظات التنظيمية</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="fw-bold">السعر الحالي</td>
+                                        <td>550 (م1) ج.م</td>
+                                        <td>950 (م1) ج.م</td>
+                                        <td>1100 (م1) ج.م</td>
+                                        <td rowspan="2" class="align-middle fw-bold text-navy">4 : 6 لاعبين<br><small class="text-muted">يوجد مستويات 1-4 وتجهيزي وفيتنس</small></td>
+                                    </tr>
+                                    <tr class="table-primary">
+                                        <td class="fw-bold text-primary">السعر المقترح (2026-2027)</td>
+                                        <td class="fw-bold text-success">650 (م1) ج.م</td>
+                                        <td class="fw-bold text-success">1000 (م1) ج.م</td>
+                                        <td class="fw-bold text-success">1200 (م1) ج.م</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!-- Statistics Grid for Game -->
+                        <h6 class="fw-bold text-navy mb-2"><i class="fa-solid fa-chart-simple text-primary me-1"></i>الإحصائيات المقارنة (2025 vs 2026):</h6>
+                        <div class="table-responsive mb-2">
+                            <table class="table table-sm table-bordered text-center align-middle small">
+                                <thead class="table-dark">
+                                    <tr>
+                                        <th>الشهر / السنة</th>
+                                        <th>أعضاء النادي</th>
+                                        <th>غير الأعضاء</th>
+                                        <th>إجمالي المشاركين</th>
+                                        <th>المبالغ المحصلة (ج.م)</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="fw-bold">يونيو 2025</td>
+                                        <td>76</td>
+                                        <td>14</td>
+                                        <td>90</td>
+                                        <td>61,407 ج.م</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-bold">يونيو 2026</td>
+                                        <td>141</td>
+                                        <td>4</td>
+                                        <td>145</td>
+                                        <td>98,410 ج.م</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-bold">أغسطس 2025</td>
+                                        <td>162</td>
+                                        <td>32</td>
+                                        <td>194</td>
+                                        <td>130,307 ج.م</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-bold">أغسطس 2026</td>
+                                        <td>187</td>
+                                        <td>0</td>
+                                        <td>187</td>
+                                        <td>133,135 ج.م</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!-- Positive Analytical Comment -->
+                        <div class="comment-box">
+                            <i class="fa-solid fa-circle-check text-success me-2"></i><strong>الرأي والتحليل الفني:</strong> تعد رياضة التنس الأرضي من الرياضات الراقية عالية النمو بالنادي، حيث تجاوز إيرادها الشهري 133 ألف جنيه بزيادة مستمرة في أعداد الممارسين الأعضاء.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SLIDE 16: Game الجمباز Details -->
+                <div class="carousel-item">
+                    <div class="slide-card">
+                        <div class="slide-title">
+                            <h3><i class="fa-solid fa-person-rays text-primary me-2"></i>بيانات لعبة: الجمباز</h3>
+                            <span class="slide-number">الشريحة 16 من 31</span>
+                        </div>
+
+                        <!-- Price Comparison Sub-Table -->
+                        <div class="table-responsive mb-3">
+                            <table class="table table-luxury table-bordered text-center align-middle mb-0">
+                                <thead>
+                                    <tr>
+                                        <th>الفئة / البيان</th>
+                                        <th>اشتراك العضو</th>
+                                        <th>خارج النادي (مصري)</th>
+                                        <th>خارج النادي (غير مصري)</th>
+                                        <th>السعة / الملاحظات التنظيمية</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="fw-bold">السعر الحالي</td>
+                                        <td>500 (م1) ج.م</td>
+                                        <td>750 (م1) ج.م</td>
+                                        <td>850 (م1) ج.م</td>
+                                        <td rowspan="2" class="align-middle fw-bold text-navy">نسبة الجهاز 45%<br><small class="text-muted">جمباز هواة: 750ج مقترح للعضو (650ج حالي)</small></td>
+                                    </tr>
+                                    <tr class="table-primary">
+                                        <td class="fw-bold text-primary">السعر المقترح (2026-2027)</td>
+                                        <td class="fw-bold text-success">600 (م1) ج.م</td>
+                                        <td class="fw-bold text-success">850 (م1) ج.م</td>
+                                        <td class="fw-bold text-success">950 (م1) ج.م</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!-- Statistics Grid for Game -->
+                        <h6 class="fw-bold text-navy mb-2"><i class="fa-solid fa-chart-simple text-primary me-1"></i>الإحصائيات المقارنة (2025 vs 2026):</h6>
+                        <div class="table-responsive mb-2">
+                            <table class="table table-sm table-bordered text-center align-middle small">
+                                <thead class="table-dark">
+                                    <tr>
+                                        <th>الشهر / السنة</th>
+                                        <th>أعضاء النادي</th>
+                                        <th>غير الأعضاء</th>
+                                        <th>إجمالي المشاركين</th>
+                                        <th>المبالغ المحصلة (ج.م)</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="fw-bold">يونيو 2025</td>
+                                        <td>183</td>
+                                        <td>13</td>
+                                        <td>196</td>
+                                        <td>121,725 ج.م</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-bold">يونيو 2026</td>
+                                        <td>250</td>
+                                        <td>0</td>
+                                        <td>250</td>
+                                        <td>193,127 ج.م</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-bold">أغسطس 2025</td>
+                                        <td>205</td>
+                                        <td>10</td>
+                                        <td>215</td>
+                                        <td>151,987 ج.م</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-bold">أغسطس 2026</td>
+                                        <td>85</td>
+                                        <td>0</td>
+                                        <td>85</td>
+                                        <td>52,555 ج.م</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!-- Positive Analytical Comment -->
+                        <div class="comment-box">
+                            <i class="fa-solid fa-circle-check text-success me-2"></i><strong>الرأي والتحليل الفني:</strong> قطاع الجمباز يتسم بالتنوع العالي بين الممارسة العامة والتجهيزي واللياقة البدنية، وتعد المدارس رافداً كبيراً لإعداد أبطال الجمهورية.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SLIDE 17: Game الخماسي الحديث Details -->
+                <div class="carousel-item">
+                    <div class="slide-card">
+                        <div class="slide-title">
+                            <h3><i class="fa-solid fa-person-swimming text-primary me-2"></i>بيانات لعبة: الخماسي الحديث</h3>
+                            <span class="slide-number">الشريحة 17 من 31</span>
+                        </div>
+
+                        <!-- Price Comparison Sub-Table -->
+                        <div class="table-responsive mb-3">
+                            <table class="table table-luxury table-bordered text-center align-middle mb-0">
+                                <thead>
+                                    <tr>
+                                        <th>الفئة / البيان</th>
+                                        <th>اشتراك العضو</th>
+                                        <th>خارج النادي (مصري)</th>
+                                        <th>خارج النادي (غير مصري)</th>
+                                        <th>السعة / الملاحظات التنظيمية</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="fw-bold">السعر الحالي</td>
+                                        <td>400 (لعبة) ج.م</td>
+                                        <td>500 (لعبة) ج.م</td>
+                                        <td>700 (لعبة) ج.م</td>
+                                        <td rowspan="2" class="align-middle fw-bold text-navy">6-8 لاعبين<br><small class="text-muted">نسبة المعلمين 50%، 5% مدير فني، 5% إداري</small></td>
+                                    </tr>
+                                    <tr class="table-primary">
+                                        <td class="fw-bold text-primary">السعر المقترح (2026-2027)</td>
+                                        <td class="fw-bold text-success">500 (لعبة) ج.م</td>
+                                        <td class="fw-bold text-success">600 (لعبة) ج.م</td>
+                                        <td class="fw-bold text-success">800 (لعبة) ج.م</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!-- Statistics Grid for Game -->
+                        <h6 class="fw-bold text-navy mb-2"><i class="fa-solid fa-chart-simple text-primary me-1"></i>الإحصائيات المقارنة (2025 vs 2026):</h6>
+                        <div class="table-responsive mb-2">
+                            <table class="table table-sm table-bordered text-center align-middle small">
+                                <thead class="table-dark">
+                                    <tr>
+                                        <th>الشهر / السنة</th>
+                                        <th>أعضاء النادي</th>
+                                        <th>غير الأعضاء</th>
+                                        <th>إجمالي المشاركين</th>
+                                        <th>المبالغ المحصلة (ج.م)</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="fw-bold">يونيو 2025</td>
+                                        <td>37</td>
+                                        <td>12</td>
+                                        <td>49</td>
+                                        <td>22,900 ج.م</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-bold">يونيو 2026</td>
+                                        <td>75</td>
+                                        <td>7</td>
+                                        <td>82</td>
+                                        <td>45,330 ج.م</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-bold">أغسطس 2025</td>
+                                        <td>107</td>
+                                        <td>15</td>
+                                        <td>122</td>
+                                        <td>56,490 ج.م</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-bold">أغسطس 2026</td>
+                                        <td>84</td>
+                                        <td>0</td>
+                                        <td>84</td>
+                                        <td>44,700 ج.م</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!-- Positive Analytical Comment -->
+                        <div class="comment-box">
+                            <i class="fa-solid fa-circle-check text-success me-2"></i><strong>الرأي والتحليل الفني:</strong> رياضة الخماسي الحديث تحقق نمواً متميزاً وتجمع بين الجري والسلاح والسباحة والرماية، مما يكسب المشاركين لياقة بدنية متكاملة.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SLIDE 18: Game كرة الماء Details -->
+                <div class="carousel-item">
+                    <div class="slide-card">
+                        <div class="slide-title">
+                            <h3><i class="fa-solid fa-water-ladder text-primary me-2"></i>بيانات لعبة: كرة الماء</h3>
+                            <span class="slide-number">الشريحة 18 من 31</span>
+                        </div>
+
+                        <!-- Price Comparison Sub-Table -->
+                        <div class="table-responsive mb-3">
+                            <table class="table table-luxury table-bordered text-center align-middle mb-0">
+                                <thead>
+                                    <tr>
+                                        <th>الفئة / البيان</th>
+                                        <th>اشتراك العضو</th>
+                                        <th>خارج النادي (مصري)</th>
+                                        <th>خارج النادي (غير مصري)</th>
+                                        <th>السعة / الملاحظات التنظيمية</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="fw-bold">السعر الحالي</td>
+                                        <td>450 ج.م</td>
+                                        <td>-- ج.م</td>
+                                        <td>-- ج.م</td>
+                                        <td rowspan="2" class="align-middle fw-bold text-navy">15 لاعب<br><small class="text-muted">المبلغ لغير العضو على 5 أقساط شهرية</small></td>
+                                    </tr>
+                                    <tr class="table-primary">
+                                        <td class="fw-bold text-primary">السعر المقترح (2026-2027)</td>
+                                        <td class="fw-bold text-success">550 ج.م</td>
+                                        <td class="fw-bold text-success">10000 ج.م</td>
+                                        <td class="fw-bold text-success">16000 ج.م</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!-- Statistics Grid for Game -->
+                        <h6 class="fw-bold text-navy mb-2"><i class="fa-solid fa-chart-simple text-primary me-1"></i>الإحصائيات المقارنة (2025 vs 2026):</h6>
+                        <div class="table-responsive mb-2">
+                            <table class="table table-sm table-bordered text-center align-middle small">
+                                <thead class="table-dark">
+                                    <tr>
+                                        <th>الشهر / السنة</th>
+                                        <th>أعضاء النادي</th>
+                                        <th>غير الأعضاء</th>
+                                        <th>إجمالي المشاركين</th>
+                                        <th>المبالغ المحصلة (ج.م)</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="fw-bold">يونيو 2025</td>
+                                        <td>64</td>
+                                        <td>6</td>
+                                        <td>70</td>
+                                        <td>33,145 ج.م</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-bold">يونيو 2026</td>
+                                        <td>66</td>
+                                        <td>0</td>
+                                        <td>66</td>
+                                        <td>36,140 ج.م</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-bold">أغسطس 2025</td>
+                                        <td>82</td>
+                                        <td>11</td>
+                                        <td>93</td>
+                                        <td>46,770 ج.م</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-bold">أغسطس 2026</td>
+                                        <td>91</td>
+                                        <td>0</td>
+                                        <td>91</td>
+                                        <td>52,610 ج.م</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!-- Positive Analytical Comment -->
+                        <div class="comment-box">
+                            <i class="fa-solid fa-circle-check text-success me-2"></i><strong>الرأي والتحليل الفني:</strong> تسجل كرة الماء زيادة مطردة في الإقبال بنسبة نمو إيراد تجاوزت 12% في أغسطس 2026 بفضل كفاءة التدريبات والالتزام ببرامج التأهيل.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SLIDE 19: Game كرة السرعة Details -->
+                <div class="carousel-item">
+                    <div class="slide-card">
+                        <div class="slide-title">
+                            <h3><i class="fa-solid fa-circle-dot text-primary me-2"></i>بيانات لعبة: كرة السرعة</h3>
+                            <span class="slide-number">الشريحة 19 من 31</span>
+                        </div>
+
+                        <!-- Price Comparison Sub-Table -->
+                        <div class="table-responsive mb-3">
+                            <table class="table table-luxury table-bordered text-center align-middle mb-0">
+                                <thead>
+                                    <tr>
+                                        <th>الفئة / البيان</th>
+                                        <th>اشتراك العضو</th>
+                                        <th>خارج النادي (مصري)</th>
+                                        <th>خارج النادي (غير مصري)</th>
+                                        <th>السعة / الملاحظات التنظيمية</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="fw-bold">السعر الحالي</td>
+                                        <td>450 ج.م</td>
+                                        <td>650 ج.م</td>
+                                        <td>750 ج.م</td>
+                                        <td rowspan="2" class="align-middle fw-bold text-navy">20 لاعب<br><small class="text-muted">تجهيزي 650ج مقترح (550ج حالي)</small></td>
+                                    </tr>
+                                    <tr class="table-primary">
+                                        <td class="fw-bold text-primary">السعر المقترح (2026-2027)</td>
+                                        <td class="fw-bold text-success">550 ج.م</td>
+                                        <td class="fw-bold text-success">750 ج.م</td>
+                                        <td class="fw-bold text-success">850 ج.م</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!-- Statistics Grid for Game -->
+                        <h6 class="fw-bold text-navy mb-2"><i class="fa-solid fa-chart-simple text-primary me-1"></i>الإحصائيات المقارنة (2025 vs 2026):</h6>
+                        <div class="table-responsive mb-2">
+                            <table class="table table-sm table-bordered text-center align-middle small">
+                                <thead class="table-dark">
+                                    <tr>
+                                        <th>الشهر / السنة</th>
+                                        <th>أعضاء النادي</th>
+                                        <th>غير الأعضاء</th>
+                                        <th>إجمالي المشاركين</th>
+                                        <th>المبالغ المحصلة (ج.م)</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="fw-bold">يونيو 2025</td>
+                                        <td>23</td>
+                                        <td>2</td>
+                                        <td>25</td>
+                                        <td>14,050 ج.م</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-bold">يونيو 2026</td>
+                                        <td>41</td>
+                                        <td>1</td>
+                                        <td>42</td>
+                                        <td>20,955 ج.م</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-bold">أغسطس 2025</td>
+                                        <td>60</td>
+                                        <td>7</td>
+                                        <td>67</td>
+                                        <td>30,520 ج.م</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-bold">أغسطس 2026</td>
+                                        <td>61</td>
+                                        <td>0</td>
+                                        <td>61</td>
+                                        <td>29,975 ج.م</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!-- Positive Analytical Comment -->
+                        <div class="comment-box">
+                            <i class="fa-solid fa-circle-check text-success me-2"></i><strong>الرأي والتحليل الفني:</strong> حافظت كرة السرعة على استقرار أعداد ممارسيها من الأعضاء، وهي من الألعاب المصرية المتميزة التي تبني التوافق والسرعة الحركية.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SLIDE 20: Game القوس والسهم Details -->
+                <div class="carousel-item">
+                    <div class="slide-card">
+                        <div class="slide-title">
+                            <h3><i class="fa-solid fa-bullseye text-primary me-2"></i>بيانات لعبة: القوس والسهم</h3>
+                            <span class="slide-number">الشريحة 20 من 31</span>
+                        </div>
+
+                        <!-- Price Comparison Sub-Table -->
+                        <div class="table-responsive mb-3">
+                            <table class="table table-luxury table-bordered text-center align-middle mb-0">
+                                <thead>
+                                    <tr>
+                                        <th>الفئة / البيان</th>
+                                        <th>اشتراك العضو</th>
+                                        <th>خارج النادي (مصري)</th>
+                                        <th>خارج النادي (غير مصري)</th>
+                                        <th>السعة / الملاحظات التنظيمية</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="fw-bold">السعر الحالي</td>
+                                        <td>450 (8حصص) ج.م</td>
+                                        <td>650 (8حصص) ج.م</td>
+                                        <td>750 (8حصص) ج.م</td>
+                                        <td rowspan="2" class="align-middle fw-bold text-navy">ساعة ونصف<br><small class="text-muted">نسبة المعلمين 60%</small></td>
+                                    </tr>
+                                    <tr class="table-primary">
+                                        <td class="fw-bold text-primary">السعر المقترح (2026-2027)</td>
+                                        <td class="fw-bold text-success">500 (8حصص) ج.م</td>
+                                        <td class="fw-bold text-success">750 (8حصص) ج.م</td>
+                                        <td class="fw-bold text-success">850 (8حصص) ج.م</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!-- Statistics Grid for Game -->
+                        <h6 class="fw-bold text-navy mb-2"><i class="fa-solid fa-chart-simple text-primary me-1"></i>الإحصائيات المقارنة (2025 vs 2026):</h6>
+                        <div class="table-responsive mb-2">
+                            <table class="table table-sm table-bordered text-center align-middle small">
+                                <thead class="table-dark">
+                                    <tr>
+                                        <th>الشهر / السنة</th>
+                                        <th>أعضاء النادي</th>
+                                        <th>غير الأعضاء</th>
+                                        <th>إجمالي المشاركين</th>
+                                        <th>المبالغ المحصلة (ج.م)</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="fw-bold">يونيو 2025</td>
+                                        <td>9</td>
+                                        <td>12</td>
+                                        <td>21</td>
+                                        <td>12,400 ج.م</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-bold">يونيو 2026</td>
+                                        <td>32</td>
+                                        <td>15</td>
+                                        <td>47</td>
+                                        <td>32,185 ج.م</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-bold">أغسطس 2025</td>
+                                        <td>23</td>
+                                        <td>21</td>
+                                        <td>44</td>
+                                        <td>26,700 ج.م</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-bold">أغسطس 2026</td>
+                                        <td>38</td>
+                                        <td>25</td>
+                                        <td>63</td>
+                                        <td>46,185 ج.م</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!-- Positive Analytical Comment -->
+                        <div class="comment-box">
+                            <i class="fa-solid fa-circle-check text-success me-2"></i><strong>الرأي والتحليل الفني:</strong> حققت أكاديمية القوس والسهم قفزة ممتازة في الإيرادات بنسبة 73% في أغسطس 2026 لتصل إلى 46,185 جنيه مع إقبال مميز من غير الأعضاء للأكاديمية.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SLIDE 21: Game الشطرنج Details -->
+                <div class="carousel-item">
+                    <div class="slide-card">
+                        <div class="slide-title">
+                            <h3><i class="fa-solid fa-chess-king text-primary me-2"></i>بيانات لعبة: الشطرنج</h3>
+                            <span class="slide-number">الشريحة 21 من 31</span>
+                        </div>
+
+                        <!-- Price Comparison Sub-Table -->
+                        <div class="table-responsive mb-3">
+                            <table class="table table-luxury table-bordered text-center align-middle mb-0">
+                                <thead>
+                                    <tr>
+                                        <th>الفئة / البيان</th>
+                                        <th>اشتراك العضو</th>
+                                        <th>خارج النادي (مصري)</th>
+                                        <th>خارج النادي (غير مصري)</th>
+                                        <th>السعة / الملاحظات التنظيمية</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="fw-bold">السعر الحالي</td>
+                                        <td>400 (L1,2,3) ج.م</td>
+                                        <td>550 (L1,2,3) ج.م</td>
+                                        <td>750 (L1,2,3) ج.م</td>
+                                        <td rowspan="2" class="align-middle fw-bold text-navy">مستويات 1 إلى 7 وتجهيزي<br><small class="text-muted">تجهيزي 650ج مقترح (550ج حالي)</small></td>
+                                    </tr>
+                                    <tr class="table-primary">
+                                        <td class="fw-bold text-primary">السعر المقترح (2026-2027)</td>
+                                        <td class="fw-bold text-success">500 (L1,2,3) ج.م</td>
+                                        <td class="fw-bold text-success">650 (L1,2,3) ج.م</td>
+                                        <td class="fw-bold text-success">850 (L1,2,3) ج.م</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!-- Statistics Grid for Game -->
+                        <h6 class="fw-bold text-navy mb-2"><i class="fa-solid fa-chart-simple text-primary me-1"></i>الإحصائيات المقارنة (2025 vs 2026):</h6>
+                        <div class="table-responsive mb-2">
+                            <table class="table table-sm table-bordered text-center align-middle small">
+                                <thead class="table-dark">
+                                    <tr>
+                                        <th>الشهر / السنة</th>
+                                        <th>أعضاء النادي</th>
+                                        <th>غير الأعضاء</th>
+                                        <th>إجمالي المشاركين</th>
+                                        <th>المبالغ المحصلة (ج.م)</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="fw-bold">يونيو 2025</td>
+                                        <td>23</td>
+                                        <td>7</td>
+                                        <td>30</td>
+                                        <td>9,820 ج.م</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-bold">يونيو 2026</td>
+                                        <td>38</td>
+                                        <td>1</td>
+                                        <td>39</td>
+                                        <td>16,700 ج.م</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-bold">أغسطس 2025</td>
+                                        <td>21</td>
+                                        <td>10</td>
+                                        <td>31</td>
+                                        <td>15,345 ج.م</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-bold">أغسطس 2026</td>
+                                        <td>30</td>
+                                        <td>0</td>
+                                        <td>30</td>
+                                        <td>14,850 ج.م</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!-- Positive Analytical Comment -->
+                        <div class="comment-box">
+                            <i class="fa-solid fa-circle-check text-success me-2"></i><strong>الرأي والتحليل الفني:</strong> الشطرنج لعبة ذهنية متميزة تشهد إقبالاً متزايداً لتنمية مهارات التفكير الاستراتيجي والتركيز لدى الناشئين بالنادي.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SLIDE 22: Game ذوو الاحتياجات الخاصة Details -->
+                <div class="carousel-item">
+                    <div class="slide-card">
+                        <div class="slide-title">
+                            <h3><i class="fa-solid fa-wheelchair text-primary me-2"></i>بيانات لعبة: ذوو الاحتياجات الخاصة</h3>
+                            <span class="slide-number">الشريحة 22 من 31</span>
+                        </div>
+
+                        <!-- Price Comparison Sub-Table -->
+                        <div class="table-responsive mb-3">
+                            <table class="table table-luxury table-bordered text-center align-middle mb-0">
+                                <thead>
+                                    <tr>
+                                        <th>الفئة / البيان</th>
+                                        <th>اشتراك العضو</th>
+                                        <th>خارج النادي (مصري)</th>
+                                        <th>خارج النادي (غير مصري)</th>
+                                        <th>السعة / الملاحظات التنظيمية</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="fw-bold">السعر الحالي</td>
+                                        <td>450 (مبتدئين) ج.م</td>
+                                        <td>700 (مبتدئين) ج.م</td>
+                                        <td>850 (مبتدئين) ج.م</td>
+                                        <td rowspan="2" class="align-middle fw-bold text-navy">5 أفراد<br><small class="text-muted">نسبة المعلمين 50%</small></td>
+                                    </tr>
+                                    <tr class="table-primary">
+                                        <td class="fw-bold text-primary">السعر المقترح (2026-2027)</td>
+                                        <td class="fw-bold text-success">550 (مبتدئين) ج.م</td>
+                                        <td class="fw-bold text-success">800 (مبتدئين) ج.م</td>
+                                        <td class="fw-bold text-success">950 (مبتدئين) ج.م</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!-- Statistics Grid for Game -->
+                        <h6 class="fw-bold text-navy mb-2"><i class="fa-solid fa-chart-simple text-primary me-1"></i>الإحصائيات المقارنة (2025 vs 2026):</h6>
+                        <div class="table-responsive mb-2">
+                            <table class="table table-sm table-bordered text-center align-middle small">
+                                <thead class="table-dark">
+                                    <tr>
+                                        <th>الشهر / السنة</th>
+                                        <th>أعضاء النادي</th>
+                                        <th>غير الأعضاء</th>
+                                        <th>إجمالي المشاركين</th>
+                                        <th>المبالغ المحصلة (ج.م)</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="fw-bold">يونيو 2025</td>
+                                        <td>4</td>
+                                        <td>9</td>
+                                        <td>13</td>
+                                        <td>5,650 ج.م</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-bold">يونيو 2026</td>
+                                        <td>16</td>
+                                        <td>0</td>
+                                        <td>16</td>
+                                        <td>8,210 ج.م</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-bold">أغسطس 2025</td>
+                                        <td>9</td>
+                                        <td>29</td>
+                                        <td>38</td>
+                                        <td>19,950 ج.م</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-bold">أغسطس 2026</td>
+                                        <td>14</td>
+                                        <td>0</td>
+                                        <td>14</td>
+                                        <td>8,480 ج.م</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!-- Positive Analytical Comment -->
+                        <div class="comment-box">
+                            <i class="fa-solid fa-circle-check text-success me-2"></i><strong>الرأي والتحليل الفني:</strong> يعكس هذا القطاع الدور المجتمعي والإنساني لنادي 6 أكتوبر في دمج ورعاية الأبطال من ذوي الهمم وتوفير كافة الإمكانيات الفنية والبدنية لهم.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SLIDE 23: Game اللياقة البدنية Details -->
+                <div class="carousel-item">
+                    <div class="slide-card">
+                        <div class="slide-title">
+                            <h3><i class="fa-solid fa-dumbbell text-primary me-2"></i>بيانات لعبة: اللياقة البدنية</h3>
+                            <span class="slide-number">الشريحة 23 من 31</span>
+                        </div>
+
+                        <!-- Price Comparison Sub-Table -->
+                        <div class="table-responsive mb-3">
+                            <table class="table table-luxury table-bordered text-center align-middle mb-0">
+                                <thead>
+                                    <tr>
+                                        <th>الفئة / البيان</th>
+                                        <th>اشتراك العضو</th>
+                                        <th>خارج النادي (مصري)</th>
+                                        <th>خارج النادي (غير مصري)</th>
+                                        <th>السعة / الملاحظات التنظيمية</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="fw-bold">السعر الحالي</td>
+                                        <td>350 ج.م</td>
+                                        <td>600 ج.م</td>
+                                        <td>750 ج.م</td>
+                                        <td rowspan="2" class="align-middle fw-bold text-navy">15 لاعب<br><small class="text-muted">نسبة المعلم 35% مدارس / 70% فرق</small></td>
+                                    </tr>
+                                    <tr class="table-primary">
+                                        <td class="fw-bold text-primary">السعر المقترح (2026-2027)</td>
+                                        <td class="fw-bold text-success">450 ج.م</td>
+                                        <td class="fw-bold text-success">700 ج.م</td>
+                                        <td class="fw-bold text-success">850 ج.م</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!-- Statistics Grid for Game -->
+                        <h6 class="fw-bold text-navy mb-2"><i class="fa-solid fa-chart-simple text-primary me-1"></i>الإحصائيات المقارنة (2025 vs 2026):</h6>
+                        <div class="table-responsive mb-2">
+                            <table class="table table-sm table-bordered text-center align-middle small">
+                                <thead class="table-dark">
+                                    <tr>
+                                        <th>الشهر / السنة</th>
+                                        <th>أعضاء النادي</th>
+                                        <th>غير الأعضاء</th>
+                                        <th>إجمالي المشاركين</th>
+                                        <th>المبالغ المحصلة (ج.م)</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="fw-bold">يونيو 2025</td>
+                                        <td>88</td>
+                                        <td>11</td>
+                                        <td>99</td>
+                                        <td>27,405 ج.م</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-bold">يونيو 2026</td>
+                                        <td>38</td>
+                                        <td>4</td>
+                                        <td>42</td>
+                                        <td>17,760 ج.م</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-bold">أغسطس 2025</td>
+                                        <td>135</td>
+                                        <td>5</td>
+                                        <td>140</td>
+                                        <td>42,000 ج.م</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-bold">أغسطس 2026</td>
+                                        <td>42</td>
+                                        <td>0</td>
+                                        <td>42</td>
+                                        <td>17,060 ج.م</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!-- Positive Analytical Comment -->
+                        <div class="comment-box">
+                            <i class="fa-solid fa-circle-check text-success me-2"></i><strong>الرأي والتحليل الفني:</strong> تُسهم تدريبات اللياقة البدنية في التأسيس البدني العام للاعبين ودعم برامج إعداد الفرق الرياضية بالنادي.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SLIDE 24: Game التأهيل العسكري Details -->
+                <div class="carousel-item">
+                    <div class="slide-card">
+                        <div class="slide-title">
+                            <h3><i class="fa-solid fa-person-military-rifle text-primary me-2"></i>بيانات لعبة: التأهيل العسكري</h3>
+                            <span class="slide-number">الشريحة 24 من 31</span>
+                        </div>
+
+                        <!-- Price Comparison Sub-Table -->
+                        <div class="table-responsive mb-3">
+                            <table class="table table-luxury table-bordered text-center align-middle mb-0">
+                                <thead>
+                                    <tr>
+                                        <th>الفئة / البيان</th>
+                                        <th>اشتراك العضو</th>
+                                        <th>خارج النادي (مصري)</th>
+                                        <th>خارج النادي (غير مصري)</th>
+                                        <th>السعة / الملاحظات التنظيمية</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="fw-bold">السعر الحالي</td>
+                                        <td>700 ج.م</td>
+                                        <td>1000 ج.م</td>
+                                        <td>-- ج.م</td>
+                                        <td rowspan="2" class="align-middle fw-bold text-navy">يشمل قفزة الثقة 200ج<br><small class="text-muted">قفزة الثقة 200ج مقترح (150ج حالي)</small></td>
+                                    </tr>
+                                    <tr class="table-primary">
+                                        <td class="fw-bold text-primary">السعر المقترح (2026-2027)</td>
+                                        <td class="fw-bold text-success">800 ج.م</td>
+                                        <td class="fw-bold text-success">1100 ج.م</td>
+                                        <td class="fw-bold text-success">-- ج.م</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!-- Statistics Grid for Game -->
+                        <h6 class="fw-bold text-navy mb-2"><i class="fa-solid fa-chart-simple text-primary me-1"></i>الإحصائيات المقارنة (2025 vs 2026):</h6>
+                        <div class="table-responsive mb-2">
+                            <table class="table table-sm table-bordered text-center align-middle small">
+                                <thead class="table-dark">
+                                    <tr>
+                                        <th>الشهر / السنة</th>
+                                        <th>أعضاء النادي</th>
+                                        <th>غير الأعضاء</th>
+                                        <th>إجمالي المشاركين</th>
+                                        <th>المبالغ المحصلة (ج.م)</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="fw-bold">يونيو 2025</td>
+                                        <td>0</td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                        <td>1,000 ج.م</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-bold">يونيو 2026</td>
+                                        <td>2</td>
+                                        <td>0</td>
+                                        <td>2</td>
+                                        <td>200 ج.م</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-bold">أغسطس 2025</td>
+                                        <td>8</td>
+                                        <td>14</td>
+                                        <td>22</td>
+                                        <td>13,500 ج.م</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-bold">أغسطس 2026</td>
+                                        <td>2</td>
+                                        <td>11</td>
+                                        <td>13</td>
+                                        <td>7,700 ج.م</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!-- Positive Analytical Comment -->
+                        <div class="comment-box">
+                            <i class="fa-solid fa-circle-check text-success me-2"></i><strong>الرأي والتحليل الفني:</strong> يقدم برنامج التأهيل العسكري خدمة متخصصة عالية الكفاءة لتأهيل المتقدمين للكليات العسكرية والشرطية مع تدريبات قفزة الثقة.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SLIDE 25: Game الباتيناج Details -->
+                <div class="carousel-item">
+                    <div class="slide-card">
+                        <div class="slide-title">
+                            <h3><i class="fa-solid fa-person-skating text-primary me-2"></i>بيانات لعبة: الباتيناج</h3>
+                            <span class="slide-number">الشريحة 25 من 31</span>
+                        </div>
+
+                        <!-- Price Comparison Sub-Table -->
+                        <div class="table-responsive mb-3">
+                            <table class="table table-luxury table-bordered text-center align-middle mb-0">
+                                <thead>
+                                    <tr>
+                                        <th>الفئة / البيان</th>
+                                        <th>اشتراك العضو</th>
+                                        <th>خارج النادي (مصري)</th>
+                                        <th>خارج النادي (غير مصري)</th>
+                                        <th>السعة / الملاحظات التنظيمية</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="fw-bold">السعر الحالي</td>
+                                        <td>500 ج.م</td>
+                                        <td>650 ج.م</td>
+                                        <td>800 ج.م</td>
+                                        <td rowspan="2" class="align-middle fw-bold text-navy">15 لاعب<br><small class="text-muted">سباقات السرعة 700ج مقترح (نسبة 40% مدرب 10% مدير فني)</small></td>
+                                    </tr>
+                                    <tr class="table-primary">
+                                        <td class="fw-bold text-primary">السعر المقترح (2026-2027)</td>
+                                        <td class="fw-bold text-success">600 ج.م</td>
+                                        <td class="fw-bold text-success">750 ج.م</td>
+                                        <td class="fw-bold text-success">900 ج.م</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!-- Statistics Grid for Game -->
+                        <h6 class="fw-bold text-navy mb-2"><i class="fa-solid fa-chart-simple text-primary me-1"></i>الإحصائيات المقارنة (2025 vs 2026):</h6>
+                        <div class="table-responsive mb-2">
+                            <table class="table table-sm table-bordered text-center align-middle small">
+                                <thead class="table-dark">
+                                    <tr>
+                                        <th>الشهر / السنة</th>
+                                        <th>أعضاء النادي</th>
+                                        <th>غير الأعضاء</th>
+                                        <th>إجمالي المشاركين</th>
+                                        <th>المبالغ المحصلة (ج.م)</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="fw-bold">يونيو 2025</td>
+                                        <td>14</td>
+                                        <td>4</td>
+                                        <td>18</td>
+                                        <td>6,800 ج.م</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-bold">يونيو 2026</td>
+                                        <td>27</td>
+                                        <td>0</td>
+                                        <td>27</td>
+                                        <td>14,605 ج.م</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-bold">أغسطس 2025</td>
+                                        <td>28</td>
+                                        <td>9</td>
+                                        <td>37</td>
+                                        <td>19,040 ج.م</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-bold">أغسطس 2026</td>
+                                        <td>33</td>
+                                        <td>0</td>
+                                        <td>33</td>
+                                        <td>20,160 ج.م</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!-- Positive Analytical Comment -->
+                        <div class="comment-box">
+                            <i class="fa-solid fa-circle-check text-success me-2"></i><strong>الرأي والتحليل الفني:</strong> تظهر رياضة الباتيناج نمواً ثابتاً في المشاركة والإيرادات لتصل إلى 20,160 جنيه في أغسطس 2026 مع تطوير قطاع سباقات السرعة.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SLIDE 26: Game الدراجات Details -->
+                <div class="carousel-item">
+                    <div class="slide-card">
+                        <div class="slide-title">
+                            <h3><i class="fa-solid fa-bicycle text-primary me-2"></i>بيانات لعبة: الدراجات</h3>
+                            <span class="slide-number">الشريحة 26 من 31</span>
+                        </div>
+
+                        <!-- Price Comparison Sub-Table -->
+                        <div class="table-responsive mb-3">
+                            <table class="table table-luxury table-bordered text-center align-middle mb-0">
+                                <thead>
+                                    <tr>
+                                        <th>الفئة / البيان</th>
+                                        <th>اشتراك العضو</th>
+                                        <th>خارج النادي (مصري)</th>
+                                        <th>خارج النادي (غير مصري)</th>
+                                        <th>السعة / الملاحظات التنظيمية</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="fw-bold">السعر الحالي</td>
+                                        <td>450 ج.م</td>
+                                        <td>600 ج.م</td>
+                                        <td>700 ج.م</td>
+                                        <td rowspan="2" class="align-middle fw-bold text-navy">20 لاعب<br><small class="text-muted">تجهيزي 650ج مقترح (550ج حالي)</small></td>
+                                    </tr>
+                                    <tr class="table-primary">
+                                        <td class="fw-bold text-primary">السعر المقترح (2026-2027)</td>
+                                        <td class="fw-bold text-success">550 ج.م</td>
+                                        <td class="fw-bold text-success">700 ج.م</td>
+                                        <td class="fw-bold text-success">800 ج.م</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!-- Statistics Grid for Game -->
+                        <h6 class="fw-bold text-navy mb-2"><i class="fa-solid fa-chart-simple text-primary me-1"></i>الإحصائيات المقارنة (2025 vs 2026):</h6>
+                        <div class="table-responsive mb-2">
+                            <table class="table table-sm table-bordered text-center align-middle small">
+                                <thead class="table-dark">
+                                    <tr>
+                                        <th>الشهر / السنة</th>
+                                        <th>أعضاء النادي</th>
+                                        <th>غير الأعضاء</th>
+                                        <th>إجمالي المشاركين</th>
+                                        <th>المبالغ المحصلة (ج.م)</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="fw-bold">يونيو 2025</td>
+                                        <td>3</td>
+                                        <td>0</td>
+                                        <td>3</td>
+                                        <td>900 ج.م</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-bold">يونيو 2026</td>
+                                        <td>4</td>
+                                        <td>0</td>
+                                        <td>4</td>
+                                        <td>4,205 ج.م</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-bold">أغسطس 2025</td>
+                                        <td>6</td>
+                                        <td>3</td>
+                                        <td>9</td>
+                                        <td>4,410 ج.م</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-bold">أغسطس 2026</td>
+                                        <td>3</td>
+                                        <td>4</td>
+                                        <td>7</td>
+                                        <td>5,150 ج.م</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!-- Positive Analytical Comment -->
+                        <div class="comment-box">
+                            <i class="fa-solid fa-circle-check text-success me-2"></i><strong>الرأي والتحليل الفني:</strong> أكاديمية الدراجات تحقق استقراراً وتطوراً في التأسيس البدني وتوفير مضامير التدريب الآمنة للمشاركين.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SLIDE 27: Game تنس الطاولة Details -->
+                <div class="carousel-item">
+                    <div class="slide-card">
+                        <div class="slide-title">
+                            <h3><i class="fa-solid fa-table-tennis-paddle-ball text-primary me-2"></i>بيانات لعبة: تنس الطاولة</h3>
+                            <span class="slide-number">الشريحة 27 من 31</span>
+                        </div>
+
+                        <!-- Price Comparison Sub-Table -->
+                        <div class="table-responsive mb-3">
+                            <table class="table table-luxury table-bordered text-center align-middle mb-0">
+                                <thead>
+                                    <tr>
+                                        <th>الفئة / البيان</th>
+                                        <th>اشتراك العضو</th>
+                                        <th>خارج النادي (مصري)</th>
+                                        <th>خارج النادي (غير مصري)</th>
+                                        <th>السعة / الملاحظات التنظيمية</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="fw-bold">السعر الحالي</td>
+                                        <td>450 ج.م</td>
+                                        <td>700 ج.م</td>
+                                        <td>750 ج.م</td>
+                                        <td rowspan="2" class="align-middle fw-bold text-navy">6 لاعبين<br><small class="text-muted">تجهيزي 650ج مقترح (550ج حالي)</small></td>
+                                    </tr>
+                                    <tr class="table-primary">
+                                        <td class="fw-bold text-primary">السعر المقترح (2026-2027)</td>
+                                        <td class="fw-bold text-success">550 ج.م</td>
+                                        <td class="fw-bold text-success">800 ج.م</td>
+                                        <td class="fw-bold text-success">850 ج.م</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!-- Statistics Grid for Game -->
+                        <h6 class="fw-bold text-navy mb-2"><i class="fa-solid fa-chart-simple text-primary me-1"></i>الإحصائيات المقارنة (2025 vs 2026):</h6>
+                        <div class="table-responsive mb-2">
+                            <table class="table table-sm table-bordered text-center align-middle small">
+                                <thead class="table-dark">
+                                    <tr>
+                                        <th>الشهر / السنة</th>
+                                        <th>أعضاء النادي</th>
+                                        <th>غير الأعضاء</th>
+                                        <th>إجمالي المشاركين</th>
+                                        <th>المبالغ المحصلة (ج.م)</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="fw-bold">يونيو 2025</td>
+                                        <td>3</td>
+                                        <td>1</td>
+                                        <td>4</td>
+                                        <td>1,500 ج.م</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-bold">يونيو 2026</td>
+                                        <td>5</td>
+                                        <td>0</td>
+                                        <td>5</td>
+                                        <td>2,695 ج.م</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-bold">أغسطس 2025</td>
+                                        <td>11</td>
+                                        <td>3</td>
+                                        <td>14</td>
+                                        <td>7,005 ج.م</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-bold">أغسطس 2026</td>
+                                        <td>2</td>
+                                        <td>0</td>
+                                        <td>2</td>
+                                        <td>1,045 ج.م</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!-- Positive Analytical Comment -->
+                        <div class="comment-box">
+                            <i class="fa-solid fa-circle-check text-success me-2"></i><strong>الرأي والتحليل الفني:</strong> تخدم المدارس نشاط تنس الطاولة بنطاق تركيزي مصغر لضمان التدريب عالي الجودة والتحكم المظلي الفردي.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SLIDE 28: Game الرواد Details -->
+                <div class="carousel-item">
+                    <div class="slide-card">
+                        <div class="slide-title">
+                            <h3><i class="fa-solid fa-user-group text-primary me-2"></i>بيانات لعبة: الرواد</h3>
+                            <span class="slide-number">الشريحة 28 من 31</span>
+                        </div>
+
+                        <!-- Price Comparison Sub-Table -->
+                        <div class="table-responsive mb-3">
+                            <table class="table table-luxury table-bordered text-center align-middle mb-0">
+                                <thead>
+                                    <tr>
+                                        <th>الفئة / البيان</th>
+                                        <th>اشتراك العضو</th>
+                                        <th>خارج النادي (مصري)</th>
+                                        <th>خارج النادي (غير مصري)</th>
+                                        <th>السعة / الملاحظات التنظيمية</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="fw-bold">السعر الحالي</td>
+                                        <td>50 ج.م</td>
+                                        <td>-- ج.م</td>
+                                        <td>-- ج.م</td>
+                                        <td rowspan="2" class="align-middle fw-bold text-navy">أعضاء النادي<br><small class="text-muted">نسبة المدربين 50%</small></td>
+                                    </tr>
+                                    <tr class="table-primary">
+                                        <td class="fw-bold text-primary">السعر المقترح (2026-2027)</td>
+                                        <td class="fw-bold text-success">100 ج.م</td>
+                                        <td class="fw-bold text-success">-- ج.م</td>
+                                        <td class="fw-bold text-success">-- ج.م</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!-- Statistics Grid for Game -->
+                        <h6 class="fw-bold text-navy mb-2"><i class="fa-solid fa-chart-simple text-primary me-1"></i>الإحصائيات المقارنة (2025 vs 2026):</h6>
+                        <div class="table-responsive mb-2">
+                            <table class="table table-sm table-bordered text-center align-middle small">
+                                <thead class="table-dark">
+                                    <tr>
+                                        <th>الشهر / السنة</th>
+                                        <th>أعضاء النادي</th>
+                                        <th>غير الأعضاء</th>
+                                        <th>إجمالي المشاركين</th>
+                                        <th>المبالغ المحصلة (ج.م)</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="fw-bold">يونيو 2025</td>
+                                        <td>15</td>
+                                        <td>0</td>
+                                        <td>15</td>
+                                        <td>1,500 ج.م</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-bold">يونيو 2026</td>
+                                        <td>23</td>
+                                        <td>0</td>
+                                        <td>23</td>
+                                        <td>2,300 ج.م</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-bold">أغسطس 2025</td>
+                                        <td>21</td>
+                                        <td>0</td>
+                                        <td>21</td>
+                                        <td>2,100 ج.م</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-bold">أغسطس 2026</td>
+                                        <td>41</td>
+                                        <td>5</td>
+                                        <td>45</td>
+                                        <td>39,400 ج.م</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!-- Positive Analytical Comment -->
+                        <div class="comment-box">
+                            <i class="fa-solid fa-circle-check text-success me-2"></i><strong>الرأي والتحليل الفني:</strong> سجل نشاط الرواد قفزة استثنائية في الإيرادات والمشاركة بأغسطس 2026 ليتجاوز 39,400 جنيه، مؤكداً اهتمام النادي بكبار السن والرواد.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SLIDE 29: Game الريشة الطائرة Details -->
+                <div class="carousel-item">
+                    <div class="slide-card">
+                        <div class="slide-title">
+                            <h3><i class="fa-solid fa-feather text-primary me-2"></i>بيانات لعبة: الريشة الطائرة</h3>
+                            <span class="slide-number">الشريحة 29 من 31</span>
+                        </div>
+
+                        <!-- Price Comparison Sub-Table -->
+                        <div class="table-responsive mb-3">
+                            <table class="table table-luxury table-bordered text-center align-middle mb-0">
+                                <thead>
+                                    <tr>
+                                        <th>الفئة / البيان</th>
+                                        <th>اشتراك العضو</th>
+                                        <th>خارج النادي (مصري)</th>
+                                        <th>خارج النادي (غير مصري)</th>
+                                        <th>السعة / الملاحظات التنظيمية</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="fw-bold">السعر الحالي</td>
+                                        <td>550 (صغار) ج.م</td>
+                                        <td>900 (صغار) ج.م</td>
+                                        <td>1100 (صغار) ج.م</td>
+                                        <td rowspan="2" class="align-middle fw-bold text-navy">2 وحدة أسبوعياً<br><small class="text-muted">نسبة المعلمين 70% وإيجار الملعب برايفيت 300ج</small></td>
+                                    </tr>
+                                    <tr class="table-primary">
+                                        <td class="fw-bold text-primary">السعر المقترح (2026-2027)</td>
+                                        <td class="fw-bold text-success">650 (صغار) ج.م</td>
+                                        <td class="fw-bold text-success">1000 (صغار) ج.م</td>
+                                        <td class="fw-bold text-success">1200 (صغار) ج.م</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!-- Statistics Grid for Game -->
+                        <h6 class="fw-bold text-navy mb-2"><i class="fa-solid fa-chart-simple text-primary me-1"></i>الإحصائيات المقارنة (2025 vs 2026):</h6>
+                        <div class="table-responsive mb-2">
+                            <table class="table table-sm table-bordered text-center align-middle small">
+                                <thead class="table-dark">
+                                    <tr>
+                                        <th>الشهر / السنة</th>
+                                        <th>أعضاء النادي</th>
+                                        <th>غير الأعضاء</th>
+                                        <th>إجمالي المشاركين</th>
+                                        <th>المبالغ المحصلة (ج.م)</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="fw-bold">يونيو 2025</td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                        <td>2</td>
+                                        <td>1,450 ج.م</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-bold">يونيو 2026</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0 ج.م</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-bold">أغسطس 2025</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0 ج.م</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-bold">أغسطس 2026</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0 ج.م</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!-- Positive Analytical Comment -->
+                        <div class="comment-box">
+                            <i class="fa-solid fa-circle-check text-success me-2"></i><strong>الرأي والتحليل الفني:</strong> نشاط واعد يتميز بنسبة عائد مرتفعة للمدربين وخطة مستهدفة للتوسع الإداري والإنشائي.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SLIDE 30: Game القفز بالمظلات Details -->
+                <div class="carousel-item">
+                    <div class="slide-card">
+                        <div class="slide-title">
+                            <h3><i class="fa-solid fa-parachute-box text-primary me-2"></i>بيانات لعبة: القفز بالمظلات</h3>
+                            <span class="slide-number">الشريحة 30 من 31</span>
+                        </div>
+
+                        <!-- Price Comparison Sub-Table -->
+                        <div class="table-responsive mb-3">
+                            <table class="table table-luxury table-bordered text-center align-middle mb-0">
+                                <thead>
+                                    <tr>
+                                        <th>الفئة / البيان</th>
+                                        <th>اشتراك العضو</th>
+                                        <th>خارج النادي (مصري)</th>
+                                        <th>خارج النادي (غير مصري)</th>
+                                        <th>السعة / الملاحظات التنظيمية</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="fw-bold">السعر الحالي</td>
+                                        <td>550 ج.م</td>
+                                        <td>850 ج.م</td>
+                                        <td>1100 ج.م</td>
+                                        <td rowspan="2" class="align-middle fw-bold text-navy">10 لاعبين<br><small class="text-muted">تدريب مدارس متخصص</small></td>
+                                    </tr>
+                                    <tr class="table-primary">
+                                        <td class="fw-bold text-primary">السعر المقترح (2026-2027)</td>
+                                        <td class="fw-bold text-success">650 ج.م</td>
+                                        <td class="fw-bold text-success">950 ج.م</td>
+                                        <td class="fw-bold text-success">1200 ج.م</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!-- Statistics Grid for Game -->
+                        <h6 class="fw-bold text-navy mb-2"><i class="fa-solid fa-chart-simple text-primary me-1"></i>الإحصائيات المقارنة (2025 vs 2026):</h6>
+                        <div class="table-responsive mb-2">
+                            <table class="table table-sm table-bordered text-center align-middle small">
+                                <thead class="table-dark">
+                                    <tr>
+                                        <th>الشهر / السنة</th>
+                                        <th>أعضاء النادي</th>
+                                        <th>غير الأعضاء</th>
+                                        <th>إجمالي المشاركين</th>
+                                        <th>المبالغ المحصلة (ج.م)</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="fw-bold">يونيو 2025</td>
+                                        <td>0</td>
+                                        <td>2</td>
+                                        <td>2</td>
+                                        <td>1,700 ج.م</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-bold">يونيو 2026</td>
+                                        <td>2</td>
+                                        <td>0</td>
+                                        <td>2</td>
+                                        <td>650 ج.م</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-bold">أغسطس 2025</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0 ج.م</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-bold">أغسطس 2026</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0 ج.م</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!-- Positive Analytical Comment -->
+                        <div class="comment-box">
+                            <i class="fa-solid fa-circle-check text-success me-2"></i><strong>الرأي والتحليل الفني:</strong> رياضة القفز بالمظلات تمثل نشاطاً نوعياً فريداً بنادي 6 أكتوبر يخدم الهواة والممارسين للرياضات الجوية.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SLIDE 31: Thank You Slide -->
                 <div class="carousel-item">
                     <div class="slide-card d-flex flex-column justify-content-center align-items-center text-center">
                         <div class="slide-title w-100 mb-4">
                             <h3><i class="fa-solid fa-heart text-danger me-2"></i>خاتمة التقرير</h3>
-                            <span class="slide-number">الشريحة 6 من 6</span>
+                            <span class="slide-number">الشريحة 31 من 31</span>
                         </div>
 
                         <div class="thank-you-card w-100 my-auto shadow-sm">

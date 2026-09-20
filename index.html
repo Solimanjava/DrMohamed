@@ -371,38 +371,6 @@
                         </div>
                     </div>
 
-                    <!-- SLIDE 3 -->
-                    <div class="carousel-item">
-                        <div class="slide-card">
-                            <div class="slide-title">
-                                <h3><i class="fa-solid fa-sitemap text-primary me-2"></i>الهيكل التنظيمي وضوابط الاتحادات الرياضية</h3>
-                                <span class="slide-number">الشريحة 3 من 31</span>
-                            </div>
-                            <div class="row g-3">
-                                <div class="col-md-6">
-                                    <div class="luxury-quote-box">
-                                        <div class="luxury-quote-title"><i class="fa-solid fa-users-gear text-success"></i>الهيكل التنظيمي للإدارة</div>
-                                        <p class="mb-0 text-secondary">«يتكون الهيكل التنظيمي من: مجلس الإدارة / المشرف العام، مدير عام الأكاديمية، المدير الفني، إدارة شؤون اللاعبين، الإدارة الطبية، وإدارة التسويق والعلاقات العامة.»</p>
-                                    </div>
-                                    <div class="luxury-quote-box">
-                                        <div class="luxury-quote-title"><i class="fa-solid fa-user-doctor text-info"></i>الجاهزية والكوادر المجهزة</div>
-                                        <p class="mb-0 text-secondary">«التعاقد مع مدربين ذوي خلفيات أكاديمية وتربوية... وتوفير أخصائي علاج طبيعي وأخصائي تغذية رياضية ومعد نفسي لكل قطاع.»</p>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="luxury-quote-box">
-                                        <div class="luxury-quote-title"><i class="fa-solid fa-football text-warning"></i>حوكمة الاتحاد المصري (EFA)</div>
-                                        <p class="mb-0 text-secondary">«سقف التسجيل (75 لاعباً كحد أقصى لكل مرحلة عمرية)، وللتصنيف في (الفئة أ)، يجب تعيين مدير أكاديمية يحمل رخصة +B ومدربين برخصة +C على الأقل.»</p>
-                                    </div>
-                                    <div class="luxury-quote-box">
-                                        <div class="luxury-quote-title"><i class="fa-solid fa-laptop-code text-primary"></i>المنصة الرقمية والتحليل الحركي</div>
-                                        <p class="mb-0 text-secondary">«تطبيق نظام ذكي موحد يربط كافة الأكاديميات يتيح متابعة نسب الحضور، منحنيات تطور القياسات البدنية، والتقارير الفنية.»</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
                     <!-- SLIDE 4 -->
                     <div class="carousel-item">
                         <div class="slide-card">
@@ -1395,7 +1363,7 @@
 
             <!-- Slide Counter Display -->
             <div class="slide-counter-display mt-3" aria-live="polite" aria-atomic="true">
-                الشريحة <span id="currentSlideNum">1</span> من <span id="totalSlidesNum">31</span>
+                الشريحة <span id="currentSlideNum">1</span> من <span id="totalSlidesNum">30</span>
             </div>
 
             <!-- Bottom Dots Navigation (Outside Carousel) -->
@@ -1427,6 +1395,7 @@
             document.getElementById('totalSlidesNum').textContent = totalSlides;
             slides.forEach((slide, index) => {
                 const title = slide.querySelector('h3').textContent.trim();
+                slide.querySelector('.slide-number').textContent = 'الشريحة ' + (index + 1) + ' من ' + totalSlides;
                 slideSelect.add(new Option((index + 1) + ' — ' + title, index));
                 slide.setAttribute('role', 'group');
                 slide.setAttribute('aria-roledescription', 'شريحة');
@@ -1472,6 +1441,7 @@
                 });
             }
 
+            updateIndicators(0);
             carouselEl.addEventListener('slid.bs.carousel', function(e) {
                 updateIndicators(e.to);
             });

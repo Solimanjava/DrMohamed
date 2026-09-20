@@ -10,14 +10,16 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
         :root {
-            --navy-primary: #1e293b;
-            --navy-dark: #0f172a;
-            --blue-accent: #2563eb;
-            --slate-bg: #f8fafc;
+            --navy-primary: #18354a;
+            --navy-dark: #0d2233;
+            --blue-accent: #087f8c;
+            --gold-accent: #c5a365;
+            --slate-bg: #eef3f6;
             --card-bg: #ffffff;
-            --border-color: #cbd5e1;
-            --text-dark: #0f172a;
-            --text-muted: #475569;
+            --border-color: #dce5eb;
+            --text-dark: #142d40;
+            --text-muted: #526779;
+            --bs-primary-rgb: 8, 127, 140;
         }
         * { box-sizing: border-box; }
         body {
@@ -32,16 +34,16 @@
         }
         .presentation-header {
             background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy-primary) 100%);
-            border-bottom: 4px solid var(--blue-accent);
-            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-            padding: 20px 0;
+            border-bottom: 3px solid var(--gold-accent);
+            box-shadow: 0 8px 28px rgba(13,34,51,0.12);
+            padding: 28px 0;
         }
         .royal-title { font-weight: 800; color: #ffffff; font-size: 2rem; margin: 0; }
         .royal-subtitle { color: #94a3b8; font-size: 1.05rem; font-weight: 600; margin: 4px 0; }
         .author-tag {
-            background-color: rgba(37, 99, 235, 0.15);
-            color: #93c5fd;
-            border: 1px solid rgba(147, 197, 253, 0.3);
+            background-color: rgba(197, 163, 101, 0.1);
+            color: #eddbb9;
+            border: 1px solid rgba(197, 163, 101, 0.35);
             display: inline-block;
             padding: 3px 16px;
             border-radius: 20px;
@@ -53,9 +55,9 @@
             background-color: var(--card-bg);
             border: 1px solid var(--border-color);
             border-top: 4px solid var(--blue-accent);
-            border-radius: 12px;
-            box-shadow: 0 10px 25px rgba(15, 23, 42, 0.05);
-            padding: 25px 30px;
+            border-radius: 20px;
+            box-shadow: 0 16px 48px rgba(13, 34, 51, 0.08);
+            padding: 30px 34px;
             min-height: 540px;
         }
         .slide-title {
@@ -110,16 +112,16 @@
             align-items: center;
             gap: 8px;
         }
-        .table-luxury { border: 1px solid var(--border-color); font-size: 0.9rem; margin-bottom: 0; }
+        .table-luxury { border: 1px solid var(--border-color); font-size: 0.9rem; margin-bottom: 0; min-width: 600px; }
         .table-luxury thead { background-color: var(--navy-primary); color: #ffffff; font-weight: 700; }
         .comment-box {
-            background-color: #eff6ff;
-            border: 1px solid #bfdbfe;
-            border-right: 4px solid #2563eb;
+            background-color: #f0f9f9;
+            border: 1px solid #cde5e7;
+            border-right: 4px solid var(--blue-accent);
             border-radius: 8px;
             padding: 14px 18px;
             font-size: 0.95rem;
-            color: #1e3a8a;
+            color: #22505b;
             margin-top: 15px;
         }
         .thank-you-card {
@@ -129,8 +131,8 @@
             padding: 50px 30px;
             text-align: center;
         }
-        .july-row { background-color: #fef9c3 !important; }
-        .july-row td { font-weight: 700; }
+        .july-row { --bs-table-bg: #f5f8fa; }
+        .july-row td { font-weight: 600; }
 
         /* ===== Carousel Container ===== */
         #presentationWrapper {
@@ -231,6 +233,63 @@
             font-size: 0.9rem;
             margin-bottom: 15px;
         }
+        .presentation-header .royal-title > i { color: var(--gold-accent) !important; }
+        .royal-subtitle { color: #bacbd7; }
+        .slide-title h3 { font-weight: 800; line-height: 1.8; }
+        .slide-title h3 > i { background: #eaf5f5; padding: 10px; border-radius: 12px; }
+        .metric-card { background: linear-gradient(145deg, #ffffff, #f0f7f8); border-radius: 14px; padding: 24px 12px; }
+        .metric-value { font-variant-numeric: tabular-nums; font-size: clamp(1.25rem, 1.7vw, 1.65rem); }
+        .metric-label { margin-top: 8px; }
+        .luxury-quote-box { border-radius: 12px; padding: 18px; }
+        .table-responsive { border: 1px solid var(--border-color); border-radius: 12px; }
+        .table { --bs-table-border-color: var(--border-color); margin-bottom: 0; font-variant-numeric: tabular-nums; }
+        .table > thead { --bs-table-bg: var(--navy-primary); --bs-table-color: #ffffff; }
+        .table > thead > tr > th { padding: 12px 8px; font-size: 0.82rem; vertical-align: middle; }
+        .table > tbody > tr > td { padding: 9px 8px; }
+        .table-primary { --bs-table-bg: #edf7f7; --bs-table-border-color: #cde5e7; }
+        .comparison-table { min-width: 570px; }
+        .comparison-table td:not(:first-child) { direction: ltr; }
+        .comparison-table td:last-child { font-weight: 800; color: var(--navy-primary); }
+        .year-group > th { text-align: right; padding: 9px 16px; font-size: 0.86rem; letter-spacing: 0; }
+        .year-group--previous { --bs-table-bg: #e9eef3; --bs-table-color: #334e65; }
+        .year-group--current { --bs-table-bg: #dcefed; --bs-table-color: #125e63; }
+        .presentation-toolbar { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 18px; }
+        .period-legend { display: flex; flex-wrap: wrap; gap: 8px; }
+        .period-chip { display: inline-flex; align-items: center; gap: 8px; padding: 6px 12px; border-radius: 8px; font-size: 0.8rem; font-weight: 700; background: #e9eef3; color: #334e65; }
+        .period-chip::before { content: ''; width: 7px; height: 7px; border-radius: 50%; background: #64748b; }
+        .period-chip--current { background: #dcefed; color: #125e63; }
+        .period-chip--current::before { background: var(--blue-accent); }
+        .slide-picker { display: flex; align-items: center; gap: 10px; min-width: 0; }
+        .slide-picker label { white-space: nowrap; font-size: 0.8rem; font-weight: 700; color: var(--text-muted); }
+        .slide-picker select { max-width: 330px; font-size: 0.85rem; border-color: var(--border-color); border-radius: 10px; }
+        .presentation-progress { height: 4px; margin-top: 18px; background: #dce5eb; border-radius: 4px; overflow: hidden; }
+        .presentation-progress span { display: block; width: 3.2258%; height: 100%; background: var(--blue-accent); transition: width 0.3s ease; }
+        .chart-panel { padding: 20px; background: #f8fbfc; border: 1px solid var(--border-color); border-radius: 14px; height: 100%; }
+        .chart-frame { position: relative; height: 260px; }
+        .chart-fallback { color: var(--text-muted); text-align: center; padding: 24px; }
+        .revenue-summary { min-width: 560px; font-size: 0.9rem; }
+        .btn-primary { --bs-btn-bg: var(--blue-accent); --bs-btn-border-color: var(--blue-accent); --bs-btn-hover-bg: #066773; --bs-btn-hover-border-color: #066773; --bs-btn-active-bg: #055963; --bs-btn-active-border-color: #055963; }
+        button:focus-visible, select:focus-visible { outline: 3px solid var(--gold-accent); outline-offset: 4px; }
+        @media (max-width: 991px) {
+            .presentation-toolbar { flex-direction: column; align-items: stretch; }
+            .slide-picker select { max-width: none; }
+        }
+        @media (max-width: 768px) {
+            .presentation-header { padding: 22px 12px; }
+            .royal-title { font-size: 1.5rem; }
+            .royal-subtitle { font-size: 0.9rem; }
+            .slide-card { padding: 20px 16px; border-radius: 14px; min-height: 0; }
+            .slide-title h3 { font-size: 1.1rem; }
+            .carousel-control-prev, .carousel-control-next { display: none; }
+            .chart-panel { padding: 14px; }
+            .table-responsive::before { content: 'اسحب الجدول أفقياً لعرض جميع الأعمدة'; display: block; position: sticky; right: 0; padding: 8px; text-align: center; font-size: 0.72rem; color: var(--text-muted); background: #f5f8fa; }
+            .carousel-dots { gap: 8px; padding: 12px; border-radius: 16px; }
+            .carousel-dots button { width: 16px; height: 16px; }
+            .nav-buttons-container .btn { padding: 10px 24px; }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            .carousel-item, .carousel-control-prev, .carousel-control-next, .carousel-dots button, .presentation-progress span, .btn { transition: none !important; }
+        }
     </style>
 </head>
 <body>
@@ -245,7 +304,17 @@
 
     <main class="container my-4 flex-grow-1">
         <div id="presentationWrapper">
-            <div id="luxuryPresentation" class="carousel slide" data-bs-ride="false" data-bs-touch="true">
+            <div class="presentation-toolbar">
+                <div class="period-legend" aria-label="فترات المقارنة">
+                    <span class="period-chip">العام المنقضي · 2025</span>
+                    <span class="period-chip period-chip--current">العام الحالي · 2026</span>
+                </div>
+                <div class="slide-picker">
+                    <label for="slideSelect">انتقال إلى</label>
+                    <select id="slideSelect" class="form-select" aria-controls="luxuryPresentation"></select>
+                </div>
+            </div>
+            <div id="luxuryPresentation" class="carousel slide" data-bs-ride="false" data-bs-touch="true" role="region" aria-roledescription="عرض شرائح" aria-label="تقرير النشاط الرياضي">
                 <div class="carousel-inner">
 
                     <!-- SLIDE 1 -->
@@ -376,18 +445,38 @@
                                 <h3><i class="fa-solid fa-chart-line text-primary me-2"></i>الإحصائيات الشهرية وتحليل الإيرادات العامة</h3>
                                 <span class="slide-number">الشريحة 5 من 31</span>
                             </div>
-                            <div class="row align-items-center">
+                            <div class="row g-3">
                                 <div class="col-md-6">
-                                    <h5 class="fw-bold text-center mb-3" style="color: var(--navy-dark);">تحليل الإيرادات المحصلة (ج.م)</h5>
-                                    <canvas id="revenueChartOfficial" height="200"></canvas>
+                                    <div class="chart-panel">
+                                        <h5 class="fw-bold text-center mb-3" style="color: var(--navy-dark);">الإيرادات المحصلة <small class="text-muted">(ج.م)</small></h5>
+                                        <div class="chart-frame"><canvas id="revenueChartOfficial" role="img" aria-label="مقارنة إيرادات العام المنقضي 2025 والعام الحالي 2026؛ القيم موضحة في الجدول التالي"></canvas></div>
+                                    </div>
                                 </div>
                                 <div class="col-md-6">
-                                    <h5 class="fw-bold text-center mb-3" style="color: var(--navy-dark);">إجمالي أعداد المشاركين</h5>
-                                    <canvas id="participantsChartOfficial" height="200"></canvas>
+                                    <div class="chart-panel">
+                                        <h5 class="fw-bold text-center mb-3" style="color: var(--navy-dark);">إجمالي أعداد المشاركين</h5>
+                                        <div class="chart-frame"><canvas id="participantsChartOfficial" role="img" aria-label="مقارنة أعداد المشاركين في العام المنقضي 2025 والعام الحالي 2026؛ القيم موضحة في الجدول التالي"></canvas></div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="mt-4 p-3 rounded border text-center" style="background-color: #f8fafc; border-color: var(--blue-accent) !important;">
-                                <small class="text-muted fw-bold">ملاحظة: تحقق أعلى إيراد في شهر يونيو 2026 بإجمالي 12,913,326 ج.م شاملاً الاشتراكات والتسجيلات الجديدة لموسم الصيف.</small>
+                            <div class="table-responsive mt-3">
+                                <table id="monthlySummary" class="table table-bordered text-center align-middle revenue-summary">
+                                    <caption class="visually-hidden">الإجماليات الشهرية للإيرادات والمشاركين حسب العام</caption>
+                                    <thead><tr><th scope="col">المجموعة / الشهر</th><th scope="col">يونيو</th><th scope="col">يوليو</th><th scope="col">أغسطس</th></tr></thead>
+                                    <tbody data-year="2025">
+                                        <tr class="year-group year-group--previous"><th colspan="4" scope="rowgroup">العام المنقضي · 2025</th></tr>
+                                        <tr data-metric="revenue"><th scope="row">الإيرادات (ج.م)</th><td>1,499,779</td><td>2,838,581</td><td>2,841,658</td></tr>
+                                        <tr data-metric="participants"><th scope="row">المشاركون</th><td>3,990</td><td>6,058</td><td>5,219</td></tr>
+                                    </tbody>
+                                    <tbody data-year="2026">
+                                        <tr class="year-group year-group--current"><th colspan="4" scope="rowgroup">العام الحالي · 2026</th></tr>
+                                        <tr data-metric="revenue"><th scope="row">الإيرادات (ج.م)</th><td>2,191,326</td><td>2,550,383</td><td>2,881,566</td></tr>
+                                        <tr data-metric="participants"><th scope="row">المشاركون</th><td>3,010</td><td>3,552</td><td>4,264</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="comment-box">
+                                <strong>قراءة المؤشرات:</strong> أعلى إيراد ضمن الأشهر المعروضة للعام الحالي تحقق في أغسطس 2026 بقيمة <bdi class="fw-bold">2,881,566 ج.م</bdi>، مقابل <bdi class="fw-bold">2,191,326 ج.م</bdi> في يونيو 2026.
                             </div>
                         </div>
                     </div>
@@ -407,12 +496,16 @@
                             </div>
                             <h6 class="fw-bold mb-2"><i class="fa-solid fa-chart-simple text-primary me-1"></i>الإحصائيات المقارنة:</h6>
                             <div class="table-responsive mb-2">
-                                <table class="table table-sm table-bordered text-center align-middle small">
+                                <table class="table table-sm table-bordered text-center align-middle small comparison-table">
                                     <thead class="table-dark"><tr><th>الشهر / السنة</th><th>أعضاء النادي</th><th>غير الأعضاء</th><th>إجمالي المشاركين</th><th>المبالغ المحصلة (ج.م)</th></tr></thead>
-                                    <tbody>
+                                    <tbody data-year="2025">
+                                        <tr class="year-group year-group--previous"><th colspan="5" scope="rowgroup">العام المنقضي · 2025</th></tr>
                                         <tr><td class="fw-bold">يونيو 2025</td><td>1726</td><td>164</td><td>1890</td><td>546,650</td></tr>
                                         <tr class="july-row"><td class="fw-bold">يوليو 2025</td><td>2570</td><td>354</td><td>2924</td><td>1,066,065</td></tr>
                                         <tr><td class="fw-bold">أغسطس 2025</td><td>1877</td><td>118</td><td>1995</td><td>1,011,295</td></tr>
+                                    </tbody>
+                                    <tbody data-year="2026">
+                                        <tr class="year-group year-group--current"><th colspan="5" scope="rowgroup">العام الحالي · 2026</th></tr>
                                         <tr><td class="fw-bold">يونيو 2026</td><td>1281</td><td>2</td><td>1283</td><td>729,580</td></tr>
                                         <tr class="july-row"><td class="fw-bold">يوليو 2026</td><td>1623</td><td>5</td><td>1628</td><td>981,675</td></tr>
                                         <tr><td class="fw-bold">أغسطس 2026</td><td>1522</td><td>2</td><td>1524</td><td>933,097</td></tr>
@@ -438,12 +531,16 @@
                             </div>
                             <h6 class="fw-bold mb-2"><i class="fa-solid fa-chart-simple text-primary me-1"></i>الإحصائيات المقارنة:</h6>
                             <div class="table-responsive mb-2">
-                                <table class="table table-sm table-bordered text-center align-middle small">
+                                <table class="table table-sm table-bordered text-center align-middle small comparison-table">
                                     <thead class="table-dark"><tr><th>الشهر / السنة</th><th>أعضاء النادي</th><th>غير الأعضاء</th><th>إجمالي المشاركين</th><th>المبالغ المحصلة (ج.م)</th></tr></thead>
-                                    <tbody>
+                                    <tbody data-year="2025">
+                                        <tr class="year-group year-group--previous"><th colspan="5" scope="rowgroup">العام المنقضي · 2025</th></tr>
                                         <tr><td class="fw-bold">يونيو 2025</td><td>489</td><td>124</td><td>613</td><td>260,945</td></tr>
                                         <tr class="july-row"><td class="fw-bold">يوليو 2025</td><td>686</td><td>219</td><td>905</td><td>478,110</td></tr>
                                         <tr><td class="fw-bold">أغسطس 2025</td><td>743</td><td>226</td><td>969</td><td>697,255</td></tr>
+                                    </tbody>
+                                    <tbody data-year="2026">
+                                        <tr class="year-group year-group--current"><th colspan="5" scope="rowgroup">العام الحالي · 2026</th></tr>
                                         <tr><td class="fw-bold">يونيو 2026</td><td>637</td><td>160</td><td>797</td><td>425,797</td></tr>
                                         <tr class="july-row"><td class="fw-bold">يوليو 2026</td><td>728</td><td>157</td><td>885</td><td>527,627</td></tr>
                                         <tr><td class="fw-bold">أغسطس 2026</td><td>843</td><td>193</td><td>1036</td><td>948,577</td></tr>
@@ -469,12 +566,16 @@
                             </div>
                             <h6 class="fw-bold mb-2"><i class="fa-solid fa-chart-simple text-primary me-1"></i>الإحصائيات المقارنة:</h6>
                             <div class="table-responsive mb-2">
-                                <table class="table table-sm table-bordered text-center align-middle small">
+                                <table class="table table-sm table-bordered text-center align-middle small comparison-table">
                                     <thead class="table-dark"><tr><th>الشهر / السنة</th><th>أعضاء النادي</th><th>غير الأعضاء</th><th>إجمالي المشاركين</th><th>المبالغ المحصلة (ج.م)</th></tr></thead>
-                                    <tbody>
+                                    <tbody data-year="2025">
+                                        <tr class="year-group year-group--previous"><th colspan="5" scope="rowgroup">العام المنقضي · 2025</th></tr>
                                         <tr><td class="fw-bold">يونيو 2025</td><td>145</td><td>66</td><td>211</td><td>92,980</td></tr>
                                         <tr class="july-row"><td class="fw-bold">يوليو 2025</td><td>265</td><td>122</td><td>387</td><td>212,510</td></tr>
                                         <tr><td class="fw-bold">أغسطس 2025</td><td>238</td><td>112</td><td>350</td><td>163,320</td></tr>
+                                    </tbody>
+                                    <tbody data-year="2026">
+                                        <tr class="year-group year-group--current"><th colspan="5" scope="rowgroup">العام الحالي · 2026</th></tr>
                                         <tr><td class="fw-bold">يونيو 2026</td><td>220</td><td>42</td><td>262</td><td>141,985</td></tr>
                                         <tr class="july-row"><td class="fw-bold">يوليو 2026</td><td>271</td><td>--</td><td>271</td><td>141,780</td></tr>
                                         <tr><td class="fw-bold">أغسطس 2026</td><td>186</td><td>--</td><td>186</td><td>101,240</td></tr>
@@ -500,12 +601,16 @@
                             </div>
                             <h6 class="fw-bold mb-2"><i class="fa-solid fa-chart-simple text-primary me-1"></i>الإحصائيات المقارنة:</h6>
                             <div class="table-responsive mb-2">
-                                <table class="table table-sm table-bordered text-center align-middle small">
+                                <table class="table table-sm table-bordered text-center align-middle small comparison-table">
                                     <thead class="table-dark"><tr><th>الشهر / السنة</th><th>أعضاء النادي</th><th>غير الأعضاء</th><th>إجمالي المشاركين</th><th>المبالغ المحصلة (ج.م)</th></tr></thead>
-                                    <tbody>
+                                    <tbody data-year="2025">
+                                        <tr class="year-group year-group--previous"><th colspan="5" scope="rowgroup">العام المنقضي · 2025</th></tr>
                                         <tr><td class="fw-bold">يونيو 2025</td><td>89</td><td>23</td><td>112</td><td>37,212</td></tr>
                                         <tr class="july-row"><td class="fw-bold">يوليو 2025</td><td>139</td><td>62</td><td>201</td><td>10,867</td></tr>
                                         <tr><td class="fw-bold">أغسطس 2025</td><td>114</td><td>44</td><td>158</td><td>77,512</td></tr>
+                                    </tbody>
+                                    <tbody data-year="2026">
+                                        <tr class="year-group year-group--current"><th colspan="5" scope="rowgroup">العام الحالي · 2026</th></tr>
                                         <tr><td class="fw-bold">يونيو 2026</td><td>116</td><td>2</td><td>118</td><td>60,005</td></tr>
                                         <tr class="july-row"><td class="fw-bold">يوليو 2026</td><td>153</td><td>--</td><td>153</td><td>77,952</td></tr>
                                         <tr><td class="fw-bold">أغسطس 2026</td><td>133</td><td>--</td><td>133</td><td>66,550</td></tr>
@@ -531,12 +636,16 @@
                             </div>
                             <h6 class="fw-bold mb-2"><i class="fa-solid fa-chart-simple text-primary me-1"></i>الإحصائيات المقارنة:</h6>
                             <div class="table-responsive mb-2">
-                                <table class="table table-sm table-bordered text-center align-middle small">
+                                <table class="table table-sm table-bordered text-center align-middle small comparison-table">
                                     <thead class="table-dark"><tr><th>الشهر / السنة</th><th>أعضاء النادي</th><th>غير الأعضاء</th><th>إجمالي المشاركين</th><th>المبالغ المحصلة (ج.م)</th></tr></thead>
-                                    <tbody>
+                                    <tbody data-year="2025">
+                                        <tr class="year-group year-group--previous"><th colspan="5" scope="rowgroup">العام المنقضي · 2025</th></tr>
                                         <tr><td class="fw-bold">يونيو 2025</td><td>82</td><td>28</td><td>110</td><td>35,835</td></tr>
                                         <tr class="july-row"><td class="fw-bold">يوليو 2025</td><td>123</td><td>47</td><td>170</td><td>108,510</td></tr>
                                         <tr><td class="fw-bold">أغسطس 2025</td><td>138</td><td>33</td><td>171</td><td>86,630</td></tr>
+                                    </tbody>
+                                    <tbody data-year="2026">
+                                        <tr class="year-group year-group--current"><th colspan="5" scope="rowgroup">العام الحالي · 2026</th></tr>
                                         <tr><td class="fw-bold">يونيو 2026</td><td>195</td><td>--</td><td>--</td><td>120,045</td></tr>
                                         <tr class="july-row"><td class="fw-bold">يوليو 2026</td><td>154</td><td>--</td><td>154</td><td>87,665</td></tr>
                                         <tr><td class="fw-bold">أغسطس 2026</td><td>179</td><td>--</td><td>179</td><td>113,420</td></tr>
@@ -562,12 +671,16 @@
                             </div>
                             <h6 class="fw-bold mb-2"><i class="fa-solid fa-chart-simple text-primary me-1"></i>الإحصائيات المقارنة:</h6>
                             <div class="table-responsive mb-2">
-                                <table class="table table-sm table-bordered text-center align-middle small">
+                                <table class="table table-sm table-bordered text-center align-middle small comparison-table">
                                     <thead class="table-dark"><tr><th>الشهر / السنة</th><th>أعضاء النادي</th><th>غير الأعضاء</th><th>إجمالي المشاركين</th><th>المبالغ المحصلة (ج.م)</th></tr></thead>
-                                    <tbody>
+                                    <tbody data-year="2025">
+                                        <tr class="year-group year-group--previous"><th colspan="5" scope="rowgroup">العام المنقضي · 2025</th></tr>
                                         <tr><td class="fw-bold">يونيو 2025</td><td>165</td><td>26</td><td>191</td><td>86,885</td></tr>
                                         <tr class="july-row"><td class="fw-bold">يوليو 2025</td><td>226</td><td>46</td><td>272</td><td>140,635</td></tr>
                                         <tr><td class="fw-bold">أغسطس 2025</td><td>200</td><td>29</td><td>229</td><td>98,435</td></tr>
+                                    </tbody>
+                                    <tbody data-year="2026">
+                                        <tr class="year-group year-group--current"><th colspan="5" scope="rowgroup">العام الحالي · 2026</th></tr>
                                         <tr><td class="fw-bold">يونيو 2026</td><td>191</td><td>1</td><td>192</td><td>94,882</td></tr>
                                         <tr class="july-row"><td class="fw-bold">يوليو 2026</td><td>329</td><td>--</td><td>329</td><td>164,254</td></tr>
                                         <tr><td class="fw-bold">أغسطس 2026</td><td>165</td><td>--</td><td>165</td><td>78,117</td></tr>
@@ -593,12 +706,16 @@
                             </div>
                             <h6 class="fw-bold mb-2"><i class="fa-solid fa-chart-simple text-primary me-1"></i>الإحصائيات المقارنة:</h6>
                             <div class="table-responsive mb-2">
-                                <table class="table table-sm table-bordered text-center align-middle small">
+                                <table class="table table-sm table-bordered text-center align-middle small comparison-table">
                                     <thead class="table-dark"><tr><th>الشهر / السنة</th><th>أعضاء النادي</th><th>غير الأعضاء</th><th>إجمالي المشاركين</th><th>المبالغ المحصلة (ج.م)</th></tr></thead>
-                                    <tbody>
+                                    <tbody data-year="2025">
+                                        <tr class="year-group year-group--previous"><th colspan="5" scope="rowgroup">العام المنقضي · 2025</th></tr>
                                         <tr><td class="fw-bold">يونيو 2025</td><td>48</td><td>7</td><td>55</td><td>43,605</td></tr>
                                         <tr class="july-row"><td class="fw-bold">يوليو 2025</td><td>102</td><td>26</td><td>128</td><td>44,625</td></tr>
                                         <tr><td class="fw-bold">أغسطس 2025</td><td>69</td><td>14</td><td>83</td><td>38,970</td></tr>
+                                    </tbody>
+                                    <tbody data-year="2026">
+                                        <tr class="year-group year-group--current"><th colspan="5" scope="rowgroup">العام الحالي · 2026</th></tr>
                                         <tr><td class="fw-bold">يونيو 2026</td><td>61</td><td>--</td><td>--</td><td>31,790</td></tr>
                                         <tr class="july-row"><td class="fw-bold">يوليو 2026</td><td>84</td><td>--</td><td>84</td><td>44,880</td></tr>
                                         <tr><td class="fw-bold">أغسطس 2026</td><td>98</td><td>--</td><td>98</td><td>39,185</td></tr>
@@ -624,12 +741,16 @@
                             </div>
                             <h6 class="fw-bold mb-2"><i class="fa-solid fa-chart-simple text-primary me-1"></i>الإحصائيات المقارنة:</h6>
                             <div class="table-responsive mb-2">
-                                <table class="table table-sm table-bordered text-center align-middle small">
+                                <table class="table table-sm table-bordered text-center align-middle small comparison-table">
                                     <thead class="table-dark"><tr><th>الشهر / السنة</th><th>أعضاء النادي</th><th>غير الأعضاء</th><th>إجمالي المشاركين</th><th>المبالغ المحصلة (ج.م)</th></tr></thead>
-                                    <tbody>
+                                    <tbody data-year="2025">
+                                        <tr class="year-group year-group--previous"><th colspan="5" scope="rowgroup">العام المنقضي · 2025</th></tr>
                                         <tr><td class="fw-bold">يونيو 2025</td><td>72</td><td>26</td><td>98</td><td>45,375</td></tr>
                                         <tr class="july-row"><td class="fw-bold">يوليو 2025</td><td>107</td><td>28</td><td>135</td><td>66,050</td></tr>
                                         <tr><td class="fw-bold">أغسطس 2025</td><td>98</td><td>14</td><td>112</td><td>54,875</td></tr>
+                                    </tbody>
+                                    <tbody data-year="2026">
+                                        <tr class="year-group year-group--current"><th colspan="5" scope="rowgroup">العام الحالي · 2026</th></tr>
                                         <tr><td class="fw-bold">يونيو 2026</td><td>125</td><td>--</td><td>--</td><td>67,680</td></tr>
                                         <tr class="july-row"><td class="fw-bold">يوليو 2026</td><td>150</td><td>--</td><td>150</td><td>83,730</td></tr>
                                         <tr><td class="fw-bold">أغسطس 2026</td><td>157</td><td>--</td><td>157</td><td>89,850</td></tr>
@@ -655,12 +776,16 @@
                             </div>
                             <h6 class="fw-bold mb-2"><i class="fa-solid fa-chart-simple text-primary me-1"></i>الإحصائيات المقارنة:</h6>
                             <div class="table-responsive mb-2">
-                                <table class="table table-sm table-bordered text-center align-middle small">
+                                <table class="table table-sm table-bordered text-center align-middle small comparison-table">
                                     <thead class="table-dark"><tr><th>الشهر / السنة</th><th>أعضاء النادي</th><th>غير الأعضاء</th><th>إجمالي المشاركين</th><th>المبالغ المحصلة (ج.م)</th></tr></thead>
-                                    <tbody>
+                                    <tbody data-year="2025">
+                                        <tr class="year-group year-group--previous"><th colspan="5" scope="rowgroup">العام المنقضي · 2025</th></tr>
                                         <tr><td class="fw-bold">يونيو 2025</td><td>52</td><td>20</td><td>72</td><td>26,940</td></tr>
                                         <tr class="july-row"><td class="fw-bold">يوليو 2025</td><td>70</td><td>30</td><td>100</td><td>45,732</td></tr>
                                         <tr><td class="fw-bold">أغسطس 2025</td><td>75</td><td>27</td><td>102</td><td>47,242</td></tr>
+                                    </tbody>
+                                    <tbody data-year="2026">
+                                        <tr class="year-group year-group--current"><th colspan="5" scope="rowgroup">العام الحالي · 2026</th></tr>
                                         <tr><td class="fw-bold">يونيو 2026</td><td>86</td><td>--</td><td>--</td><td>42,790</td></tr>
                                         <tr class="july-row"><td class="fw-bold">يوليو 2026</td><td>85</td><td>--</td><td>85</td><td>41,580</td></tr>
                                         <tr><td class="fw-bold">أغسطس 2026</td><td>76</td><td>--</td><td>76</td><td>38,225</td></tr>
@@ -686,12 +811,16 @@
                             </div>
                             <h6 class="fw-bold mb-2"><i class="fa-solid fa-chart-simple text-primary me-1"></i>الإحصائيات المقارنة:</h6>
                             <div class="table-responsive mb-2">
-                                <table class="table table-sm table-bordered text-center align-middle small">
+                                <table class="table table-sm table-bordered text-center align-middle small comparison-table">
                                     <thead class="table-dark"><tr><th>الشهر / السنة</th><th>أعضاء النادي</th><th>غير الأعضاء</th><th>إجمالي المشاركين</th><th>المبالغ المحصلة (ج.م)</th></tr></thead>
-                                    <tbody>
+                                    <tbody data-year="2025">
+                                        <tr class="year-group year-group--previous"><th colspan="5" scope="rowgroup">العام المنقضي · 2025</th></tr>
                                         <tr><td class="fw-bold">يونيو 2025</td><td>76</td><td>14</td><td>90</td><td>61,407</td></tr>
                                         <tr class="july-row"><td class="fw-bold">يوليو 2025</td><td>146</td><td>30</td><td>176</td><td>112,282</td></tr>
                                         <tr><td class="fw-bold">أغسطس 2025</td><td>162</td><td>32</td><td>194</td><td>130,307</td></tr>
+                                    </tbody>
+                                    <tbody data-year="2026">
+                                        <tr class="year-group year-group--current"><th colspan="5" scope="rowgroup">العام الحالي · 2026</th></tr>
                                         <tr><td class="fw-bold">يونيو 2026</td><td>141</td><td>4</td><td>145</td><td>98,410</td></tr>
                                         <tr class="july-row"><td class="fw-bold">يوليو 2026</td><td>194</td><td>1</td><td>195</td><td>134,015</td></tr>
                                         <tr><td class="fw-bold">أغسطس 2026</td><td>187</td><td>--</td><td>187</td><td>133,135</td></tr>
@@ -717,12 +846,16 @@
                             </div>
                             <h6 class="fw-bold mb-2"><i class="fa-solid fa-chart-simple text-primary me-1"></i>الإحصائيات المقارنة:</h6>
                             <div class="table-responsive mb-2">
-                                <table class="table table-sm table-bordered text-center align-middle small">
+                                <table class="table table-sm table-bordered text-center align-middle small comparison-table">
                                     <thead class="table-dark"><tr><th>الشهر / السنة</th><th>أعضاء النادي</th><th>غير الأعضاء</th><th>إجمالي المشاركين</th><th>المبالغ المحصلة (ج.م)</th></tr></thead>
-                                    <tbody>
+                                    <tbody data-year="2025">
+                                        <tr class="year-group year-group--previous"><th colspan="5" scope="rowgroup">العام المنقضي · 2025</th></tr>
                                         <tr><td class="fw-bold">يونيو 2025</td><td>183</td><td>13</td><td>196</td><td>121,725</td></tr>
                                         <tr class="july-row"><td class="fw-bold">يوليو 2025</td><td>150</td><td>16</td><td>166</td><td>271,230</td></tr>
                                         <tr><td class="fw-bold">أغسطس 2025</td><td>205</td><td>10</td><td>215</td><td>151,987</td></tr>
+                                    </tbody>
+                                    <tbody data-year="2026">
+                                        <tr class="year-group year-group--current"><th colspan="5" scope="rowgroup">العام الحالي · 2026</th></tr>
                                         <tr><td class="fw-bold">يونيو 2026</td><td>250</td><td>--</td><td>--</td><td>193,127</td></tr>
                                         <tr class="july-row"><td class="fw-bold">يوليو 2026</td><td>68</td><td>--</td><td>68</td><td>43,550</td></tr>
                                         <tr><td class="fw-bold">أغسطس 2026</td><td>85</td><td>--</td><td>85</td><td>52,555</td></tr>
@@ -748,12 +881,16 @@
                             </div>
                             <h6 class="fw-bold mb-2"><i class="fa-solid fa-chart-simple text-primary me-1"></i>الإحصائيات المقارنة:</h6>
                             <div class="table-responsive mb-2">
-                                <table class="table table-sm table-bordered text-center align-middle small">
+                                <table class="table table-sm table-bordered text-center align-middle small comparison-table">
                                     <thead class="table-dark"><tr><th>الشهر / السنة</th><th>أعضاء النادي</th><th>غير الأعضاء</th><th>إجمالي المشاركين</th><th>المبالغ المحصلة (ج.م)</th></tr></thead>
-                                    <tbody>
+                                    <tbody data-year="2025">
+                                        <tr class="year-group year-group--previous"><th colspan="5" scope="rowgroup">العام المنقضي · 2025</th></tr>
                                         <tr><td class="fw-bold">يونيو 2025</td><td>37</td><td>12</td><td>49</td><td>22,900</td></tr>
                                         <tr class="july-row"><td class="fw-bold">يوليو 2025</td><td>80</td><td>18</td><td>98</td><td>43,450</td></tr>
                                         <tr><td class="fw-bold">أغسطس 2025</td><td>107</td><td>15</td><td>122</td><td>56,490</td></tr>
+                                    </tbody>
+                                    <tbody data-year="2026">
+                                        <tr class="year-group year-group--current"><th colspan="5" scope="rowgroup">العام الحالي · 2026</th></tr>
                                         <tr><td class="fw-bold">يونيو 2026</td><td>75</td><td>7</td><td>82</td><td>45,330</td></tr>
                                         <tr class="july-row"><td class="fw-bold">يوليو 2026</td><td>87</td><td>--</td><td>87</td><td>46,680</td></tr>
                                         <tr><td class="fw-bold">أغسطس 2026</td><td>84</td><td>--</td><td>84</td><td>44,700</td></tr>
@@ -779,12 +916,16 @@
                             </div>
                             <h6 class="fw-bold mb-2"><i class="fa-solid fa-chart-simple text-primary me-1"></i>الإحصائيات المقارنة:</h6>
                             <div class="table-responsive mb-2">
-                                <table class="table table-sm table-bordered text-center align-middle small">
+                                <table class="table table-sm table-bordered text-center align-middle small comparison-table">
                                     <thead class="table-dark"><tr><th>الشهر / السنة</th><th>أعضاء النادي</th><th>غير الأعضاء</th><th>إجمالي المشاركين</th><th>المبالغ المحصلة (ج.م)</th></tr></thead>
-                                    <tbody>
+                                    <tbody data-year="2025">
+                                        <tr class="year-group year-group--previous"><th colspan="5" scope="rowgroup">العام المنقضي · 2025</th></tr>
                                         <tr><td class="fw-bold">يونيو 2025</td><td>64</td><td>6</td><td>70</td><td>33,145</td></tr>
                                         <tr class="july-row"><td class="fw-bold">يوليو 2025</td><td>89</td><td>9</td><td>98</td><td>47,060</td></tr>
                                         <tr><td class="fw-bold">أغسطس 2025</td><td>82</td><td>11</td><td>93</td><td>46,770</td></tr>
+                                    </tbody>
+                                    <tbody data-year="2026">
+                                        <tr class="year-group year-group--current"><th colspan="5" scope="rowgroup">العام الحالي · 2026</th></tr>
                                         <tr><td class="fw-bold">يونيو 2026</td><td>66</td><td>--</td><td>--</td><td>36,140</td></tr>
                                         <tr class="july-row"><td class="fw-bold">يوليو 2026</td><td>75</td><td>--</td><td>75</td><td>41,665</td></tr>
                                         <tr><td class="fw-bold">أغسطس 2026</td><td>91</td><td>--</td><td>91</td><td>52,610</td></tr>
@@ -810,12 +951,16 @@
                             </div>
                             <h6 class="fw-bold mb-2"><i class="fa-solid fa-chart-simple text-primary me-1"></i>الإحصائيات المقارنة:</h6>
                             <div class="table-responsive mb-2">
-                                <table class="table table-sm table-bordered text-center align-middle small">
+                                <table class="table table-sm table-bordered text-center align-middle small comparison-table">
                                     <thead class="table-dark"><tr><th>الشهر / السنة</th><th>أعضاء النادي</th><th>غير الأعضاء</th><th>إجمالي المشاركين</th><th>المبالغ المحصلة (ج.م)</th></tr></thead>
-                                    <tbody>
+                                    <tbody data-year="2025">
+                                        <tr class="year-group year-group--previous"><th colspan="5" scope="rowgroup">العام المنقضي · 2025</th></tr>
                                         <tr><td class="fw-bold">يونيو 2025</td><td>23</td><td>2</td><td>25</td><td>14,050</td></tr>
                                         <tr class="july-row"><td class="fw-bold">يوليو 2025</td><td>40</td><td>4</td><td>44</td><td>31,215</td></tr>
                                         <tr><td class="fw-bold">أغسطس 2025</td><td>60</td><td>7</td><td>67</td><td>30,520</td></tr>
+                                    </tbody>
+                                    <tbody data-year="2026">
+                                        <tr class="year-group year-group--current"><th colspan="5" scope="rowgroup">العام الحالي · 2026</th></tr>
                                         <tr><td class="fw-bold">يونيو 2026</td><td>41</td><td>1</td><td>42</td><td>20,955</td></tr>
                                         <tr class="july-row"><td class="fw-bold">يوليو 2026</td><td>47</td><td>--</td><td>47</td><td>21,440</td></tr>
                                         <tr><td class="fw-bold">أغسطس 2026</td><td>61</td><td>--</td><td>61</td><td>29,975</td></tr>
@@ -841,12 +986,16 @@
                             </div>
                             <h6 class="fw-bold mb-2"><i class="fa-solid fa-chart-simple text-primary me-1"></i>الإحصائيات المقارنة:</h6>
                             <div class="table-responsive mb-2">
-                                <table class="table table-sm table-bordered text-center align-middle small">
+                                <table class="table table-sm table-bordered text-center align-middle small comparison-table">
                                     <thead class="table-dark"><tr><th>الشهر / السنة</th><th>أعضاء النادي</th><th>غير الأعضاء</th><th>إجمالي المشاركين</th><th>المبالغ المحصلة (ج.م)</th></tr></thead>
-                                    <tbody>
+                                    <tbody data-year="2025">
+                                        <tr class="year-group year-group--previous"><th colspan="5" scope="rowgroup">العام المنقضي · 2025</th></tr>
                                         <tr><td class="fw-bold">يونيو 2025</td><td>9</td><td>12</td><td>21</td><td>12,400</td></tr>
                                         <tr class="july-row"><td class="fw-bold">يوليو 2025</td><td>26</td><td>24</td><td>50</td><td>27,300</td></tr>
                                         <tr><td class="fw-bold">أغسطس 2025</td><td>23</td><td>21</td><td>44</td><td>26,700</td></tr>
+                                    </tbody>
+                                    <tbody data-year="2026">
+                                        <tr class="year-group year-group--current"><th colspan="5" scope="rowgroup">العام الحالي · 2026</th></tr>
                                         <tr><td class="fw-bold">يونيو 2026</td><td>32</td><td>15</td><td>47</td><td>32,185</td></tr>
                                         <tr class="july-row"><td class="fw-bold">يوليو 2026</td><td>37</td><td>19</td><td>56</td><td>39,725</td></tr>
                                         <tr><td class="fw-bold">أغسطس 2026</td><td>38</td><td>25</td><td>63</td><td>46,185</td></tr>
@@ -872,12 +1021,16 @@
                             </div>
                             <h6 class="fw-bold mb-2"><i class="fa-solid fa-chart-simple text-primary me-1"></i>الإحصائيات المقارنة:</h6>
                             <div class="table-responsive mb-2">
-                                <table class="table table-sm table-bordered text-center align-middle small">
+                                <table class="table table-sm table-bordered text-center align-middle small comparison-table">
                                     <thead class="table-dark"><tr><th>الشهر / السنة</th><th>أعضاء النادي</th><th>غير الأعضاء</th><th>إجمالي المشاركين</th><th>المبالغ المحصلة (ج.م)</th></tr></thead>
-                                    <tbody>
+                                    <tbody data-year="2025">
+                                        <tr class="year-group year-group--previous"><th colspan="5" scope="rowgroup">العام المنقضي · 2025</th></tr>
                                         <tr><td class="fw-bold">يونيو 2025</td><td>23</td><td>7</td><td>30</td><td>9,820</td></tr>
                                         <tr class="july-row"><td class="fw-bold">يوليو 2025</td><td>26</td><td>11</td><td>37</td><td>14,370</td></tr>
                                         <tr><td class="fw-bold">أغسطس 2025</td><td>21</td><td>10</td><td>31</td><td>15,345</td></tr>
+                                    </tbody>
+                                    <tbody data-year="2026">
+                                        <tr class="year-group year-group--current"><th colspan="5" scope="rowgroup">العام الحالي · 2026</th></tr>
                                         <tr><td class="fw-bold">يونيو 2026</td><td>38</td><td>1</td><td>--</td><td>--</td></tr>
                                         <tr class="july-row"><td class="fw-bold">يوليو 2026</td><td>34</td><td>1</td><td>35</td><td>16,700</td></tr>
                                         <tr><td class="fw-bold">أغسطس 2026</td><td>30</td><td>--</td><td>30</td><td>14,850</td></tr>
@@ -903,12 +1056,16 @@
                             </div>
                             <h6 class="fw-bold mb-2"><i class="fa-solid fa-chart-simple text-primary me-1"></i>الإحصائيات المقارنة:</h6>
                             <div class="table-responsive mb-2">
-                                <table class="table table-sm table-bordered text-center align-middle small">
+                                <table class="table table-sm table-bordered text-center align-middle small comparison-table">
                                     <thead class="table-dark"><tr><th>الشهر / السنة</th><th>أعضاء النادي</th><th>غير الأعضاء</th><th>إجمالي المشاركين</th><th>المبالغ المحصلة (ج.م)</th></tr></thead>
-                                    <tbody>
+                                    <tbody data-year="2025">
+                                        <tr class="year-group year-group--previous"><th colspan="5" scope="rowgroup">العام المنقضي · 2025</th></tr>
                                         <tr><td class="fw-bold">يونيو 2025</td><td>4</td><td>9</td><td>13</td><td>5,650</td></tr>
                                         <tr class="july-row"><td class="fw-bold">يوليو 2025</td><td>8</td><td>13</td><td>21</td><td>12,445</td></tr>
                                         <tr><td class="fw-bold">أغسطس 2025</td><td>9</td><td>29</td><td>38</td><td>19,950</td></tr>
+                                    </tbody>
+                                    <tbody data-year="2026">
+                                        <tr class="year-group year-group--current"><th colspan="5" scope="rowgroup">العام الحالي · 2026</th></tr>
                                         <tr><td class="fw-bold">يونيو 2026</td><td>16</td><td>--</td><td>--</td><td>8,210</td></tr>
                                         <tr class="july-row"><td class="fw-bold">يوليو 2026</td><td>12</td><td>--</td><td>12</td><td>6,375</td></tr>
                                         <tr><td class="fw-bold">أغسطس 2026</td><td>14</td><td>--</td><td>--</td><td>8,480</td></tr>
@@ -934,12 +1091,16 @@
                             </div>
                             <h6 class="fw-bold mb-2"><i class="fa-solid fa-chart-simple text-primary me-1"></i>الإحصائيات المقارنة:</h6>
                             <div class="table-responsive mb-2">
-                                <table class="table table-sm table-bordered text-center align-middle small">
+                                <table class="table table-sm table-bordered text-center align-middle small comparison-table">
                                     <thead class="table-dark"><tr><th>الشهر / السنة</th><th>أعضاء النادي</th><th>غير الأعضاء</th><th>إجمالي المشاركين</th><th>المبالغ المحصلة (ج.م)</th></tr></thead>
-                                    <tbody>
+                                    <tbody data-year="2025">
+                                        <tr class="year-group year-group--previous"><th colspan="5" scope="rowgroup">العام المنقضي · 2025</th></tr>
                                         <tr><td class="fw-bold">يونيو 2025</td><td>88</td><td>11</td><td>99</td><td>27,405</td></tr>
                                         <tr class="july-row"><td class="fw-bold">يوليو 2025</td><td>2</td><td>3</td><td>5</td><td>47,825</td></tr>
                                         <tr><td class="fw-bold">أغسطس 2025</td><td>135</td><td>5</td><td>140</td><td>42,000</td></tr>
+                                    </tbody>
+                                    <tbody data-year="2026">
+                                        <tr class="year-group year-group--current"><th colspan="5" scope="rowgroup">العام الحالي · 2026</th></tr>
                                         <tr><td class="fw-bold">يونيو 2026</td><td>38</td><td>4</td><td>42</td><td>17,760</td></tr>
                                         <tr class="july-row"><td class="fw-bold">يوليو 2026</td><td>39</td><td>--</td><td>39</td><td>15,485</td></tr>
                                         <tr><td class="fw-bold">أغسطس 2026</td><td>42</td><td>--</td><td>42</td><td>17,060</td></tr>
@@ -965,12 +1126,16 @@
                             </div>
                             <h6 class="fw-bold mb-2"><i class="fa-solid fa-chart-simple text-primary me-1"></i>الإحصائيات المقارنة:</h6>
                             <div class="table-responsive mb-2">
-                                <table class="table table-sm table-bordered text-center align-middle small">
+                                <table class="table table-sm table-bordered text-center align-middle small comparison-table">
                                     <thead class="table-dark"><tr><th>الشهر / السنة</th><th>أعضاء النادي</th><th>غير الأعضاء</th><th>إجمالي المشاركين</th><th>المبالغ المحصلة (ج.م)</th></tr></thead>
-                                    <tbody>
+                                    <tbody data-year="2025">
+                                        <tr class="year-group year-group--previous"><th colspan="5" scope="rowgroup">العام المنقضي · 2025</th></tr>
                                         <tr><td class="fw-bold">يونيو 2025</td><td>--</td><td>1</td><td>1</td><td>1,000</td></tr>
                                         <tr class="july-row"><td class="fw-bold">يوليو 2025</td><td>4</td><td>7</td><td>11</td><td>8,550</td></tr>
                                         <tr><td class="fw-bold">أغسطس 2025</td><td>8</td><td>14</td><td>22</td><td>13,500</td></tr>
+                                    </tbody>
+                                    <tbody data-year="2026">
+                                        <tr class="year-group year-group--current"><th colspan="5" scope="rowgroup">العام الحالي · 2026</th></tr>
                                         <tr><td class="fw-bold">يونيو 2026</td><td>2</td><td>--</td><td>--</td><td>200</td></tr>
                                         <tr class="july-row"><td class="fw-bold">يوليو 2026</td><td>2</td><td>--</td><td>2</td><td>1,600</td></tr>
                                         <tr><td class="fw-bold">أغسطس 2026</td><td>2</td><td>11</td><td>13</td><td>7,700</td></tr>
@@ -996,12 +1161,16 @@
                             </div>
                             <h6 class="fw-bold mb-2"><i class="fa-solid fa-chart-simple text-primary me-1"></i>الإحصائيات المقارنة:</h6>
                             <div class="table-responsive mb-2">
-                                <table class="table table-sm table-bordered text-center align-middle small">
+                                <table class="table table-sm table-bordered text-center align-middle small comparison-table">
                                     <thead class="table-dark"><tr><th>الشهر / السنة</th><th>أعضاء النادي</th><th>غير الأعضاء</th><th>إجمالي المشاركين</th><th>المبالغ المحصلة (ج.م)</th></tr></thead>
-                                    <tbody>
+                                    <tbody data-year="2025">
+                                        <tr class="year-group year-group--previous"><th colspan="5" scope="rowgroup">العام المنقضي · 2025</th></tr>
                                         <tr><td class="fw-bold">يونيو 2025</td><td>14</td><td>4</td><td>18</td><td>6,800</td></tr>
                                         <tr class="july-row"><td class="fw-bold">يوليو 2025</td><td>50</td><td>8</td><td>58</td><td>24,355</td></tr>
                                         <tr><td class="fw-bold">أغسطس 2025</td><td>28</td><td>9</td><td>37</td><td>19,040</td></tr>
+                                    </tbody>
+                                    <tbody data-year="2026">
+                                        <tr class="year-group year-group--current"><th colspan="5" scope="rowgroup">العام الحالي · 2026</th></tr>
                                         <tr><td class="fw-bold">يونيو 2026</td><td>27</td><td>--</td><td>--</td><td>14,605</td></tr>
                                         <tr class="july-row"><td class="fw-bold">يوليو 2026</td><td>35</td><td>--</td><td>35</td><td>22,260</td></tr>
                                         <tr><td class="fw-bold">أغسطس 2026</td><td>33</td><td>--</td><td>33</td><td>20,160</td></tr>
@@ -1027,12 +1196,16 @@
                             </div>
                             <h6 class="fw-bold mb-2"><i class="fa-solid fa-chart-simple text-primary me-1"></i>الإحصائيات المقارنة:</h6>
                             <div class="table-responsive mb-2">
-                                <table class="table table-sm table-bordered text-center align-middle small">
+                                <table class="table table-sm table-bordered text-center align-middle small comparison-table">
                                     <thead class="table-dark"><tr><th>الشهر / السنة</th><th>أعضاء النادي</th><th>غير الأعضاء</th><th>إجمالي المشاركين</th><th>المبالغ المحصلة (ج.م)</th></tr></thead>
-                                    <tbody>
+                                    <tbody data-year="2025">
+                                        <tr class="year-group year-group--previous"><th colspan="5" scope="rowgroup">العام المنقضي · 2025</th></tr>
                                         <tr><td class="fw-bold">يونيو 2025</td><td>3</td><td>--</td><td>3</td><td>900</td></tr>
                                         <tr class="july-row"><td class="fw-bold">يوليو 2025</td><td>8</td><td>4</td><td>12</td><td>4,980</td></tr>
                                         <tr><td class="fw-bold">أغسطس 2025</td><td>6</td><td>3</td><td>9</td><td>4,410</td></tr>
+                                    </tbody>
+                                    <tbody data-year="2026">
+                                        <tr class="year-group year-group--current"><th colspan="5" scope="rowgroup">العام الحالي · 2026</th></tr>
                                         <tr><td class="fw-bold">يونيو 2026</td><td>4</td><td>--</td><td>--</td><td>4,205</td></tr>
                                         <tr class="july-row"><td class="fw-bold">يوليو 2026</td><td>4</td><td>--</td><td>4</td><td>2,200</td></tr>
                                         <tr><td class="fw-bold">أغسطس 2026</td><td>3</td><td>4</td><td>7</td><td>5,150</td></tr>
@@ -1058,12 +1231,16 @@
                             </div>
                             <h6 class="fw-bold mb-2"><i class="fa-solid fa-chart-simple text-primary me-1"></i>الإحصائيات المقارنة:</h6>
                             <div class="table-responsive mb-2">
-                                <table class="table table-sm table-bordered text-center align-middle small">
+                                <table class="table table-sm table-bordered text-center align-middle small comparison-table">
                                     <thead class="table-dark"><tr><th>الشهر / السنة</th><th>أعضاء النادي</th><th>غير الأعضاء</th><th>إجمالي المشاركين</th><th>المبالغ المحصلة (ج.م)</th></tr></thead>
-                                    <tbody>
+                                    <tbody data-year="2025">
+                                        <tr class="year-group year-group--previous"><th colspan="5" scope="rowgroup">العام المنقضي · 2025</th></tr>
                                         <tr><td class="fw-bold">يونيو 2025</td><td>3</td><td>1</td><td>4</td><td>1,500</td></tr>
                                         <tr class="july-row"><td class="fw-bold">يوليو 2025</td><td>16</td><td>4</td><td>20</td><td>9,015</td></tr>
                                         <tr><td class="fw-bold">أغسطس 2025</td><td>11</td><td>3</td><td>14</td><td>7,005</td></tr>
+                                    </tbody>
+                                    <tbody data-year="2026">
+                                        <tr class="year-group year-group--current"><th colspan="5" scope="rowgroup">العام الحالي · 2026</th></tr>
                                         <tr><td class="fw-bold">يونيو 2026</td><td>5</td><td>--</td><td>--</td><td>2,695</td></tr>
                                         <tr class="july-row"><td class="fw-bold">يوليو 2026</td><td>6</td><td>--</td><td>6</td><td>3,245</td></tr>
                                         <tr><td class="fw-bold">أغسطس 2026</td><td>2</td><td>--</td><td>2</td><td>1,045</td></tr>
@@ -1089,12 +1266,16 @@
                             </div>
                             <h6 class="fw-bold mb-2"><i class="fa-solid fa-chart-simple text-primary me-1"></i>الإحصائيات المقارنة:</h6>
                             <div class="table-responsive mb-2">
-                                <table class="table table-sm table-bordered text-center align-middle small">
+                                <table class="table table-sm table-bordered text-center align-middle small comparison-table">
                                     <thead class="table-dark"><tr><th>الشهر / السنة</th><th>أعضاء النادي</th><th>غير الأعضاء</th><th>إجمالي المشاركين</th><th>المبالغ المحصلة (ج.م)</th></tr></thead>
-                                    <tbody>
+                                    <tbody data-year="2025">
+                                        <tr class="year-group year-group--previous"><th colspan="5" scope="rowgroup">العام المنقضي · 2025</th></tr>
                                         <tr><td class="fw-bold">يونيو 2025</td><td>15</td><td>--</td><td>15</td><td>1,500</td></tr>
                                         <tr class="july-row"><td class="fw-bold">يوليو 2025</td><td>29</td><td>--</td><td>29</td><td>2,900</td></tr>
                                         <tr><td class="fw-bold">أغسطس 2025</td><td>21</td><td>--</td><td>21</td><td>2,100</td></tr>
+                                    </tbody>
+                                    <tbody data-year="2026">
+                                        <tr class="year-group year-group--current"><th colspan="5" scope="rowgroup">العام الحالي · 2026</th></tr>
                                         <tr><td class="fw-bold">يونيو 2026</td><td>23</td><td>--</td><td>--</td><td>2,300</td></tr>
                                         <tr class="july-row"><td class="fw-bold">يوليو 2026</td><td>30</td><td>--</td><td>30</td><td>3,000</td></tr>
                                         <tr><td class="fw-bold">أغسطس 2026</td><td>41</td><td>5</td><td>45</td><td>39,400</td></tr>
@@ -1120,12 +1301,16 @@
                             </div>
                             <h6 class="fw-bold mb-2"><i class="fa-solid fa-chart-simple text-primary me-1"></i>الإحصائيات المقارنة:</h6>
                             <div class="table-responsive mb-2">
-                                <table class="table table-sm table-bordered text-center align-middle small">
+                                <table class="table table-sm table-bordered text-center align-middle small comparison-table">
                                     <thead class="table-dark"><tr><th>الشهر / السنة</th><th>أعضاء النادي</th><th>غير الأعضاء</th><th>إجمالي المشاركين</th><th>المبالغ المحصلة (ج.م)</th></tr></thead>
-                                    <tbody>
+                                    <tbody data-year="2025">
+                                        <tr class="year-group year-group--previous"><th colspan="5" scope="rowgroup">العام المنقضي · 2025</th></tr>
                                         <tr><td class="fw-bold">يونيو 2025</td><td>1</td><td>1</td><td>2</td><td>1,450</td></tr>
                                         <tr class="july-row"><td class="fw-bold">يوليو 2025</td><td>4</td><td>3</td><td>7</td><td>5,100</td></tr>
                                         <tr><td class="fw-bold">أغسطس 2025</td><td>--</td><td>--</td><td>--</td><td>--</td></tr>
+                                    </tbody>
+                                    <tbody data-year="2026">
+                                        <tr class="year-group year-group--current"><th colspan="5" scope="rowgroup">العام الحالي · 2026</th></tr>
                                         <tr><td class="fw-bold">يونيو 2026</td><td>--</td><td>--</td><td>--</td><td>--</td></tr>
                                         <tr class="july-row"><td class="fw-bold">يوليو 2026</td><td>--</td><td>--</td><td>--</td><td>--</td></tr>
                                         <tr><td class="fw-bold">أغسطس 2026</td><td>--</td><td>--</td><td>--</td><td>--</td></tr>
@@ -1151,12 +1336,16 @@
                             </div>
                             <h6 class="fw-bold mb-2"><i class="fa-solid fa-chart-simple text-primary me-1"></i>الإحصائيات المقارنة:</h6>
                             <div class="table-responsive mb-2">
-                                <table class="table table-sm table-bordered text-center align-middle small">
+                                <table class="table table-sm table-bordered text-center align-middle small comparison-table">
                                     <thead class="table-dark"><tr><th>الشهر / السنة</th><th>أعضاء النادي</th><th>غير الأعضاء</th><th>إجمالي المشاركين</th><th>المبالغ المحصلة (ج.م)</th></tr></thead>
-                                    <tbody>
+                                    <tbody data-year="2025">
+                                        <tr class="year-group year-group--previous"><th colspan="5" scope="rowgroup">العام المنقضي · 2025</th></tr>
                                         <tr><td class="fw-bold">يونيو 2025</td><td>--</td><td>2</td><td>2</td><td>1,700</td></tr>
                                         <tr class="july-row"><td class="fw-bold">يوليو 2025</td><td>--</td><td>4</td><td>4</td><td>3,400</td></tr>
                                         <tr><td class="fw-bold">أغسطس 2025</td><td>--</td><td>--</td><td>--</td><td>--</td></tr>
+                                    </tbody>
+                                    <tbody data-year="2026">
+                                        <tr class="year-group year-group--current"><th colspan="5" scope="rowgroup">العام الحالي · 2026</th></tr>
                                         <tr><td class="fw-bold">يونيو 2026</td><td>2</td><td>--</td><td>--</td><td>650</td></tr>
                                         <tr class="july-row"><td class="fw-bold">يوليو 2026</td><td>2</td><td>--</td><td>2</td><td>1,300</td></tr>
                                         <tr><td class="fw-bold">أغسطس 2026</td><td>--</td><td>--</td><td>--</td><td>--</td></tr>
@@ -1202,8 +1391,10 @@
                 </button>
             </div>
 
+            <div class="presentation-progress" aria-hidden="true"><span id="slideProgress"></span></div>
+
             <!-- Slide Counter Display -->
-            <div class="slide-counter-display mt-3">
+            <div class="slide-counter-display mt-3" aria-live="polite" aria-atomic="true">
                 الشريحة <span id="currentSlideNum">1</span> من <span id="totalSlidesNum">31</span>
             </div>
 
@@ -1230,15 +1421,28 @@
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const carouselEl = document.getElementById('luxuryPresentation');
-            const totalSlides = document.querySelectorAll('.carousel-item').length;
+            const slides = Array.from(carouselEl.querySelectorAll('.carousel-item'));
+            const totalSlides = slides.length;
+            const slideSelect = document.getElementById('slideSelect');
             document.getElementById('totalSlidesNum').textContent = totalSlides;
+            slides.forEach((slide, index) => {
+                const title = slide.querySelector('h3').textContent.trim();
+                slideSelect.add(new Option((index + 1) + ' — ' + title, index));
+                slide.setAttribute('role', 'group');
+                slide.setAttribute('aria-roledescription', 'شريحة');
+                slide.setAttribute('aria-label', (index + 1) + ' من ' + totalSlides + ': ' + title);
+            });
 
             // Initialize Carousel manually
             const carousel = new bootstrap.Carousel(carouselEl, {
                 interval: false,
                 ride: false,
                 wrap: true,
-                touch: true
+                touch: true,
+                keyboard: false
+            });
+            slideSelect.addEventListener('change', function() {
+                carousel.to(Number(this.value));
             });
 
             // Build Dots Navigation
@@ -1246,7 +1450,9 @@
             for (let i = 0; i < totalSlides; i++) {
                 const dot = document.createElement('button');
                 dot.type = 'button';
-                dot.setAttribute('aria-label', 'الشريحة ' + (i + 1));
+                dot.setAttribute('aria-label', 'الشريحة ' + (i + 1) + ': ' + slides[i].querySelector('h3').textContent.trim());
+                dot.title = dot.getAttribute('aria-label');
+                dot.setAttribute('aria-current', i === 0 ? 'true' : 'false');
                 if (i === 0) dot.classList.add('active');
                 dot.addEventListener('click', function() {
                     carousel.to(i);
@@ -1258,9 +1464,11 @@
             // Update counter and dots on slide change
             function updateIndicators(index) {
                 document.getElementById('currentSlideNum').textContent = index + 1;
+                slideSelect.value = String(index);
+                document.getElementById('slideProgress').style.width = ((index + 1) / totalSlides * 100) + '%';
                 dots.forEach((d, i) => {
-                    if (i === index) d.classList.add('active');
-                    else d.classList.remove('active');
+                    d.classList.toggle('active', i === index);
+                    d.setAttribute('aria-current', i === index ? 'true' : 'false');
                 });
             }
 
@@ -1278,42 +1486,75 @@
 
             // Keyboard Navigation
             document.addEventListener('keydown', function(e) {
-                if (e.key === 'ArrowLeft') carousel.next();
-                if (e.key === 'ArrowRight') carousel.prev();
+                if (e.target.closest('input, textarea, select, [contenteditable="true"]') || e.altKey || e.ctrlKey || e.metaKey) return;
+                if (e.key === 'ArrowLeft' || e.key === 'ArrowRight') {
+                    e.preventDefault();
+                    if (e.key === 'ArrowLeft') carousel.next();
+                    else carousel.prev();
+                }
             });
 
             // Charts
+            if (typeof Chart === 'undefined') {
+                document.querySelectorAll('.chart-frame').forEach(frame => {
+                    frame.classList.add('chart-fallback');
+                    frame.textContent = 'تعذر تحميل الرسم البياني. جميع القيم متاحة في الجدول أدناه.';
+                });
+                return;
+            }
             Chart.defaults.font.family = "'Cairo', sans-serif";
-
-            const ctxRevenue = document.getElementById('revenueChartOfficial').getContext('2d');
-            new Chart(ctxRevenue, {
-                type: 'bar',
-                data: {
-                    labels: ['يونيو', 'يوليو', 'أغسطس'],
-                    datasets: [
-                        { label: 'إيرادات 2025', data: [1499779, 2935781, 2841660], backgroundColor: '#64748b' },
-                        { label: 'إيرادات 2026', data: [2913326, 2550383, 2881566], backgroundColor: '#2563eb' }
-                    ]
-                },
-                options: { responsive: true, plugins: { legend: { position: 'bottom' } } }
-            });
-
-            const ctxParticipants = document.getElementById('participantsChartOfficial').getContext('2d');
-            new Chart(ctxParticipants, {
-                type: 'line',
-                data: {
-                    labels: ['يونيو 2025','يونيو 2026','يوليو 2025','يوليو 2026','أغسطس 2025','أغسطس 2026'],
-                    datasets: [{
-                        label: 'عدد المشاركين',
-                        data: [3990, 3010, 6058, 3552, 5219, 4264],
-                        borderColor: '#2563eb',
-                        backgroundColor: 'rgba(37, 99, 235, 0.1)',
-                        fill: true,
-                        tension: 0.3
-                    }]
-                },
-                options: { responsive: true, plugins: { legend: { position: 'bottom' } } }
-            });
+            Chart.defaults.color = '#526779';
+            const periods = [
+                { year: '2025', label: 'العام المنقضي · 2025', color: '#64748b' },
+                { year: '2026', label: 'العام الحالي · 2026', color: '#087f8c' }
+            ];
+            const labels = ['يونيو', 'يوليو', 'أغسطس'];
+            const numberFormat = new Intl.NumberFormat('en-US');
+            const charts = [];
+            function createChart(canvasId, metric, type) {
+                const datasets = periods.map(period => ({
+                    label: period.label,
+                    data: Array.from(document.querySelectorAll('#monthlySummary tbody[data-year="' + period.year + '"] tr[data-metric="' + metric + '"] td'), cell => Number(cell.textContent.replace(/,/g, ''))),
+                    backgroundColor: period.color,
+                    borderColor: period.color,
+                    borderRadius: 6,
+                    maxBarThickness: 42,
+                    borderWidth: type === 'line' ? 3 : 0,
+                    pointRadius: 4,
+                    pointHoverRadius: 6,
+                    tension: 0.25,
+                    fill: false
+                }));
+                return new Chart(document.getElementById(canvasId), {
+                    type,
+                    data: { labels, datasets },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        animation: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? false : { duration: 450 },
+                        interaction: { mode: 'index', intersect: false },
+                        plugins: {
+                            legend: { position: 'bottom', rtl: true, labels: { usePointStyle: true, padding: 18, font: { size: 11 } } },
+                            tooltip: { rtl: true, callbacks: { label: context => context.dataset.label + ': ' + numberFormat.format(context.parsed.y) + (metric === 'revenue' ? ' ج.م' : ' مشارك') } }
+                        },
+                        scales: {
+                            x: { grid: { display: false } },
+                            y: { beginAtZero: true, grid: { color: '#e7edf2' }, ticks: { maxTicksLimit: 5, precision: 0 } }
+                        }
+                    }
+                });
+            }
+            function showCharts() {
+                if (!document.getElementById('monthlySummary').closest('.carousel-item').classList.contains('active')) return;
+                if (!charts.length) {
+                    charts.push(createChart('revenueChartOfficial', 'revenue', 'bar'));
+                    charts.push(createChart('participantsChartOfficial', 'participants', 'line'));
+                }
+                charts.forEach(chart => chart.resize());
+            }
+            carouselEl.addEventListener('slid.bs.carousel', showCharts);
+            document.fonts.ready.then(showCharts);
+            showCharts();
         });
     </script>
 </body>

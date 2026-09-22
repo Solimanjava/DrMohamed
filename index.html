@@ -290,12 +290,132 @@
         @media (prefers-reduced-motion: reduce) {
             .carousel-item, .carousel-control-prev, .carousel-control-next, .carousel-dots button, .presentation-progress span, .btn { transition: none !important; }
         }
+
+        /* ===== Visual Enhancements ===== */
+        .club-logo {
+            width: 96px;
+            height: 96px;
+            object-fit: contain;
+            background: #ffffff;
+            border-radius: 50%;
+            padding: 7px;
+            border: 3px solid var(--gold-accent);
+            box-shadow: 0 10px 26px rgba(0, 0, 0, 0.3);
+        }
+        .presentation-header { position: relative; overflow: hidden; }
+        .presentation-header::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(circle at 88% 12%, rgba(197, 163, 101, 0.22), transparent 55%),
+                radial-gradient(circle at 6% 92%, rgba(8, 127, 140, 0.28), transparent 50%);
+            pointer-events: none;
+        }
+        .presentation-header .container { position: relative; z-index: 1; }
+
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(16px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .carousel-item.active .slide-card > * { animation: fadeUp 0.45s ease both; }
+        .carousel-item.active .slide-card > *:nth-child(2) { animation-delay: 0.07s; }
+        .carousel-item.active .slide-card > *:nth-child(3) { animation-delay: 0.14s; }
+        .carousel-item.active .slide-card > *:nth-child(4) { animation-delay: 0.21s; }
+        .carousel-item.active .slide-card > *:nth-child(n+5) { animation-delay: 0.28s; }
+
+        .metric-card { transition: transform 0.25s, box-shadow 0.25s; }
+        .metric-card:hover { transform: translateY(-5px); box-shadow: 0 14px 28px rgba(13, 34, 51, 0.14); }
+        .metric-icon {
+            width: 46px;
+            height: 46px;
+            margin: 0 auto 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 14px;
+            background: #e2f2f3;
+            color: var(--blue-accent);
+            font-size: 1.25rem;
+        }
+
+        .vision-box {
+            border-color: var(--blue-accent) !important;
+            border-top: 4px solid var(--gold-accent) !important;
+            box-shadow: 0 10px 30px rgba(13, 34, 51, 0.06);
+        }
+
+        .comment-box--directive {
+            background-color: #fdf9ef;
+            border-color: #ecdfc0;
+            border-right-color: var(--gold-accent);
+            color: #6b531f;
+        }
+        .comment-box--directive > i { color: var(--gold-accent) !important; }
+
+        .table > tbody > tr:not(.year-group):nth-of-type(even) > td { --bs-table-bg: #fbfdfe; }
+        .comparison-table > tbody > tr:not(.year-group) > td:last-child,
+        .revenue-summary > tbody > tr:not(.year-group) > td:last-child { background-color: #eaf5f5; }
+
+        .carousel-dots button {
+            width: 22px;
+            height: 22px;
+            font-size: 0.62rem;
+            font-weight: 700;
+            color: var(--text-muted);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            line-height: 1;
+        }
+        .carousel-dots button.active { width: 34px; color: #ffffff; }
+
+        @media (max-width: 768px) {
+            .club-logo { width: 74px; height: 74px; }
+            .carousel-dots button { width: 20px; height: 20px; font-size: 0.58rem; }
+            .carousel-dots button.active { width: 30px; }
+            .table > thead > tr > th:first-child,
+            .table > tbody > tr:not(.year-group) > td:first-child {
+                position: sticky;
+                right: 0;
+                z-index: 2;
+                background: #ffffff;
+                box-shadow: -5px 0 8px -5px rgba(13, 34, 51, 0.25);
+            }
+            .table > thead > tr > th:first-child { background: var(--navy-primary); }
+            .table > tbody > tr.july-row > td:first-child { background: #f5f8fa; }
+            .table > tbody > tr:not(.year-group):nth-of-type(even) > td:first-child { background: #fbfdfe; }
+        }
+
+        @media print {
+            body { background: #ffffff; }
+            .presentation-toolbar, .carousel-control-prev, .carousel-control-next,
+            .carousel-dots, .nav-buttons-container, .slide-counter-display,
+            .presentation-progress, footer { display: none !important; }
+            #presentationWrapper { padding: 0; }
+            .carousel-item {
+                display: block !important;
+                opacity: 1 !important;
+                transform: none !important;
+                transition: none !important;
+                page-break-after: always;
+            }
+            .carousel-item.active .slide-card > * { animation: none; }
+            .slide-card { min-height: 0; box-shadow: none; }
+            .chart-frame { break-inside: avoid; }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .carousel-item.active .slide-card > * { animation: none !important; }
+            .metric-card { transition: none; }
+        }
     </style>
 </head>
 <body>
 
     <header class="presentation-header text-center">
         <div class="container">
+            <img src="logo.jpg" alt="شعار نادي 6 أكتوبر الرياضي" class="club-logo mb-3">
             <h1 class="royal-title mb-1"><i class="fa-solid fa-building-columns text-primary me-2"></i>نادي 6 أكتوبر الرياضي</h1>
             <p class="royal-subtitle mb-1">عرض استراتيجية تطوير الأكاديميات، اللوائح المالية، والتفاصيل الكاملة للألعاب الرياضية</p>
             <div class="author-tag"><i class="fa-solid fa-user-check me-2"></i>إعداد الدكتور / محمد عبد العزيز</div>
@@ -306,12 +426,13 @@
         <div id="presentationWrapper">
             <div class="presentation-toolbar">
                 <div class="period-legend" aria-label="فترات المقارنة">
-                    <span class="period-chip">العام المنقضي · 2025</span>
+                    <span class="period-chip">العام السابق · 2025</span>
                     <span class="period-chip period-chip--current">العام الحالي · 2026</span>
                 </div>
                 <div class="slide-picker">
                     <label for="slideSelect">انتقال إلى</label>
                     <select id="slideSelect" class="form-select" aria-controls="luxuryPresentation"></select>
+                    <button class="btn btn-outline-secondary btn-sm rounded-pill px-3" id="fullscreenBtn" type="button" title="عرض ملء الشاشة"><i class="fa-solid fa-expand me-md-1"></i><span class="d-none d-md-inline">ملء الشاشة</span></button>
                 </div>
             </div>
             <div id="luxuryPresentation" class="carousel slide" data-bs-ride="false" data-bs-touch="true" role="region" aria-roledescription="عرض شرائح" aria-label="تقرير النشاط الرياضي">
@@ -319,18 +440,17 @@
 
                     <!-- SLIDE 1 -->
                     <div class="carousel-item active">
-                        <div class="slide-card">
+                        <div class="slide-card d-flex flex-column">
                             <div class="slide-title">
                                 <h3><i class="fa-solid fa-compass text-primary me-2"></i>النظرة العامة والمؤشرات الرئيسية</h3>
                                 <span class="slide-number">الشريحة 1 من 31</span>
                             </div>
-                            <div class="row g-4 mb-4">
-                                <div class="col-md-3"><div class="metric-card"><div class="metric-value">2,881,566 ج.م</div><div class="metric-label">إيراد أغسطس 2026</div></div></div>
-                                <div class="col-md-3"><div class="metric-card"><div class="metric-value">4,264</div><div class="metric-label">مشارك (أغسطس 2026)</div></div></div>
-                                <div class="col-md-3"><div class="metric-card"><div class="metric-value">95.5%</div><div class="metric-label">نسبة مشاركة الأعضاء</div></div></div>
-                                <div class="col-md-3"><div class="metric-card"><div class="metric-value">الفئة (أ)</div><div class="metric-label">التصنيف المستهدف EFA</div></div></div>
+                            <div class="row g-4 my-auto py-4">
+                                <div class="col-md-4"><div class="metric-card"><div class="metric-icon"><i class="fa-solid fa-coins"></i></div><div class="metric-value">2,881,566 ج.م</div><div class="metric-label">إيراد أغسطس 2026</div></div></div>
+                                <div class="col-md-4"><div class="metric-card"><div class="metric-icon"><i class="fa-solid fa-users"></i></div><div class="metric-value">4,264</div><div class="metric-label">مشارك (أغسطس 2026)</div></div></div>
+                                <div class="col-md-4"><div class="metric-card"><div class="metric-icon"><i class="fa-solid fa-percent"></i></div><div class="metric-value">95.5%</div><div class="metric-label">نسبة مشاركة الأعضاء</div></div></div>
                             </div>
-                            <div class="p-4 rounded-3 border text-center" style="background-color: #f8fafc; border-color: var(--blue-accent) !important;">
+                            <div class="p-4 rounded-3 border text-center vision-box mb-2" style="background-color: #f8fafc;">
                                 <h4 class="fw-bold mb-3" style="color: var(--navy-dark);">الرؤية الاستراتيجية لأكاديميات نادي 6 أكتوبر</h4>
                                 <p class="lead mb-0 text-secondary" style="font-size: 1.1rem; font-weight: 600;">
                                     تحويل الأكاديميات إلى بيئة احترافية متكاملة تفرخ المواهب الرياضية وتدعم الفرق الأولى للنادي وتستثمر تجارياً، وفق أعلى معايير الحوكمة المالية والتطوير الرقمي الحديث.
@@ -382,13 +502,13 @@
                                 <div class="col-md-6">
                                     <div class="chart-panel">
                                         <h5 class="fw-bold text-center mb-3" style="color: var(--navy-dark);">الإيرادات المحصلة <small class="text-muted">(ج.م)</small></h5>
-                                        <div class="chart-frame"><canvas id="revenueChartOfficial" role="img" aria-label="مقارنة إيرادات العام المنقضي 2025 والعام الحالي 2026؛ القيم موضحة في الجدول التالي"></canvas></div>
+                                        <div class="chart-frame"><canvas id="revenueChartOfficial" role="img" aria-label="مقارنة إيرادات العام السابق 2025 والعام الحالي 2026؛ القيم موضحة في الجدول التالي"></canvas></div>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="chart-panel">
                                         <h5 class="fw-bold text-center mb-3" style="color: var(--navy-dark);">إجمالي أعداد المشاركين</h5>
-                                        <div class="chart-frame"><canvas id="participantsChartOfficial" role="img" aria-label="مقارنة أعداد المشاركين في العام المنقضي 2025 والعام الحالي 2026؛ القيم موضحة في الجدول التالي"></canvas></div>
+                                        <div class="chart-frame"><canvas id="participantsChartOfficial" role="img" aria-label="مقارنة أعداد المشاركين في العام السابق 2025 والعام الحالي 2026؛ القيم موضحة في الجدول التالي"></canvas></div>
                                     </div>
                                 </div>
                             </div>
@@ -397,7 +517,7 @@
                                     <caption class="visually-hidden">الإجماليات الشهرية للإيرادات والمشاركين حسب العام</caption>
                                     <thead><tr><th scope="col">المجموعة / الشهر</th><th scope="col">يونيو</th><th scope="col">يوليو</th><th scope="col">أغسطس</th></tr></thead>
                                     <tbody data-year="2025">
-                                        <tr class="year-group year-group--previous"><th colspan="4" scope="rowgroup">العام المنقضي · 2025</th></tr>
+                                        <tr class="year-group year-group--previous"><th colspan="4" scope="rowgroup">العام السابق · 2025</th></tr>
                                         <tr data-metric="revenue"><th scope="row">الإيرادات (ج.م)</th><td>1,499,779</td><td>2,838,581</td><td>2,841,658</td></tr>
                                         <tr data-metric="participants"><th scope="row">المشاركون</th><td>3,990</td><td>6,058</td><td>5,219</td></tr>
                                     </tbody>
@@ -432,7 +552,7 @@
                                 <table class="table table-sm table-bordered text-center align-middle small comparison-table">
                                     <thead class="table-dark"><tr><th>الشهر / السنة</th><th>أعضاء النادي</th><th>غير الأعضاء</th><th>إجمالي المشاركين</th><th>المبالغ المحصلة (ج.م)</th></tr></thead>
                                     <tbody data-year="2025">
-                                        <tr class="year-group year-group--previous"><th colspan="5" scope="rowgroup">العام المنقضي · 2025</th></tr>
+                                        <tr class="year-group year-group--previous"><th colspan="5" scope="rowgroup">العام السابق · 2025</th></tr>
                                         <tr><td class="fw-bold">يونيو 2025</td><td>1726</td><td>164</td><td>1890</td><td>546,650</td></tr>
                                         <tr class="july-row"><td class="fw-bold">يوليو 2025</td><td>2570</td><td>354</td><td>2924</td><td>1,066,065</td></tr>
                                         <tr><td class="fw-bold">أغسطس 2025</td><td>1877</td><td>118</td><td>1995</td><td>1,011,295</td></tr>
@@ -445,7 +565,8 @@
                                     </tbody>
                                 </table>
                             </div>
-                            <div class="comment-box"><i class="fa-solid fa-circle-check text-success me-2"></i><strong>الرأي والتحليل الفني:</strong> تُسجل السباحة إقبالاً استثنائياً حيث حققت أعلى إيراد سنوي في يوليو 2025 بأكثر من مليون و66 ألف جنيه، وتُواصل تصدرها في يوليو 2026 بـ 981,675 ج.م.</div>
+                            <div class="comment-box"><i class="fa-solid fa-circle-check text-success me-2"></i><strong>الرأي والتحليل الفني:</strong> سجّلت السباحة أعلى إيراد سنوي في يوليو 2025 بأكثر من مليون و66 ألف جنيه، ويليه تراجع مالي في يوليو 2026 بـ 981,675 ج.م.</div>
+                            <div class="comment-box comment-box--directive"><i class="fa-solid fa-lightbulb me-2"></i><strong>التوجيه:</strong> العمل على زيادة حارات التدريب وإقامة بطولات تشجيعية بشكل ثابت ودوري.</div>
                         </div>
                     </div>
 
@@ -467,7 +588,7 @@
                                 <table class="table table-sm table-bordered text-center align-middle small comparison-table">
                                     <thead class="table-dark"><tr><th>الشهر / السنة</th><th>أعضاء النادي</th><th>غير الأعضاء</th><th>إجمالي المشاركين</th><th>المبالغ المحصلة (ج.م)</th></tr></thead>
                                     <tbody data-year="2025">
-                                        <tr class="year-group year-group--previous"><th colspan="5" scope="rowgroup">العام المنقضي · 2025</th></tr>
+                                        <tr class="year-group year-group--previous"><th colspan="5" scope="rowgroup">العام السابق · 2025</th></tr>
                                         <tr><td class="fw-bold">يونيو 2025</td><td>489</td><td>124</td><td>613</td><td>260,945</td></tr>
                                         <tr class="july-row"><td class="fw-bold">يوليو 2025</td><td>686</td><td>219</td><td>905</td><td>478,110</td></tr>
                                         <tr><td class="fw-bold">أغسطس 2025</td><td>743</td><td>226</td><td>969</td><td>697,255</td></tr>
@@ -480,7 +601,8 @@
                                     </tbody>
                                 </table>
                             </div>
-                            <div class="comment-box"><i class="fa-solid fa-circle-check text-success me-2"></i><strong>الرأي والتحليل الفني:</strong> حققت أكاديمية كرة القدم قفزة قياسية في الإيرادات بنمو قارب 36% في أغسطس 2026، مع استقرار في يوليو 2026 عند 527,627 ج.م و885 مشاركاً.</div>
+                            <div class="comment-box"><i class="fa-solid fa-circle-check text-success me-2"></i><strong>الرأي والتحليل الفني:</strong> حققت أكاديمية كرة القدم إيرادات بنمو قارب 36% في أغسطس 2026 عن العام السابق.</div>
+                            <div class="comment-box comment-box--directive"><i class="fa-solid fa-lightbulb me-2"></i><strong>التوجيه:</strong> زيادة البطولات الدعائية المتنوعة كأوجه تسويقية.</div>
                         </div>
                     </div>
 
@@ -502,7 +624,7 @@
                                 <table class="table table-sm table-bordered text-center align-middle small comparison-table">
                                     <thead class="table-dark"><tr><th>الشهر / السنة</th><th>أعضاء النادي</th><th>غير الأعضاء</th><th>إجمالي المشاركين</th><th>المبالغ المحصلة (ج.م)</th></tr></thead>
                                     <tbody data-year="2025">
-                                        <tr class="year-group year-group--previous"><th colspan="5" scope="rowgroup">العام المنقضي · 2025</th></tr>
+                                        <tr class="year-group year-group--previous"><th colspan="5" scope="rowgroup">العام السابق · 2025</th></tr>
                                         <tr><td class="fw-bold">يونيو 2025</td><td>145</td><td>66</td><td>211</td><td>92,980</td></tr>
                                         <tr class="july-row"><td class="fw-bold">يوليو 2025</td><td>265</td><td>122</td><td>387</td><td>212,510</td></tr>
                                         <tr><td class="fw-bold">أغسطس 2025</td><td>238</td><td>112</td><td>350</td><td>163,320</td></tr>
@@ -515,7 +637,8 @@
                                     </tbody>
                                 </table>
                             </div>
-                            <div class="comment-box"><i class="fa-solid fa-circle-check text-success me-2"></i><strong>الرأي والتحليل الفني:</strong> تتمتع كرة السلة بقاعدة مشاركة متينة مع ذروة إيرادية في يوليو 2025 (212,510 ج.م) واستقرار في يوليو 2026 عند 141,780 ج.م.</div>
+                            <div class="comment-box"><i class="fa-solid fa-circle-check text-success me-2"></i><strong>الرأي والتحليل الفني:</strong> فقدت كرة السلة ما يقارب 42% من الإيرادات عن العام الماضي، حيث سجّل أعلى إيراد في العام السابق يوليو 2025 (212,510 ج.م) وتراجع في شهر يوليو من العام الحالي 2026 عند 141,780 ج.م.</div>
+                            <div class="comment-box comment-box--directive"><i class="fa-solid fa-lightbulb me-2"></i><strong>التوجيه:</strong> زيادة المهرجانات والبطولات الدعائية المدعومة كأوجه تسويقية.</div>
                         </div>
                     </div>
 
@@ -537,9 +660,9 @@
                                 <table class="table table-sm table-bordered text-center align-middle small comparison-table">
                                     <thead class="table-dark"><tr><th>الشهر / السنة</th><th>أعضاء النادي</th><th>غير الأعضاء</th><th>إجمالي المشاركين</th><th>المبالغ المحصلة (ج.م)</th></tr></thead>
                                     <tbody data-year="2025">
-                                        <tr class="year-group year-group--previous"><th colspan="5" scope="rowgroup">العام المنقضي · 2025</th></tr>
+                                        <tr class="year-group year-group--previous"><th colspan="5" scope="rowgroup">العام السابق · 2025</th></tr>
                                         <tr><td class="fw-bold">يونيو 2025</td><td>89</td><td>23</td><td>112</td><td>37,212</td></tr>
-                                        <tr class="july-row"><td class="fw-bold">يوليو 2025</td><td>139</td><td>62</td><td>201</td><td>10,867</td></tr>
+                                        <tr class="july-row"><td class="fw-bold">يوليو 2025</td><td>139</td><td>62</td><td>201</td><td>96,976</td></tr>
                                         <tr><td class="fw-bold">أغسطس 2025</td><td>114</td><td>44</td><td>158</td><td>77,512</td></tr>
                                     </tbody>
                                     <tbody data-year="2026">
@@ -550,7 +673,8 @@
                                     </tbody>
                                 </table>
                             </div>
-                            <div class="comment-box"><i class="fa-solid fa-circle-check text-success me-2"></i><strong>الرأي والتحليل الفني:</strong> تظهر كرة اليد نمواً ملحوظاً بزيادة تجاوزت 16% في أغسطس 2026، مع قفزة إيرادية في يوليو 2026 بلغت 77,952 ج.م.</div>
+                            <div class="comment-box"><i class="fa-solid fa-circle-check text-success me-2"></i><strong>الرأي والتحليل الفني:</strong> تظهر كرة اليد نمواً ملحوظاً بزيادة تجاوزت 16% في أغسطس 2026، مع إيراد في يوليو 2026 بلغ 77,952 ج.م.</div>
+                            <div class="comment-box comment-box--directive"><i class="fa-solid fa-lightbulb me-2"></i><strong>التوجيه:</strong> العمل على تشكيل فرق موازية ووجود إعلامي مستمر.</div>
                         </div>
                     </div>
 
@@ -572,7 +696,7 @@
                                 <table class="table table-sm table-bordered text-center align-middle small comparison-table">
                                     <thead class="table-dark"><tr><th>الشهر / السنة</th><th>أعضاء النادي</th><th>غير الأعضاء</th><th>إجمالي المشاركين</th><th>المبالغ المحصلة (ج.م)</th></tr></thead>
                                     <tbody data-year="2025">
-                                        <tr class="year-group year-group--previous"><th colspan="5" scope="rowgroup">العام المنقضي · 2025</th></tr>
+                                        <tr class="year-group year-group--previous"><th colspan="5" scope="rowgroup">العام السابق · 2025</th></tr>
                                         <tr><td class="fw-bold">يونيو 2025</td><td>82</td><td>28</td><td>110</td><td>35,835</td></tr>
                                         <tr class="july-row"><td class="fw-bold">يوليو 2025</td><td>123</td><td>47</td><td>170</td><td>108,510</td></tr>
                                         <tr><td class="fw-bold">أغسطس 2025</td><td>138</td><td>33</td><td>171</td><td>86,630</td></tr>
@@ -585,7 +709,8 @@
                                     </tbody>
                                 </table>
                             </div>
-                            <div class="comment-box"><i class="fa-solid fa-circle-check text-success me-2"></i><strong>الرأي والتحليل الفني:</strong> حققت الكرة الطائرة نمواً ممتازاً بنسبة تجاوزت 30% في أغسطس 2026 مع اعتماد كامل على أعضاء النادي، وقفزة إيرادية في يوليو 2025 بلغت 108,510 ج.م.</div>
+                            <div class="comment-box"><i class="fa-solid fa-circle-check text-success me-2"></i><strong>الرأي والتحليل الفني:</strong> حققت الكرة الطائرة نمواً بنسبة تجاوزت 30% في أغسطس 2026 وبلغ أعلى إيراد في 2025 (شهر يوليو) بمبلغ 108,510 ج.م.</div>
+                            <div class="comment-box comment-box--directive"><i class="fa-solid fa-lightbulb me-2"></i><strong>التوجيه:</strong> الاستمرار على نفس التطور وإنشاء فرق موازية تخوض المنافسات الرسمية.</div>
                         </div>
                     </div>
 
@@ -607,7 +732,7 @@
                                 <table class="table table-sm table-bordered text-center align-middle small comparison-table">
                                     <thead class="table-dark"><tr><th>الشهر / السنة</th><th>أعضاء النادي</th><th>غير الأعضاء</th><th>إجمالي المشاركين</th><th>المبالغ المحصلة (ج.م)</th></tr></thead>
                                     <tbody data-year="2025">
-                                        <tr class="year-group year-group--previous"><th colspan="5" scope="rowgroup">العام المنقضي · 2025</th></tr>
+                                        <tr class="year-group year-group--previous"><th colspan="5" scope="rowgroup">العام السابق · 2025</th></tr>
                                         <tr><td class="fw-bold">يونيو 2025</td><td>165</td><td>26</td><td>191</td><td>86,885</td></tr>
                                         <tr class="july-row"><td class="fw-bold">يوليو 2025</td><td>226</td><td>46</td><td>272</td><td>140,635</td></tr>
                                         <tr><td class="fw-bold">أغسطس 2025</td><td>200</td><td>29</td><td>229</td><td>98,435</td></tr>
@@ -620,7 +745,8 @@
                                     </tbody>
                                 </table>
                             </div>
-                            <div class="comment-box"><i class="fa-solid fa-circle-check text-success me-2"></i><strong>الرأي والتحليل الفني:</strong> رياضة الكاراتيه حققت أعلى إيراد في يوليو 2026 بـ 164,254 ج.م مع 329 مشاركاً، ما يعكس نمواً كبيراً في الإقبال على قطاع المنازلات.</div>
+                            <div class="comment-box"><i class="fa-solid fa-circle-check text-success me-2"></i><strong>الرأي والتحليل الفني:</strong> رياضة الكاراتيه حققت أعلى إيراد في يوليو 2026 بـ 164,254 ج.م مع 329 مشاركاً، وانخفاض ملحوظ في أغسطس 2026 بنسبة 21% عن نظيره في العام السابق.</div>
+                            <div class="comment-box comment-box--directive"><i class="fa-solid fa-lightbulb me-2"></i><strong>التوجيه:</strong> العمل على وجود بطولات دعائية مدعومة وتعديل وضع اختبارات الأحزمة وزيادة التواجد الإعلامي، وتحليل أداء الجهاز الفني في شهر أغسطس 2026 للوقوف على سبب التراجع الملحوظ.</div>
                         </div>
                     </div>
 
@@ -642,7 +768,7 @@
                                 <table class="table table-sm table-bordered text-center align-middle small comparison-table">
                                     <thead class="table-dark"><tr><th>الشهر / السنة</th><th>أعضاء النادي</th><th>غير الأعضاء</th><th>إجمالي المشاركين</th><th>المبالغ المحصلة (ج.م)</th></tr></thead>
                                     <tbody data-year="2025">
-                                        <tr class="year-group year-group--previous"><th colspan="5" scope="rowgroup">العام المنقضي · 2025</th></tr>
+                                        <tr class="year-group year-group--previous"><th colspan="5" scope="rowgroup">العام السابق · 2025</th></tr>
                                         <tr><td class="fw-bold">يونيو 2025</td><td>48</td><td>7</td><td>55</td><td>43,605</td></tr>
                                         <tr class="july-row"><td class="fw-bold">يوليو 2025</td><td>102</td><td>26</td><td>128</td><td>44,625</td></tr>
                                         <tr><td class="fw-bold">أغسطس 2025</td><td>69</td><td>14</td><td>83</td><td>38,970</td></tr>
@@ -655,7 +781,8 @@
                                     </tbody>
                                 </table>
                             </div>
-                            <div class="comment-box"><i class="fa-solid fa-circle-check text-success me-2"></i><strong>الرأي والتحليل الفني:</strong> سجلت التايكوندو ارتفاعاً ملحوظاً في عدد المشاركين من الأعضاء ليصل إلى 84 مشاركاً في يوليو 2026 مع إيراد 44,880 ج.م.</div>
+                            <div class="comment-box"><i class="fa-solid fa-circle-check text-success me-2"></i><strong>الرأي والتحليل الفني:</strong> سجلت التايكوندو استقراراً يتناسب مع زيادة الاشتراكات.</div>
+                            <div class="comment-box comment-box--directive"><i class="fa-solid fa-lightbulb me-2"></i><strong>التوجيه:</strong> العمل على وجود بطولات دعائية مدعومة وتعديل وضع اختبارات الأحزمة وزيادة التواجد الإعلامي.</div>
                         </div>
                     </div>
 
@@ -677,7 +804,7 @@
                                 <table class="table table-sm table-bordered text-center align-middle small comparison-table">
                                     <thead class="table-dark"><tr><th>الشهر / السنة</th><th>أعضاء النادي</th><th>غير الأعضاء</th><th>إجمالي المشاركين</th><th>المبالغ المحصلة (ج.م)</th></tr></thead>
                                     <tbody data-year="2025">
-                                        <tr class="year-group year-group--previous"><th colspan="5" scope="rowgroup">العام المنقضي · 2025</th></tr>
+                                        <tr class="year-group year-group--previous"><th colspan="5" scope="rowgroup">العام السابق · 2025</th></tr>
                                         <tr><td class="fw-bold">يونيو 2025</td><td>72</td><td>26</td><td>98</td><td>45,375</td></tr>
                                         <tr class="july-row"><td class="fw-bold">يوليو 2025</td><td>107</td><td>28</td><td>135</td><td>66,050</td></tr>
                                         <tr><td class="fw-bold">أغسطس 2025</td><td>98</td><td>14</td><td>112</td><td>54,875</td></tr>
@@ -690,7 +817,8 @@
                                     </tbody>
                                 </table>
                             </div>
-                            <div class="comment-box"><i class="fa-solid fa-circle-check text-success me-2"></i><strong>الرأي والتحليل الفني:</strong> قفز إيراد الكونغ فو بنسبة نمو تجاوزت 63% في أغسطس 2026 ليصل إلى 89,850 ج.م، مع إيراد مميز في يوليو 2026 بلغ 83,730 ج.م.</div>
+                            <div class="comment-box"><i class="fa-solid fa-circle-check text-success me-2"></i><strong>الرأي والتحليل الفني:</strong> قفز إيراد الكونغ فو بنسبة نمو تجاوزت 63% في أغسطس 2026 ليصل إلى 89,850 ج.م، مع إيراد في يوليو 2026 بلغ 83,730 ج.م.</div>
+                            <div class="comment-box comment-box--directive"><i class="fa-solid fa-lightbulb me-2"></i><strong>التوجيه:</strong> الاستمرار على نفس منوال التطوير مع وجود بطولات دعائية وتعديل أوضاع اختبارات التصعيد.</div>
                         </div>
                     </div>
 
@@ -712,7 +840,7 @@
                                 <table class="table table-sm table-bordered text-center align-middle small comparison-table">
                                     <thead class="table-dark"><tr><th>الشهر / السنة</th><th>أعضاء النادي</th><th>غير الأعضاء</th><th>إجمالي المشاركين</th><th>المبالغ المحصلة (ج.م)</th></tr></thead>
                                     <tbody data-year="2025">
-                                        <tr class="year-group year-group--previous"><th colspan="5" scope="rowgroup">العام المنقضي · 2025</th></tr>
+                                        <tr class="year-group year-group--previous"><th colspan="5" scope="rowgroup">العام السابق · 2025</th></tr>
                                         <tr><td class="fw-bold">يونيو 2025</td><td>52</td><td>20</td><td>72</td><td>26,940</td></tr>
                                         <tr class="july-row"><td class="fw-bold">يوليو 2025</td><td>70</td><td>30</td><td>100</td><td>45,732</td></tr>
                                         <tr><td class="fw-bold">أغسطس 2025</td><td>75</td><td>27</td><td>102</td><td>47,242</td></tr>
@@ -725,7 +853,8 @@
                                     </tbody>
                                 </table>
                             </div>
-                            <div class="comment-box"><i class="fa-solid fa-circle-check text-success me-2"></i><strong>الرأي والتحليل الفني:</strong> تشهد ألعاب القوى استقراراً فنياً مميزاً بتركيز تام على القياسات الرقمية الفردية وتصعيد المواهب الشابة للتجهيزي والفرق الرسمية.</div>
+                            <div class="comment-box"><i class="fa-solid fa-circle-check text-success me-2"></i><strong>الرأي والتحليل الفني:</strong> تشهد ألعاب القوى استقراراً فنياً مميزاً وسجّلت أعلى إيراد في يونيو 2026 برقم 42,790 ج.م.</div>
+                            <div class="comment-box comment-box--directive"><i class="fa-solid fa-lightbulb me-2"></i><strong>التوجيه:</strong> تصعيد المواهب الشابة للتجهيزي والفرق الرسمية، والعمل على وجود صفوف من البراعم في المنافسات الرسمية.</div>
                         </div>
                     </div>
 
@@ -747,7 +876,7 @@
                                 <table class="table table-sm table-bordered text-center align-middle small comparison-table">
                                     <thead class="table-dark"><tr><th>الشهر / السنة</th><th>أعضاء النادي</th><th>غير الأعضاء</th><th>إجمالي المشاركين</th><th>المبالغ المحصلة (ج.م)</th></tr></thead>
                                     <tbody data-year="2025">
-                                        <tr class="year-group year-group--previous"><th colspan="5" scope="rowgroup">العام المنقضي · 2025</th></tr>
+                                        <tr class="year-group year-group--previous"><th colspan="5" scope="rowgroup">العام السابق · 2025</th></tr>
                                         <tr><td class="fw-bold">يونيو 2025</td><td>76</td><td>14</td><td>90</td><td>61,407</td></tr>
                                         <tr class="july-row"><td class="fw-bold">يوليو 2025</td><td>146</td><td>30</td><td>176</td><td>112,282</td></tr>
                                         <tr><td class="fw-bold">أغسطس 2025</td><td>162</td><td>32</td><td>194</td><td>130,307</td></tr>
@@ -760,7 +889,8 @@
                                     </tbody>
                                 </table>
                             </div>
-                            <div class="comment-box"><i class="fa-solid fa-circle-check text-success me-2"></i><strong>الرأي والتحليل الفني:</strong> التنس الأرضي من الرياضات الراقية عالية النمو، مع إيراد مميز في يوليو 2026 بلغ 134,015 ج.م و195 مشاركاً.</div>
+                            <div class="comment-box"><i class="fa-solid fa-circle-check text-success me-2"></i><strong>الرأي والتحليل الفني:</strong> شهد التنس الأرضي ارتفاعاً مستقراً في هذا الموسم وبلغ إيراده في يوليو 2026 مبلغ 134,015 ج.م و195 مشاركاً.</div>
+                            <div class="comment-box comment-box--directive"><i class="fa-solid fa-lightbulb me-2"></i><strong>التوجيه:</strong> العمل على وجود بطولات ومهرجانات دعائية وتسويقية بشكل دائم مع زيادة التواجد الإعلامي.</div>
                         </div>
                     </div>
 
@@ -772,7 +902,7 @@
                                 <table class="table table-luxury table-bordered text-center align-middle">
                                     <thead><tr><th>الفئة / البيان</th><th>اشتراك العضو</th><th>خارج النادي (مصري)</th><th>خارج النادي (غير مصري)</th><th>السعة / الملاحظات</th></tr></thead>
                                     <tbody>
-                                        <tr><td class="fw-bold">السعر الحالي</td><td>500 (م1) ج.م</td><td>750 (م1) ج.م</td><td>850 (م1) ج.م</td><td rowspan="2" class="align-middle fw-bold">نسبة الجهاز 45%<br><small class="text-muted">جمباز هواة: 750ج مقترح (650ج حالي)</small></td></tr>
+                                        <tr><td class="fw-bold">السعر الحالي</td><td>500 (م1) ج.م</td><td>750 (م1) ج.م</td><td>850 (م1) ج.م</td><td rowspan="2" class="align-middle fw-bold">نسبة الجهاز في العام السابق من 45% إلى 70%<br><small class="text-muted">والعام الحالي من 5% إلى 45%</small></td></tr>
                                         <tr class="table-primary"><td class="fw-bold text-primary">المقترح (2026-2027)</td><td class="fw-bold text-success">600 (م1) ج.م</td><td class="fw-bold text-success">850 (م1) ج.م</td><td class="fw-bold text-success">950 (م1) ج.م</td></tr>
                                     </tbody>
                                 </table>
@@ -782,7 +912,7 @@
                                 <table class="table table-sm table-bordered text-center align-middle small comparison-table">
                                     <thead class="table-dark"><tr><th>الشهر / السنة</th><th>أعضاء النادي</th><th>غير الأعضاء</th><th>إجمالي المشاركين</th><th>المبالغ المحصلة (ج.م)</th></tr></thead>
                                     <tbody data-year="2025">
-                                        <tr class="year-group year-group--previous"><th colspan="5" scope="rowgroup">العام المنقضي · 2025</th></tr>
+                                        <tr class="year-group year-group--previous"><th colspan="5" scope="rowgroup">العام السابق · 2025</th></tr>
                                         <tr><td class="fw-bold">يونيو 2025</td><td>183</td><td>13</td><td>196</td><td>121,725</td></tr>
                                         <tr class="july-row"><td class="fw-bold">يوليو 2025</td><td>150</td><td>16</td><td>166</td><td>271,230</td></tr>
                                         <tr><td class="fw-bold">أغسطس 2025</td><td>205</td><td>10</td><td>215</td><td>151,987</td></tr>
@@ -795,7 +925,8 @@
                                     </tbody>
                                 </table>
                             </div>
-                            <div class="comment-box"><i class="fa-solid fa-circle-check text-success me-2"></i><strong>الرأي والتحليل الفني:</strong> قطاع الجمباز يتسم بالتنوع العالي، مع تحقيق أعلى إيراد في يوليو 2025 بلغ 271,230 ج.م، وتعد المدارس رافداً كبيراً لإعداد أبطال الجمهورية.</div>
+                            <div class="comment-box"><i class="fa-solid fa-circle-check text-success me-2"></i><strong>الرأي والتحليل الفني:</strong> استوعبت أكاديمية الجمباز العام الماضي عدد 577 لاعباً بمجموع إيرادات 544,942 ج.م، بينما استوعبت العام الحالي عدد 403 لاعبين بمجمل إيرادات 289,232 ج.م.</div>
+                            <div class="comment-box comment-box--directive"><i class="fa-solid fa-lightbulb me-2"></i><strong>التوجيه:</strong> العمل على وجود بطولات ومهرجانات مدعومة بشكل دوري وزيادة التواجد الإعلامي.</div>
                         </div>
                     </div>
 
@@ -817,7 +948,7 @@
                                 <table class="table table-sm table-bordered text-center align-middle small comparison-table">
                                     <thead class="table-dark"><tr><th>الشهر / السنة</th><th>أعضاء النادي</th><th>غير الأعضاء</th><th>إجمالي المشاركين</th><th>المبالغ المحصلة (ج.م)</th></tr></thead>
                                     <tbody data-year="2025">
-                                        <tr class="year-group year-group--previous"><th colspan="5" scope="rowgroup">العام المنقضي · 2025</th></tr>
+                                        <tr class="year-group year-group--previous"><th colspan="5" scope="rowgroup">العام السابق · 2025</th></tr>
                                         <tr><td class="fw-bold">يونيو 2025</td><td>37</td><td>12</td><td>49</td><td>22,900</td></tr>
                                         <tr class="july-row"><td class="fw-bold">يوليو 2025</td><td>80</td><td>18</td><td>98</td><td>43,450</td></tr>
                                         <tr><td class="fw-bold">أغسطس 2025</td><td>107</td><td>15</td><td>122</td><td>56,490</td></tr>
@@ -830,7 +961,8 @@
                                     </tbody>
                                 </table>
                             </div>
-                            <div class="comment-box"><i class="fa-solid fa-circle-check text-success me-2"></i><strong>الرأي والتحليل الفني:</strong> الخماسي الحديث يحقق نمواً متميزاً ويجمع بين الجري والسلاح والسباحة والرماية، مع إيراد 46,680 ج.م في يوليو 2026.</div>
+                            <div class="comment-box"><i class="fa-solid fa-circle-check text-success me-2"></i><strong>الرأي والتحليل الفني:</strong> حقق الخماسي الحديث إيراداً بلغ 46,680 ج.م في يوليو 2026، بتراجع في أغسطس الحالي عن أغسطس العام الماضي بنسبة 22%.</div>
+                            <div class="comment-box comment-box--directive"><i class="fa-solid fa-lightbulb me-2"></i><strong>التوجيه:</strong> العمل على وجود بطولات ومهرجانات مدعومة بشكل دوري وزيادة التواجد الإعلامي.</div>
                         </div>
                     </div>
 
@@ -852,7 +984,7 @@
                                 <table class="table table-sm table-bordered text-center align-middle small comparison-table">
                                     <thead class="table-dark"><tr><th>الشهر / السنة</th><th>أعضاء النادي</th><th>غير الأعضاء</th><th>إجمالي المشاركين</th><th>المبالغ المحصلة (ج.م)</th></tr></thead>
                                     <tbody data-year="2025">
-                                        <tr class="year-group year-group--previous"><th colspan="5" scope="rowgroup">العام المنقضي · 2025</th></tr>
+                                        <tr class="year-group year-group--previous"><th colspan="5" scope="rowgroup">العام السابق · 2025</th></tr>
                                         <tr><td class="fw-bold">يونيو 2025</td><td>64</td><td>6</td><td>70</td><td>33,145</td></tr>
                                         <tr class="july-row"><td class="fw-bold">يوليو 2025</td><td>89</td><td>9</td><td>98</td><td>47,060</td></tr>
                                         <tr><td class="fw-bold">أغسطس 2025</td><td>82</td><td>11</td><td>93</td><td>46,770</td></tr>
@@ -887,7 +1019,7 @@
                                 <table class="table table-sm table-bordered text-center align-middle small comparison-table">
                                     <thead class="table-dark"><tr><th>الشهر / السنة</th><th>أعضاء النادي</th><th>غير الأعضاء</th><th>إجمالي المشاركين</th><th>المبالغ المحصلة (ج.م)</th></tr></thead>
                                     <tbody data-year="2025">
-                                        <tr class="year-group year-group--previous"><th colspan="5" scope="rowgroup">العام المنقضي · 2025</th></tr>
+                                        <tr class="year-group year-group--previous"><th colspan="5" scope="rowgroup">العام السابق · 2025</th></tr>
                                         <tr><td class="fw-bold">يونيو 2025</td><td>23</td><td>2</td><td>25</td><td>14,050</td></tr>
                                         <tr class="july-row"><td class="fw-bold">يوليو 2025</td><td>40</td><td>4</td><td>44</td><td>31,215</td></tr>
                                         <tr><td class="fw-bold">أغسطس 2025</td><td>60</td><td>7</td><td>67</td><td>30,520</td></tr>
@@ -922,7 +1054,7 @@
                                 <table class="table table-sm table-bordered text-center align-middle small comparison-table">
                                     <thead class="table-dark"><tr><th>الشهر / السنة</th><th>أعضاء النادي</th><th>غير الأعضاء</th><th>إجمالي المشاركين</th><th>المبالغ المحصلة (ج.م)</th></tr></thead>
                                     <tbody data-year="2025">
-                                        <tr class="year-group year-group--previous"><th colspan="5" scope="rowgroup">العام المنقضي · 2025</th></tr>
+                                        <tr class="year-group year-group--previous"><th colspan="5" scope="rowgroup">العام السابق · 2025</th></tr>
                                         <tr><td class="fw-bold">يونيو 2025</td><td>9</td><td>12</td><td>21</td><td>12,400</td></tr>
                                         <tr class="july-row"><td class="fw-bold">يوليو 2025</td><td>26</td><td>24</td><td>50</td><td>27,300</td></tr>
                                         <tr><td class="fw-bold">أغسطس 2025</td><td>23</td><td>21</td><td>44</td><td>26,700</td></tr>
@@ -935,7 +1067,7 @@
                                     </tbody>
                                 </table>
                             </div>
-                            <div class="comment-box"><i class="fa-solid fa-circle-check text-success me-2"></i><strong>الرأي والتحليل الفني:</strong> حققت أكاديمية القوس والسهم قفزة ممتازة بنسبة 73% في أغسطس 2026 لتصل إلى 46,185 ج.م مع إقبال مميز من غير الأعضاء.</div>
+                            <div class="comment-box"><i class="fa-solid fa-circle-check text-success me-2"></i><strong>الرأي والتحليل الفني:</strong> حققت أكاديمية القوس والسهم إيرادات بنسبة 73% في أغسطس 2026 لتصل إلى 46,185 ج.م مع إقبال من غير الأعضاء.</div>
                         </div>
                     </div>
 
@@ -957,7 +1089,7 @@
                                 <table class="table table-sm table-bordered text-center align-middle small comparison-table">
                                     <thead class="table-dark"><tr><th>الشهر / السنة</th><th>أعضاء النادي</th><th>غير الأعضاء</th><th>إجمالي المشاركين</th><th>المبالغ المحصلة (ج.م)</th></tr></thead>
                                     <tbody data-year="2025">
-                                        <tr class="year-group year-group--previous"><th colspan="5" scope="rowgroup">العام المنقضي · 2025</th></tr>
+                                        <tr class="year-group year-group--previous"><th colspan="5" scope="rowgroup">العام السابق · 2025</th></tr>
                                         <tr><td class="fw-bold">يونيو 2025</td><td>23</td><td>7</td><td>30</td><td>9,820</td></tr>
                                         <tr class="july-row"><td class="fw-bold">يوليو 2025</td><td>26</td><td>11</td><td>37</td><td>14,370</td></tr>
                                         <tr><td class="fw-bold">أغسطس 2025</td><td>21</td><td>10</td><td>31</td><td>15,345</td></tr>
@@ -992,7 +1124,7 @@
                                 <table class="table table-sm table-bordered text-center align-middle small comparison-table">
                                     <thead class="table-dark"><tr><th>الشهر / السنة</th><th>أعضاء النادي</th><th>غير الأعضاء</th><th>إجمالي المشاركين</th><th>المبالغ المحصلة (ج.م)</th></tr></thead>
                                     <tbody data-year="2025">
-                                        <tr class="year-group year-group--previous"><th colspan="5" scope="rowgroup">العام المنقضي · 2025</th></tr>
+                                        <tr class="year-group year-group--previous"><th colspan="5" scope="rowgroup">العام السابق · 2025</th></tr>
                                         <tr><td class="fw-bold">يونيو 2025</td><td>4</td><td>9</td><td>13</td><td>5,650</td></tr>
                                         <tr class="july-row"><td class="fw-bold">يوليو 2025</td><td>8</td><td>13</td><td>21</td><td>12,445</td></tr>
                                         <tr><td class="fw-bold">أغسطس 2025</td><td>9</td><td>29</td><td>38</td><td>19,950</td></tr>
@@ -1027,7 +1159,7 @@
                                 <table class="table table-sm table-bordered text-center align-middle small comparison-table">
                                     <thead class="table-dark"><tr><th>الشهر / السنة</th><th>أعضاء النادي</th><th>غير الأعضاء</th><th>إجمالي المشاركين</th><th>المبالغ المحصلة (ج.م)</th></tr></thead>
                                     <tbody data-year="2025">
-                                        <tr class="year-group year-group--previous"><th colspan="5" scope="rowgroup">العام المنقضي · 2025</th></tr>
+                                        <tr class="year-group year-group--previous"><th colspan="5" scope="rowgroup">العام السابق · 2025</th></tr>
                                         <tr><td class="fw-bold">يونيو 2025</td><td>88</td><td>11</td><td>99</td><td>27,405</td></tr>
                                         <tr class="july-row"><td class="fw-bold">يوليو 2025</td><td>2</td><td>3</td><td>5</td><td>47,825</td></tr>
                                         <tr><td class="fw-bold">أغسطس 2025</td><td>135</td><td>5</td><td>140</td><td>42,000</td></tr>
@@ -1062,7 +1194,7 @@
                                 <table class="table table-sm table-bordered text-center align-middle small comparison-table">
                                     <thead class="table-dark"><tr><th>الشهر / السنة</th><th>أعضاء النادي</th><th>غير الأعضاء</th><th>إجمالي المشاركين</th><th>المبالغ المحصلة (ج.م)</th></tr></thead>
                                     <tbody data-year="2025">
-                                        <tr class="year-group year-group--previous"><th colspan="5" scope="rowgroup">العام المنقضي · 2025</th></tr>
+                                        <tr class="year-group year-group--previous"><th colspan="5" scope="rowgroup">العام السابق · 2025</th></tr>
                                         <tr><td class="fw-bold">يونيو 2025</td><td>--</td><td>1</td><td>1</td><td>1,000</td></tr>
                                         <tr class="july-row"><td class="fw-bold">يوليو 2025</td><td>4</td><td>7</td><td>11</td><td>8,550</td></tr>
                                         <tr><td class="fw-bold">أغسطس 2025</td><td>8</td><td>14</td><td>22</td><td>13,500</td></tr>
@@ -1097,7 +1229,7 @@
                                 <table class="table table-sm table-bordered text-center align-middle small comparison-table">
                                     <thead class="table-dark"><tr><th>الشهر / السنة</th><th>أعضاء النادي</th><th>غير الأعضاء</th><th>إجمالي المشاركين</th><th>المبالغ المحصلة (ج.م)</th></tr></thead>
                                     <tbody data-year="2025">
-                                        <tr class="year-group year-group--previous"><th colspan="5" scope="rowgroup">العام المنقضي · 2025</th></tr>
+                                        <tr class="year-group year-group--previous"><th colspan="5" scope="rowgroup">العام السابق · 2025</th></tr>
                                         <tr><td class="fw-bold">يونيو 2025</td><td>14</td><td>4</td><td>18</td><td>6,800</td></tr>
                                         <tr class="july-row"><td class="fw-bold">يوليو 2025</td><td>50</td><td>8</td><td>58</td><td>24,355</td></tr>
                                         <tr><td class="fw-bold">أغسطس 2025</td><td>28</td><td>9</td><td>37</td><td>19,040</td></tr>
@@ -1132,7 +1264,7 @@
                                 <table class="table table-sm table-bordered text-center align-middle small comparison-table">
                                     <thead class="table-dark"><tr><th>الشهر / السنة</th><th>أعضاء النادي</th><th>غير الأعضاء</th><th>إجمالي المشاركين</th><th>المبالغ المحصلة (ج.م)</th></tr></thead>
                                     <tbody data-year="2025">
-                                        <tr class="year-group year-group--previous"><th colspan="5" scope="rowgroup">العام المنقضي · 2025</th></tr>
+                                        <tr class="year-group year-group--previous"><th colspan="5" scope="rowgroup">العام السابق · 2025</th></tr>
                                         <tr><td class="fw-bold">يونيو 2025</td><td>3</td><td>--</td><td>3</td><td>900</td></tr>
                                         <tr class="july-row"><td class="fw-bold">يوليو 2025</td><td>8</td><td>4</td><td>12</td><td>4,980</td></tr>
                                         <tr><td class="fw-bold">أغسطس 2025</td><td>6</td><td>3</td><td>9</td><td>4,410</td></tr>
@@ -1167,7 +1299,7 @@
                                 <table class="table table-sm table-bordered text-center align-middle small comparison-table">
                                     <thead class="table-dark"><tr><th>الشهر / السنة</th><th>أعضاء النادي</th><th>غير الأعضاء</th><th>إجمالي المشاركين</th><th>المبالغ المحصلة (ج.م)</th></tr></thead>
                                     <tbody data-year="2025">
-                                        <tr class="year-group year-group--previous"><th colspan="5" scope="rowgroup">العام المنقضي · 2025</th></tr>
+                                        <tr class="year-group year-group--previous"><th colspan="5" scope="rowgroup">العام السابق · 2025</th></tr>
                                         <tr><td class="fw-bold">يونيو 2025</td><td>3</td><td>1</td><td>4</td><td>1,500</td></tr>
                                         <tr class="july-row"><td class="fw-bold">يوليو 2025</td><td>16</td><td>4</td><td>20</td><td>9,015</td></tr>
                                         <tr><td class="fw-bold">أغسطس 2025</td><td>11</td><td>3</td><td>14</td><td>7,005</td></tr>
@@ -1202,7 +1334,7 @@
                                 <table class="table table-sm table-bordered text-center align-middle small comparison-table">
                                     <thead class="table-dark"><tr><th>الشهر / السنة</th><th>أعضاء النادي</th><th>غير الأعضاء</th><th>إجمالي المشاركين</th><th>المبالغ المحصلة (ج.م)</th></tr></thead>
                                     <tbody data-year="2025">
-                                        <tr class="year-group year-group--previous"><th colspan="5" scope="rowgroup">العام المنقضي · 2025</th></tr>
+                                        <tr class="year-group year-group--previous"><th colspan="5" scope="rowgroup">العام السابق · 2025</th></tr>
                                         <tr><td class="fw-bold">يونيو 2025</td><td>15</td><td>--</td><td>15</td><td>1,500</td></tr>
                                         <tr class="july-row"><td class="fw-bold">يوليو 2025</td><td>29</td><td>--</td><td>29</td><td>2,900</td></tr>
                                         <tr><td class="fw-bold">أغسطس 2025</td><td>21</td><td>--</td><td>21</td><td>2,100</td></tr>
@@ -1215,7 +1347,7 @@
                                     </tbody>
                                 </table>
                             </div>
-                            <div class="comment-box"><i class="fa-solid fa-circle-check text-success me-2"></i><strong>الرأي والتحليل الفني:</strong> سجل نشاط الرواد قفزة استثنائية في الإيرادات والمشاركة بأغسطس 2026 ليتجاوز 39,400 ج.م.</div>
+                            <div class="comment-box"><i class="fa-solid fa-circle-check text-success me-2"></i><strong>الرأي والتحليل الفني:</strong> سجل نشاط الرواد إيرادات والمشاركة بأغسطس 2026 بـ 39,400 ج.م.</div>
                         </div>
                     </div>
 
@@ -1237,7 +1369,7 @@
                                 <table class="table table-sm table-bordered text-center align-middle small comparison-table">
                                     <thead class="table-dark"><tr><th>الشهر / السنة</th><th>أعضاء النادي</th><th>غير الأعضاء</th><th>إجمالي المشاركين</th><th>المبالغ المحصلة (ج.م)</th></tr></thead>
                                     <tbody data-year="2025">
-                                        <tr class="year-group year-group--previous"><th colspan="5" scope="rowgroup">العام المنقضي · 2025</th></tr>
+                                        <tr class="year-group year-group--previous"><th colspan="5" scope="rowgroup">العام السابق · 2025</th></tr>
                                         <tr><td class="fw-bold">يونيو 2025</td><td>1</td><td>1</td><td>2</td><td>1,450</td></tr>
                                         <tr class="july-row"><td class="fw-bold">يوليو 2025</td><td>4</td><td>3</td><td>7</td><td>5,100</td></tr>
                                         <tr><td class="fw-bold">أغسطس 2025</td><td>--</td><td>--</td><td>--</td><td>--</td></tr>
@@ -1272,7 +1404,7 @@
                                 <table class="table table-sm table-bordered text-center align-middle small comparison-table">
                                     <thead class="table-dark"><tr><th>الشهر / السنة</th><th>أعضاء النادي</th><th>غير الأعضاء</th><th>إجمالي المشاركين</th><th>المبالغ المحصلة (ج.م)</th></tr></thead>
                                     <tbody data-year="2025">
-                                        <tr class="year-group year-group--previous"><th colspan="5" scope="rowgroup">العام المنقضي · 2025</th></tr>
+                                        <tr class="year-group year-group--previous"><th colspan="5" scope="rowgroup">العام السابق · 2025</th></tr>
                                         <tr><td class="fw-bold">يونيو 2025</td><td>--</td><td>2</td><td>2</td><td>1,700</td></tr>
                                         <tr class="july-row"><td class="fw-bold">يوليو 2025</td><td>--</td><td>4</td><td>4</td><td>3,400</td></tr>
                                         <tr><td class="fw-bold">أغسطس 2025</td><td>--</td><td>--</td><td>--</td><td>--</td></tr>
@@ -1384,6 +1516,7 @@
             for (let i = 0; i < totalSlides; i++) {
                 const dot = document.createElement('button');
                 dot.type = 'button';
+                dot.textContent = i + 1;
                 dot.setAttribute('aria-label', 'الشريحة ' + (i + 1) + ': ' + slides[i].querySelector('h3').textContent.trim());
                 dot.title = dot.getAttribute('aria-label');
                 dot.setAttribute('aria-current', i === 0 ? 'true' : 'false');
@@ -1419,6 +1552,21 @@
                 carousel.next();
             });
 
+            // Fullscreen Toggle
+            const fullscreenBtn = document.getElementById('fullscreenBtn');
+            fullscreenBtn.addEventListener('click', function() {
+                if (!document.fullscreenElement) {
+                    document.documentElement.requestFullscreen();
+                } else {
+                    document.exitFullscreen();
+                }
+            });
+            document.addEventListener('fullscreenchange', function() {
+                fullscreenBtn.querySelector('i').className = document.fullscreenElement
+                    ? 'fa-solid fa-compress me-md-1'
+                    : 'fa-solid fa-expand me-md-1';
+            });
+
             // Keyboard Navigation
             document.addEventListener('keydown', function(e) {
                 if (e.target.closest('input, textarea, select, [contenteditable="true"]') || e.altKey || e.ctrlKey || e.metaKey) return;
@@ -1440,7 +1588,7 @@
             Chart.defaults.font.family = "'Cairo', sans-serif";
             Chart.defaults.color = '#526779';
             const periods = [
-                { year: '2025', label: 'العام المنقضي · 2025', color: '#64748b' },
+                { year: '2025', label: 'العام السابق · 2025', color: '#64748b' },
                 { year: '2026', label: 'العام الحالي · 2026', color: '#087f8c' }
             ];
             const labels = ['يونيو', 'يوليو', 'أغسطس'];

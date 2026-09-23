@@ -339,6 +339,18 @@
             font-size: 1.25rem;
         }
 
+        .author-photo {
+            width: 140px;
+            height: 140px;
+            object-fit: cover;
+            object-position: center 18%;
+            border-radius: 50%;
+            border: 4px solid var(--gold-accent);
+            box-shadow: 0 10px 26px rgba(13, 34, 51, 0.2);
+            display: block;
+            margin: 0 auto 14px;
+        }
+
         .vision-box {
             border-color: var(--blue-accent) !important;
             border-top: 4px solid var(--gold-accent) !important;
@@ -356,6 +368,9 @@
         .table > tbody > tr:not(.year-group):nth-of-type(even) > td { --bs-table-bg: #fbfdfe; }
         .comparison-table > tbody > tr:not(.year-group) > td:last-child,
         .revenue-summary > tbody > tr:not(.year-group) > td:last-child { background-color: #eaf5f5; }
+        .total-row > td { border-top: 2px solid var(--blue-accent); }
+        .comparison-table > tbody[data-year="2025"] > .total-row > td { --bs-table-bg: #d3dde6; color: #334e65; }
+        .comparison-table > tbody[data-year="2026"] > .total-row > td { --bs-table-bg: #bfe4de; color: #125e63; }
 
         .carousel-dots button {
             width: 22px;
@@ -556,12 +571,14 @@
                                         <tr><td class="fw-bold">يونيو 2025</td><td>1726</td><td>164</td><td>1890</td><td>546,650</td></tr>
                                         <tr class="july-row"><td class="fw-bold">يوليو 2025</td><td>2570</td><td>354</td><td>2924</td><td>1,066,065</td></tr>
                                         <tr><td class="fw-bold">أغسطس 2025</td><td>1877</td><td>118</td><td>1995</td><td>1,011,295</td></tr>
+                                                                            <tr class="total-row"><td class="fw-bold">إجمالي 2025</td><td class="fw-bold">6,173</td><td class="fw-bold">636</td><td class="fw-bold">6,809</td><td class="fw-bold">2,624,010</td></tr>
                                     </tbody>
                                     <tbody data-year="2026">
                                         <tr class="year-group year-group--current"><th colspan="5" scope="rowgroup">العام الحالي · 2026</th></tr>
                                         <tr><td class="fw-bold">يونيو 2026</td><td>1281</td><td>2</td><td>1283</td><td>729,580</td></tr>
                                         <tr class="july-row"><td class="fw-bold">يوليو 2026</td><td>1623</td><td>5</td><td>1628</td><td>981,675</td></tr>
                                         <tr><td class="fw-bold">أغسطس 2026</td><td>1522</td><td>2</td><td>1524</td><td>933,097</td></tr>
+                                                                            <tr class="total-row"><td class="fw-bold">إجمالي 2026</td><td class="fw-bold">4,426</td><td class="fw-bold">9</td><td class="fw-bold">4,435</td><td class="fw-bold">2,644,352</td></tr>
                                     </tbody>
                                 </table>
                             </div>
@@ -592,12 +609,14 @@
                                         <tr><td class="fw-bold">يونيو 2025</td><td>489</td><td>124</td><td>613</td><td>260,945</td></tr>
                                         <tr class="july-row"><td class="fw-bold">يوليو 2025</td><td>686</td><td>219</td><td>905</td><td>478,110</td></tr>
                                         <tr><td class="fw-bold">أغسطس 2025</td><td>743</td><td>226</td><td>969</td><td>697,255</td></tr>
+                                                                            <tr class="total-row"><td class="fw-bold">إجمالي 2025</td><td class="fw-bold">1,918</td><td class="fw-bold">569</td><td class="fw-bold">2,487</td><td class="fw-bold">1,436,310</td></tr>
                                     </tbody>
                                     <tbody data-year="2026">
                                         <tr class="year-group year-group--current"><th colspan="5" scope="rowgroup">العام الحالي · 2026</th></tr>
                                         <tr><td class="fw-bold">يونيو 2026</td><td>637</td><td>160</td><td>797</td><td>425,797</td></tr>
                                         <tr class="july-row"><td class="fw-bold">يوليو 2026</td><td>728</td><td>157</td><td>885</td><td>527,627</td></tr>
                                         <tr><td class="fw-bold">أغسطس 2026</td><td>843</td><td>193</td><td>1036</td><td>948,577</td></tr>
+                                                                            <tr class="total-row"><td class="fw-bold">إجمالي 2026</td><td class="fw-bold">2,208</td><td class="fw-bold">510</td><td class="fw-bold">2,718</td><td class="fw-bold">1,902,001</td></tr>
                                     </tbody>
                                 </table>
                             </div>
@@ -628,12 +647,14 @@
                                         <tr><td class="fw-bold">يونيو 2025</td><td>145</td><td>66</td><td>211</td><td>92,980</td></tr>
                                         <tr class="july-row"><td class="fw-bold">يوليو 2025</td><td>265</td><td>122</td><td>387</td><td>212,510</td></tr>
                                         <tr><td class="fw-bold">أغسطس 2025</td><td>238</td><td>112</td><td>350</td><td>163,320</td></tr>
+                                                                            <tr class="total-row"><td class="fw-bold">إجمالي 2025</td><td class="fw-bold">648</td><td class="fw-bold">300</td><td class="fw-bold">948</td><td class="fw-bold">468,810</td></tr>
                                     </tbody>
                                     <tbody data-year="2026">
                                         <tr class="year-group year-group--current"><th colspan="5" scope="rowgroup">العام الحالي · 2026</th></tr>
                                         <tr><td class="fw-bold">يونيو 2026</td><td>220</td><td>42</td><td>262</td><td>141,985</td></tr>
                                         <tr class="july-row"><td class="fw-bold">يوليو 2026</td><td>271</td><td>--</td><td>271</td><td>141,780</td></tr>
                                         <tr><td class="fw-bold">أغسطس 2026</td><td>186</td><td>--</td><td>186</td><td>101,240</td></tr>
+                                                                            <tr class="total-row"><td class="fw-bold">إجمالي 2026</td><td class="fw-bold">677</td><td class="fw-bold">42</td><td class="fw-bold">719</td><td class="fw-bold">385,005</td></tr>
                                     </tbody>
                                 </table>
                             </div>
@@ -664,12 +685,14 @@
                                         <tr><td class="fw-bold">يونيو 2025</td><td>89</td><td>23</td><td>112</td><td>37,212</td></tr>
                                         <tr class="july-row"><td class="fw-bold">يوليو 2025</td><td>139</td><td>62</td><td>201</td><td>96,976</td></tr>
                                         <tr><td class="fw-bold">أغسطس 2025</td><td>114</td><td>44</td><td>158</td><td>77,512</td></tr>
+                                                                            <tr class="total-row"><td class="fw-bold">إجمالي 2025</td><td class="fw-bold">342</td><td class="fw-bold">129</td><td class="fw-bold">471</td><td class="fw-bold">211,700</td></tr>
                                     </tbody>
                                     <tbody data-year="2026">
                                         <tr class="year-group year-group--current"><th colspan="5" scope="rowgroup">العام الحالي · 2026</th></tr>
                                         <tr><td class="fw-bold">يونيو 2026</td><td>116</td><td>2</td><td>118</td><td>60,005</td></tr>
                                         <tr class="july-row"><td class="fw-bold">يوليو 2026</td><td>153</td><td>--</td><td>153</td><td>77,952</td></tr>
                                         <tr><td class="fw-bold">أغسطس 2026</td><td>133</td><td>--</td><td>133</td><td>66,550</td></tr>
+                                                                            <tr class="total-row"><td class="fw-bold">إجمالي 2026</td><td class="fw-bold">402</td><td class="fw-bold">2</td><td class="fw-bold">404</td><td class="fw-bold">204,507</td></tr>
                                     </tbody>
                                 </table>
                             </div>
@@ -700,12 +723,14 @@
                                         <tr><td class="fw-bold">يونيو 2025</td><td>82</td><td>28</td><td>110</td><td>35,835</td></tr>
                                         <tr class="july-row"><td class="fw-bold">يوليو 2025</td><td>123</td><td>47</td><td>170</td><td>108,510</td></tr>
                                         <tr><td class="fw-bold">أغسطس 2025</td><td>138</td><td>33</td><td>171</td><td>86,630</td></tr>
+                                                                            <tr class="total-row"><td class="fw-bold">إجمالي 2025</td><td class="fw-bold">343</td><td class="fw-bold">108</td><td class="fw-bold">451</td><td class="fw-bold">230,975</td></tr>
                                     </tbody>
                                     <tbody data-year="2026">
                                         <tr class="year-group year-group--current"><th colspan="5" scope="rowgroup">العام الحالي · 2026</th></tr>
                                         <tr><td class="fw-bold">يونيو 2026</td><td>195</td><td>--</td><td>--</td><td>120,045</td></tr>
                                         <tr class="july-row"><td class="fw-bold">يوليو 2026</td><td>154</td><td>--</td><td>154</td><td>87,665</td></tr>
                                         <tr><td class="fw-bold">أغسطس 2026</td><td>179</td><td>--</td><td>179</td><td>113,420</td></tr>
+                                                                            <tr class="total-row"><td class="fw-bold">إجمالي 2026</td><td class="fw-bold">528</td><td class="fw-bold">--</td><td class="fw-bold">528</td><td class="fw-bold">321,130</td></tr>
                                     </tbody>
                                 </table>
                             </div>
@@ -736,12 +761,14 @@
                                         <tr><td class="fw-bold">يونيو 2025</td><td>165</td><td>26</td><td>191</td><td>86,885</td></tr>
                                         <tr class="july-row"><td class="fw-bold">يوليو 2025</td><td>226</td><td>46</td><td>272</td><td>140,635</td></tr>
                                         <tr><td class="fw-bold">أغسطس 2025</td><td>200</td><td>29</td><td>229</td><td>98,435</td></tr>
+                                                                            <tr class="total-row"><td class="fw-bold">إجمالي 2025</td><td class="fw-bold">591</td><td class="fw-bold">101</td><td class="fw-bold">692</td><td class="fw-bold">325,955</td></tr>
                                     </tbody>
                                     <tbody data-year="2026">
                                         <tr class="year-group year-group--current"><th colspan="5" scope="rowgroup">العام الحالي · 2026</th></tr>
                                         <tr><td class="fw-bold">يونيو 2026</td><td>191</td><td>1</td><td>192</td><td>94,882</td></tr>
                                         <tr class="july-row"><td class="fw-bold">يوليو 2026</td><td>329</td><td>--</td><td>329</td><td>164,254</td></tr>
                                         <tr><td class="fw-bold">أغسطس 2026</td><td>165</td><td>--</td><td>165</td><td>78,117</td></tr>
+                                                                            <tr class="total-row"><td class="fw-bold">إجمالي 2026</td><td class="fw-bold">685</td><td class="fw-bold">1</td><td class="fw-bold">686</td><td class="fw-bold">337,253</td></tr>
                                     </tbody>
                                 </table>
                             </div>
@@ -772,12 +799,14 @@
                                         <tr><td class="fw-bold">يونيو 2025</td><td>48</td><td>7</td><td>55</td><td>43,605</td></tr>
                                         <tr class="july-row"><td class="fw-bold">يوليو 2025</td><td>102</td><td>26</td><td>128</td><td>44,625</td></tr>
                                         <tr><td class="fw-bold">أغسطس 2025</td><td>69</td><td>14</td><td>83</td><td>38,970</td></tr>
+                                                                            <tr class="total-row"><td class="fw-bold">إجمالي 2025</td><td class="fw-bold">219</td><td class="fw-bold">47</td><td class="fw-bold">266</td><td class="fw-bold">127,200</td></tr>
                                     </tbody>
                                     <tbody data-year="2026">
                                         <tr class="year-group year-group--current"><th colspan="5" scope="rowgroup">العام الحالي · 2026</th></tr>
                                         <tr><td class="fw-bold">يونيو 2026</td><td>61</td><td>--</td><td>--</td><td>31,790</td></tr>
                                         <tr class="july-row"><td class="fw-bold">يوليو 2026</td><td>84</td><td>--</td><td>84</td><td>44,880</td></tr>
                                         <tr><td class="fw-bold">أغسطس 2026</td><td>98</td><td>--</td><td>98</td><td>39,185</td></tr>
+                                                                            <tr class="total-row"><td class="fw-bold">إجمالي 2026</td><td class="fw-bold">243</td><td class="fw-bold">--</td><td class="fw-bold">243</td><td class="fw-bold">115,855</td></tr>
                                     </tbody>
                                 </table>
                             </div>
@@ -808,12 +837,14 @@
                                         <tr><td class="fw-bold">يونيو 2025</td><td>72</td><td>26</td><td>98</td><td>45,375</td></tr>
                                         <tr class="july-row"><td class="fw-bold">يوليو 2025</td><td>107</td><td>28</td><td>135</td><td>66,050</td></tr>
                                         <tr><td class="fw-bold">أغسطس 2025</td><td>98</td><td>14</td><td>112</td><td>54,875</td></tr>
+                                                                            <tr class="total-row"><td class="fw-bold">إجمالي 2025</td><td class="fw-bold">277</td><td class="fw-bold">68</td><td class="fw-bold">345</td><td class="fw-bold">166,300</td></tr>
                                     </tbody>
                                     <tbody data-year="2026">
                                         <tr class="year-group year-group--current"><th colspan="5" scope="rowgroup">العام الحالي · 2026</th></tr>
                                         <tr><td class="fw-bold">يونيو 2026</td><td>125</td><td>--</td><td>--</td><td>67,680</td></tr>
                                         <tr class="july-row"><td class="fw-bold">يوليو 2026</td><td>150</td><td>--</td><td>150</td><td>83,730</td></tr>
                                         <tr><td class="fw-bold">أغسطس 2026</td><td>157</td><td>--</td><td>157</td><td>89,850</td></tr>
+                                                                            <tr class="total-row"><td class="fw-bold">إجمالي 2026</td><td class="fw-bold">432</td><td class="fw-bold">--</td><td class="fw-bold">432</td><td class="fw-bold">241,260</td></tr>
                                     </tbody>
                                 </table>
                             </div>
@@ -844,12 +875,14 @@
                                         <tr><td class="fw-bold">يونيو 2025</td><td>52</td><td>20</td><td>72</td><td>26,940</td></tr>
                                         <tr class="july-row"><td class="fw-bold">يوليو 2025</td><td>70</td><td>30</td><td>100</td><td>45,732</td></tr>
                                         <tr><td class="fw-bold">أغسطس 2025</td><td>75</td><td>27</td><td>102</td><td>47,242</td></tr>
+                                                                            <tr class="total-row"><td class="fw-bold">إجمالي 2025</td><td class="fw-bold">197</td><td class="fw-bold">77</td><td class="fw-bold">274</td><td class="fw-bold">119,914</td></tr>
                                     </tbody>
                                     <tbody data-year="2026">
                                         <tr class="year-group year-group--current"><th colspan="5" scope="rowgroup">العام الحالي · 2026</th></tr>
                                         <tr><td class="fw-bold">يونيو 2026</td><td>86</td><td>--</td><td>--</td><td>42,790</td></tr>
                                         <tr class="july-row"><td class="fw-bold">يوليو 2026</td><td>85</td><td>--</td><td>85</td><td>41,580</td></tr>
                                         <tr><td class="fw-bold">أغسطس 2026</td><td>76</td><td>--</td><td>76</td><td>38,225</td></tr>
+                                                                            <tr class="total-row"><td class="fw-bold">إجمالي 2026</td><td class="fw-bold">247</td><td class="fw-bold">--</td><td class="fw-bold">247</td><td class="fw-bold">122,595</td></tr>
                                     </tbody>
                                 </table>
                             </div>
@@ -880,12 +913,14 @@
                                         <tr><td class="fw-bold">يونيو 2025</td><td>76</td><td>14</td><td>90</td><td>61,407</td></tr>
                                         <tr class="july-row"><td class="fw-bold">يوليو 2025</td><td>146</td><td>30</td><td>176</td><td>112,282</td></tr>
                                         <tr><td class="fw-bold">أغسطس 2025</td><td>162</td><td>32</td><td>194</td><td>130,307</td></tr>
+                                                                            <tr class="total-row"><td class="fw-bold">إجمالي 2025</td><td class="fw-bold">384</td><td class="fw-bold">76</td><td class="fw-bold">460</td><td class="fw-bold">303,996</td></tr>
                                     </tbody>
                                     <tbody data-year="2026">
                                         <tr class="year-group year-group--current"><th colspan="5" scope="rowgroup">العام الحالي · 2026</th></tr>
                                         <tr><td class="fw-bold">يونيو 2026</td><td>141</td><td>4</td><td>145</td><td>98,410</td></tr>
                                         <tr class="july-row"><td class="fw-bold">يوليو 2026</td><td>194</td><td>1</td><td>195</td><td>134,015</td></tr>
                                         <tr><td class="fw-bold">أغسطس 2026</td><td>187</td><td>--</td><td>187</td><td>133,135</td></tr>
+                                                                            <tr class="total-row"><td class="fw-bold">إجمالي 2026</td><td class="fw-bold">522</td><td class="fw-bold">5</td><td class="fw-bold">527</td><td class="fw-bold">365,560</td></tr>
                                     </tbody>
                                 </table>
                             </div>
@@ -916,12 +951,14 @@
                                         <tr><td class="fw-bold">يونيو 2025</td><td>183</td><td>13</td><td>196</td><td>121,725</td></tr>
                                         <tr class="july-row"><td class="fw-bold">يوليو 2025</td><td>150</td><td>16</td><td>166</td><td>271,230</td></tr>
                                         <tr><td class="fw-bold">أغسطس 2025</td><td>205</td><td>10</td><td>215</td><td>151,987</td></tr>
+                                                                            <tr class="total-row"><td class="fw-bold">إجمالي 2025</td><td class="fw-bold">538</td><td class="fw-bold">39</td><td class="fw-bold">577</td><td class="fw-bold">544,942</td></tr>
                                     </tbody>
                                     <tbody data-year="2026">
                                         <tr class="year-group year-group--current"><th colspan="5" scope="rowgroup">العام الحالي · 2026</th></tr>
                                         <tr><td class="fw-bold">يونيو 2026</td><td>250</td><td>--</td><td>--</td><td>193,127</td></tr>
                                         <tr class="july-row"><td class="fw-bold">يوليو 2026</td><td>68</td><td>--</td><td>68</td><td>43,550</td></tr>
                                         <tr><td class="fw-bold">أغسطس 2026</td><td>85</td><td>--</td><td>85</td><td>52,555</td></tr>
+                                                                            <tr class="total-row"><td class="fw-bold">إجمالي 2026</td><td class="fw-bold">403</td><td class="fw-bold">--</td><td class="fw-bold">403</td><td class="fw-bold">289,232</td></tr>
                                     </tbody>
                                 </table>
                             </div>
@@ -952,12 +989,14 @@
                                         <tr><td class="fw-bold">يونيو 2025</td><td>37</td><td>12</td><td>49</td><td>22,900</td></tr>
                                         <tr class="july-row"><td class="fw-bold">يوليو 2025</td><td>80</td><td>18</td><td>98</td><td>43,450</td></tr>
                                         <tr><td class="fw-bold">أغسطس 2025</td><td>107</td><td>15</td><td>122</td><td>56,490</td></tr>
+                                                                            <tr class="total-row"><td class="fw-bold">إجمالي 2025</td><td class="fw-bold">224</td><td class="fw-bold">45</td><td class="fw-bold">269</td><td class="fw-bold">122,840</td></tr>
                                     </tbody>
                                     <tbody data-year="2026">
                                         <tr class="year-group year-group--current"><th colspan="5" scope="rowgroup">العام الحالي · 2026</th></tr>
                                         <tr><td class="fw-bold">يونيو 2026</td><td>75</td><td>7</td><td>82</td><td>45,330</td></tr>
                                         <tr class="july-row"><td class="fw-bold">يوليو 2026</td><td>87</td><td>--</td><td>87</td><td>46,680</td></tr>
                                         <tr><td class="fw-bold">أغسطس 2026</td><td>84</td><td>--</td><td>84</td><td>44,700</td></tr>
+                                                                            <tr class="total-row"><td class="fw-bold">إجمالي 2026</td><td class="fw-bold">246</td><td class="fw-bold">7</td><td class="fw-bold">253</td><td class="fw-bold">136,710</td></tr>
                                     </tbody>
                                 </table>
                             </div>
@@ -988,12 +1027,14 @@
                                         <tr><td class="fw-bold">يونيو 2025</td><td>64</td><td>6</td><td>70</td><td>33,145</td></tr>
                                         <tr class="july-row"><td class="fw-bold">يوليو 2025</td><td>89</td><td>9</td><td>98</td><td>47,060</td></tr>
                                         <tr><td class="fw-bold">أغسطس 2025</td><td>82</td><td>11</td><td>93</td><td>46,770</td></tr>
+                                                                            <tr class="total-row"><td class="fw-bold">إجمالي 2025</td><td class="fw-bold">235</td><td class="fw-bold">26</td><td class="fw-bold">261</td><td class="fw-bold">126,975</td></tr>
                                     </tbody>
                                     <tbody data-year="2026">
                                         <tr class="year-group year-group--current"><th colspan="5" scope="rowgroup">العام الحالي · 2026</th></tr>
                                         <tr><td class="fw-bold">يونيو 2026</td><td>66</td><td>--</td><td>--</td><td>36,140</td></tr>
                                         <tr class="july-row"><td class="fw-bold">يوليو 2026</td><td>75</td><td>--</td><td>75</td><td>41,665</td></tr>
                                         <tr><td class="fw-bold">أغسطس 2026</td><td>91</td><td>--</td><td>91</td><td>52,610</td></tr>
+                                                                            <tr class="total-row"><td class="fw-bold">إجمالي 2026</td><td class="fw-bold">232</td><td class="fw-bold">--</td><td class="fw-bold">232</td><td class="fw-bold">130,415</td></tr>
                                     </tbody>
                                 </table>
                             </div>
@@ -1024,12 +1065,14 @@
                                         <tr><td class="fw-bold">يونيو 2025</td><td>23</td><td>2</td><td>25</td><td>14,050</td></tr>
                                         <tr class="july-row"><td class="fw-bold">يوليو 2025</td><td>40</td><td>4</td><td>44</td><td>31,215</td></tr>
                                         <tr><td class="fw-bold">أغسطس 2025</td><td>60</td><td>7</td><td>67</td><td>30,520</td></tr>
+                                                                            <tr class="total-row"><td class="fw-bold">إجمالي 2025</td><td class="fw-bold">123</td><td class="fw-bold">13</td><td class="fw-bold">136</td><td class="fw-bold">75,785</td></tr>
                                     </tbody>
                                     <tbody data-year="2026">
                                         <tr class="year-group year-group--current"><th colspan="5" scope="rowgroup">العام الحالي · 2026</th></tr>
                                         <tr><td class="fw-bold">يونيو 2026</td><td>41</td><td>1</td><td>42</td><td>20,955</td></tr>
                                         <tr class="july-row"><td class="fw-bold">يوليو 2026</td><td>47</td><td>--</td><td>47</td><td>21,440</td></tr>
                                         <tr><td class="fw-bold">أغسطس 2026</td><td>61</td><td>--</td><td>61</td><td>29,975</td></tr>
+                                                                            <tr class="total-row"><td class="fw-bold">إجمالي 2026</td><td class="fw-bold">149</td><td class="fw-bold">1</td><td class="fw-bold">150</td><td class="fw-bold">72,370</td></tr>
                                     </tbody>
                                 </table>
                             </div>
@@ -1060,17 +1103,19 @@
                                         <tr><td class="fw-bold">يونيو 2025</td><td>9</td><td>12</td><td>21</td><td>12,400</td></tr>
                                         <tr class="july-row"><td class="fw-bold">يوليو 2025</td><td>26</td><td>24</td><td>50</td><td>27,300</td></tr>
                                         <tr><td class="fw-bold">أغسطس 2025</td><td>23</td><td>21</td><td>44</td><td>26,700</td></tr>
+                                                                            <tr class="total-row"><td class="fw-bold">إجمالي 2025</td><td class="fw-bold">58</td><td class="fw-bold">57</td><td class="fw-bold">115</td><td class="fw-bold">66,400</td></tr>
                                     </tbody>
                                     <tbody data-year="2026">
                                         <tr class="year-group year-group--current"><th colspan="5" scope="rowgroup">العام الحالي · 2026</th></tr>
                                         <tr><td class="fw-bold">يونيو 2026</td><td>32</td><td>15</td><td>47</td><td>32,185</td></tr>
                                         <tr class="july-row"><td class="fw-bold">يوليو 2026</td><td>37</td><td>19</td><td>56</td><td>39,725</td></tr>
                                         <tr><td class="fw-bold">أغسطس 2026</td><td>38</td><td>25</td><td>63</td><td>46,185</td></tr>
+                                                                            <tr class="total-row"><td class="fw-bold">إجمالي 2026</td><td class="fw-bold">107</td><td class="fw-bold">59</td><td class="fw-bold">166</td><td class="fw-bold">118,095</td></tr>
                                     </tbody>
                                 </table>
                             </div>
                             <div class="comment-box"><i class="fa-solid fa-circle-check text-success me-2"></i><strong>الرأي والتحليل الفني:</strong> حققت أكاديمية القوس والسهم نمواً بنسبة 73% في أغسطس 2026 لتصل إلى 46,185 ج.م مقابل 26,700 ج.م في العام السابق، مع إقبال من غير الأعضاء.</div>
-                            <div class="comment-box comment-box--directive"><i class="fa-solid fa-lightbulb me-2"></i><strong>التوجيه:</strong> الاستمرار على منوال التطوير واستقطاب مزيد من المشاركين خارج النادي.</div>
+                            <div class="comment-box comment-box--directive"><i class="fa-solid fa-lightbulb me-2"></i><strong>التوجيه:</strong> الاستمرار على منوال التطوير واستقطاب المزيد من المشاركين عن طريق زيادة التسويق الإعلامي.</div>
                         </div>
                     </div>
 
@@ -1096,17 +1141,19 @@
                                         <tr><td class="fw-bold">يونيو 2025</td><td>23</td><td>7</td><td>30</td><td>9,820</td></tr>
                                         <tr class="july-row"><td class="fw-bold">يوليو 2025</td><td>26</td><td>11</td><td>37</td><td>14,370</td></tr>
                                         <tr><td class="fw-bold">أغسطس 2025</td><td>21</td><td>10</td><td>31</td><td>15,345</td></tr>
+                                                                            <tr class="total-row"><td class="fw-bold">إجمالي 2025</td><td class="fw-bold">70</td><td class="fw-bold">28</td><td class="fw-bold">98</td><td class="fw-bold">39,535</td></tr>
                                     </tbody>
                                     <tbody data-year="2026">
                                         <tr class="year-group year-group--current"><th colspan="5" scope="rowgroup">العام الحالي · 2026</th></tr>
                                         <tr><td class="fw-bold">يونيو 2026</td><td>38</td><td>1</td><td>--</td><td>--</td></tr>
                                         <tr class="july-row"><td class="fw-bold">يوليو 2026</td><td>34</td><td>1</td><td>35</td><td>16,700</td></tr>
                                         <tr><td class="fw-bold">أغسطس 2026</td><td>30</td><td>--</td><td>30</td><td>14,850</td></tr>
+                                                                            <tr class="total-row"><td class="fw-bold">إجمالي 2026</td><td class="fw-bold">102</td><td class="fw-bold">2</td><td class="fw-bold">104</td><td class="fw-bold">31,550</td></tr>
                                     </tbody>
                                 </table>
                             </div>
                             <div class="comment-box"><i class="fa-solid fa-circle-check text-success me-2"></i><strong>الرأي والتحليل الفني:</strong> سجّل الشطرنج أعلى إيراد في العام الحالي يوليو 2026 بـ 16,700 ج.م متجاوزاً العام السابق، مع تراجع ملحوظ في مشاركة غير الأعضاء.</div>
-                            <div class="comment-box comment-box--directive"><i class="fa-solid fa-lightbulb me-2"></i><strong>التوجيه:</strong> تنشيط البطولات الداخلية والتسويق الخارجي لاستعادة مشاركة غير الأعضاء.</div>
+                            <div class="comment-box comment-box--directive"><i class="fa-solid fa-lightbulb me-2"></i><strong>التوجيه:</strong> تنشيط البطولات الداخلية وزيادة التسويق الإعلامي لزيادة المشاركين من الأعضاء.</div>
                         </div>
                     </div>
 
@@ -1132,12 +1179,14 @@
                                         <tr><td class="fw-bold">يونيو 2025</td><td>4</td><td>9</td><td>13</td><td>5,650</td></tr>
                                         <tr class="july-row"><td class="fw-bold">يوليو 2025</td><td>8</td><td>13</td><td>21</td><td>12,445</td></tr>
                                         <tr><td class="fw-bold">أغسطس 2025</td><td>9</td><td>29</td><td>38</td><td>19,950</td></tr>
+                                                                            <tr class="total-row"><td class="fw-bold">إجمالي 2025</td><td class="fw-bold">21</td><td class="fw-bold">51</td><td class="fw-bold">72</td><td class="fw-bold">38,045</td></tr>
                                     </tbody>
                                     <tbody data-year="2026">
                                         <tr class="year-group year-group--current"><th colspan="5" scope="rowgroup">العام الحالي · 2026</th></tr>
                                         <tr><td class="fw-bold">يونيو 2026</td><td>16</td><td>--</td><td>--</td><td>8,210</td></tr>
                                         <tr class="july-row"><td class="fw-bold">يوليو 2026</td><td>12</td><td>--</td><td>12</td><td>6,375</td></tr>
                                         <tr><td class="fw-bold">أغسطس 2026</td><td>14</td><td>--</td><td>--</td><td>8,480</td></tr>
+                                                                            <tr class="total-row"><td class="fw-bold">إجمالي 2026</td><td class="fw-bold">42</td><td class="fw-bold">--</td><td class="fw-bold">42</td><td class="fw-bold">23,065</td></tr>
                                     </tbody>
                                 </table>
                             </div>
@@ -1168,12 +1217,14 @@
                                         <tr><td class="fw-bold">يونيو 2025</td><td>88</td><td>11</td><td>99</td><td>27,405</td></tr>
                                         <tr class="july-row"><td class="fw-bold">يوليو 2025</td><td>2</td><td>3</td><td>5</td><td>47,825</td></tr>
                                         <tr><td class="fw-bold">أغسطس 2025</td><td>135</td><td>5</td><td>140</td><td>42,000</td></tr>
+                                                                            <tr class="total-row"><td class="fw-bold">إجمالي 2025</td><td class="fw-bold">225</td><td class="fw-bold">19</td><td class="fw-bold">244</td><td class="fw-bold">117,230</td></tr>
                                     </tbody>
                                     <tbody data-year="2026">
                                         <tr class="year-group year-group--current"><th colspan="5" scope="rowgroup">العام الحالي · 2026</th></tr>
                                         <tr><td class="fw-bold">يونيو 2026</td><td>38</td><td>4</td><td>42</td><td>17,760</td></tr>
                                         <tr class="july-row"><td class="fw-bold">يوليو 2026</td><td>39</td><td>--</td><td>39</td><td>15,485</td></tr>
                                         <tr><td class="fw-bold">أغسطس 2026</td><td>42</td><td>--</td><td>42</td><td>17,060</td></tr>
+                                                                            <tr class="total-row"><td class="fw-bold">إجمالي 2026</td><td class="fw-bold">119</td><td class="fw-bold">4</td><td class="fw-bold">123</td><td class="fw-bold">50,305</td></tr>
                                     </tbody>
                                 </table>
                             </div>
@@ -1204,12 +1255,14 @@
                                         <tr><td class="fw-bold">يونيو 2025</td><td>--</td><td>1</td><td>1</td><td>1,000</td></tr>
                                         <tr class="july-row"><td class="fw-bold">يوليو 2025</td><td>4</td><td>7</td><td>11</td><td>8,550</td></tr>
                                         <tr><td class="fw-bold">أغسطس 2025</td><td>8</td><td>14</td><td>22</td><td>13,500</td></tr>
+                                                                            <tr class="total-row"><td class="fw-bold">إجمالي 2025</td><td class="fw-bold">12</td><td class="fw-bold">22</td><td class="fw-bold">34</td><td class="fw-bold">23,050</td></tr>
                                     </tbody>
                                     <tbody data-year="2026">
                                         <tr class="year-group year-group--current"><th colspan="5" scope="rowgroup">العام الحالي · 2026</th></tr>
                                         <tr><td class="fw-bold">يونيو 2026</td><td>2</td><td>--</td><td>--</td><td>200</td></tr>
                                         <tr class="july-row"><td class="fw-bold">يوليو 2026</td><td>2</td><td>--</td><td>2</td><td>1,600</td></tr>
                                         <tr><td class="fw-bold">أغسطس 2026</td><td>2</td><td>11</td><td>13</td><td>7,700</td></tr>
+                                                                            <tr class="total-row"><td class="fw-bold">إجمالي 2026</td><td class="fw-bold">6</td><td class="fw-bold">11</td><td class="fw-bold">17</td><td class="fw-bold">9,500</td></tr>
                                     </tbody>
                                 </table>
                             </div>
@@ -1240,12 +1293,14 @@
                                         <tr><td class="fw-bold">يونيو 2025</td><td>14</td><td>4</td><td>18</td><td>6,800</td></tr>
                                         <tr class="july-row"><td class="fw-bold">يوليو 2025</td><td>50</td><td>8</td><td>58</td><td>24,355</td></tr>
                                         <tr><td class="fw-bold">أغسطس 2025</td><td>28</td><td>9</td><td>37</td><td>19,040</td></tr>
+                                                                            <tr class="total-row"><td class="fw-bold">إجمالي 2025</td><td class="fw-bold">92</td><td class="fw-bold">21</td><td class="fw-bold">113</td><td class="fw-bold">50,195</td></tr>
                                     </tbody>
                                     <tbody data-year="2026">
                                         <tr class="year-group year-group--current"><th colspan="5" scope="rowgroup">العام الحالي · 2026</th></tr>
                                         <tr><td class="fw-bold">يونيو 2026</td><td>27</td><td>--</td><td>--</td><td>14,605</td></tr>
                                         <tr class="july-row"><td class="fw-bold">يوليو 2026</td><td>35</td><td>--</td><td>35</td><td>22,260</td></tr>
                                         <tr><td class="fw-bold">أغسطس 2026</td><td>33</td><td>--</td><td>33</td><td>20,160</td></tr>
+                                                                            <tr class="total-row"><td class="fw-bold">إجمالي 2026</td><td class="fw-bold">95</td><td class="fw-bold">--</td><td class="fw-bold">95</td><td class="fw-bold">57,025</td></tr>
                                     </tbody>
                                 </table>
                             </div>
@@ -1276,12 +1331,14 @@
                                         <tr><td class="fw-bold">يونيو 2025</td><td>3</td><td>--</td><td>3</td><td>900</td></tr>
                                         <tr class="july-row"><td class="fw-bold">يوليو 2025</td><td>8</td><td>4</td><td>12</td><td>4,980</td></tr>
                                         <tr><td class="fw-bold">أغسطس 2025</td><td>6</td><td>3</td><td>9</td><td>4,410</td></tr>
+                                                                            <tr class="total-row"><td class="fw-bold">إجمالي 2025</td><td class="fw-bold">17</td><td class="fw-bold">7</td><td class="fw-bold">24</td><td class="fw-bold">10,290</td></tr>
                                     </tbody>
                                     <tbody data-year="2026">
                                         <tr class="year-group year-group--current"><th colspan="5" scope="rowgroup">العام الحالي · 2026</th></tr>
                                         <tr><td class="fw-bold">يونيو 2026</td><td>4</td><td>--</td><td>--</td><td>4,205</td></tr>
                                         <tr class="july-row"><td class="fw-bold">يوليو 2026</td><td>4</td><td>--</td><td>4</td><td>2,200</td></tr>
                                         <tr><td class="fw-bold">أغسطس 2026</td><td>3</td><td>4</td><td>7</td><td>5,150</td></tr>
+                                                                            <tr class="total-row"><td class="fw-bold">إجمالي 2026</td><td class="fw-bold">11</td><td class="fw-bold">4</td><td class="fw-bold">15</td><td class="fw-bold">11,555</td></tr>
                                     </tbody>
                                 </table>
                             </div>
@@ -1312,17 +1369,19 @@
                                         <tr><td class="fw-bold">يونيو 2025</td><td>3</td><td>1</td><td>4</td><td>1,500</td></tr>
                                         <tr class="july-row"><td class="fw-bold">يوليو 2025</td><td>16</td><td>4</td><td>20</td><td>9,015</td></tr>
                                         <tr><td class="fw-bold">أغسطس 2025</td><td>11</td><td>3</td><td>14</td><td>7,005</td></tr>
+                                                                            <tr class="total-row"><td class="fw-bold">إجمالي 2025</td><td class="fw-bold">30</td><td class="fw-bold">8</td><td class="fw-bold">38</td><td class="fw-bold">17,520</td></tr>
                                     </tbody>
                                     <tbody data-year="2026">
                                         <tr class="year-group year-group--current"><th colspan="5" scope="rowgroup">العام الحالي · 2026</th></tr>
                                         <tr><td class="fw-bold">يونيو 2026</td><td>5</td><td>--</td><td>--</td><td>2,695</td></tr>
                                         <tr class="july-row"><td class="fw-bold">يوليو 2026</td><td>6</td><td>--</td><td>6</td><td>3,245</td></tr>
                                         <tr><td class="fw-bold">أغسطس 2026</td><td>2</td><td>--</td><td>2</td><td>1,045</td></tr>
+                                                                            <tr class="total-row"><td class="fw-bold">إجمالي 2026</td><td class="fw-bold">13</td><td class="fw-bold">--</td><td class="fw-bold">13</td><td class="fw-bold">6,985</td></tr>
                                     </tbody>
                                 </table>
                             </div>
                             <div class="comment-box"><i class="fa-solid fa-circle-check text-success me-2"></i><strong>الرأي والتحليل الفني:</strong> بلغت تنس الطاولة ذروتها في العام السابق يوليو 2025 بـ 20 مشاركاً و9,015 ج.م، وتراجع العام الحالي بشدة ليبلغ إيراد أغسطس 1,045 ج.م فقط.</div>
-                            <div class="comment-box comment-box--directive"><i class="fa-solid fa-lightbulb me-2"></i><strong>التوجيه:</strong> الوقوف على أسباب التراجع وتفعيل المدارس والبطولات الداخلية لاستعادة الأعداد.</div>
+                            <div class="comment-box comment-box--directive"><i class="fa-solid fa-lightbulb me-2"></i><strong>التوجيه:</strong> الوقوف على أسباب التراجع وتفعيل المدارس والبطولات الداخلية لاستعادة الأعداد، وتفعيل المهرجانات والبطولات الدعائية بهدف التسويق.</div>
                         </div>
                     </div>
 
@@ -1348,12 +1407,14 @@
                                         <tr><td class="fw-bold">يونيو 2025</td><td>15</td><td>--</td><td>15</td><td>1,500</td></tr>
                                         <tr class="july-row"><td class="fw-bold">يوليو 2025</td><td>29</td><td>--</td><td>29</td><td>2,900</td></tr>
                                         <tr><td class="fw-bold">أغسطس 2025</td><td>21</td><td>--</td><td>21</td><td>2,100</td></tr>
+                                                                            <tr class="total-row"><td class="fw-bold">إجمالي 2025</td><td class="fw-bold">65</td><td class="fw-bold">--</td><td class="fw-bold">65</td><td class="fw-bold">6,500</td></tr>
                                     </tbody>
                                     <tbody data-year="2026">
                                         <tr class="year-group year-group--current"><th colspan="5" scope="rowgroup">العام الحالي · 2026</th></tr>
                                         <tr><td class="fw-bold">يونيو 2026</td><td>23</td><td>--</td><td>--</td><td>2,300</td></tr>
                                         <tr class="july-row"><td class="fw-bold">يوليو 2026</td><td>30</td><td>--</td><td>30</td><td>3,000</td></tr>
                                         <tr><td class="fw-bold">أغسطس 2026</td><td>41</td><td>5</td><td>45</td><td>39,400</td></tr>
+                                                                            <tr class="total-row"><td class="fw-bold">إجمالي 2026</td><td class="fw-bold">94</td><td class="fw-bold">5</td><td class="fw-bold">98</td><td class="fw-bold">44,700</td></tr>
                                     </tbody>
                                 </table>
                             </div>
@@ -1384,12 +1445,14 @@
                                         <tr><td class="fw-bold">يونيو 2025</td><td>1</td><td>1</td><td>2</td><td>1,450</td></tr>
                                         <tr class="july-row"><td class="fw-bold">يوليو 2025</td><td>4</td><td>3</td><td>7</td><td>5,100</td></tr>
                                         <tr><td class="fw-bold">أغسطس 2025</td><td>--</td><td>--</td><td>--</td><td>--</td></tr>
+                                                                            <tr class="total-row"><td class="fw-bold">إجمالي 2025</td><td class="fw-bold">5</td><td class="fw-bold">4</td><td class="fw-bold">9</td><td class="fw-bold">6,550</td></tr>
                                     </tbody>
                                     <tbody data-year="2026">
                                         <tr class="year-group year-group--current"><th colspan="5" scope="rowgroup">العام الحالي · 2026</th></tr>
                                         <tr><td class="fw-bold">يونيو 2026</td><td>--</td><td>--</td><td>--</td><td>--</td></tr>
                                         <tr class="july-row"><td class="fw-bold">يوليو 2026</td><td>--</td><td>--</td><td>--</td><td>--</td></tr>
                                         <tr><td class="fw-bold">أغسطس 2026</td><td>--</td><td>--</td><td>--</td><td>--</td></tr>
+                                                                            <tr class="total-row"><td class="fw-bold">إجمالي 2026</td><td class="fw-bold">--</td><td class="fw-bold">--</td><td class="fw-bold">--</td><td class="fw-bold">--</td></tr>
                                     </tbody>
                                 </table>
                             </div>
@@ -1420,12 +1483,14 @@
                                         <tr><td class="fw-bold">يونيو 2025</td><td>--</td><td>2</td><td>2</td><td>1,700</td></tr>
                                         <tr class="july-row"><td class="fw-bold">يوليو 2025</td><td>--</td><td>4</td><td>4</td><td>3,400</td></tr>
                                         <tr><td class="fw-bold">أغسطس 2025</td><td>--</td><td>--</td><td>--</td><td>--</td></tr>
+                                                                            <tr class="total-row"><td class="fw-bold">إجمالي 2025</td><td class="fw-bold">--</td><td class="fw-bold">6</td><td class="fw-bold">6</td><td class="fw-bold">5,100</td></tr>
                                     </tbody>
                                     <tbody data-year="2026">
                                         <tr class="year-group year-group--current"><th colspan="5" scope="rowgroup">العام الحالي · 2026</th></tr>
                                         <tr><td class="fw-bold">يونيو 2026</td><td>2</td><td>--</td><td>--</td><td>650</td></tr>
                                         <tr class="july-row"><td class="fw-bold">يوليو 2026</td><td>2</td><td>--</td><td>2</td><td>1,300</td></tr>
                                         <tr><td class="fw-bold">أغسطس 2026</td><td>--</td><td>--</td><td>--</td><td>--</td></tr>
+                                                                            <tr class="total-row"><td class="fw-bold">إجمالي 2026</td><td class="fw-bold">4</td><td class="fw-bold">--</td><td class="fw-bold">4</td><td class="fw-bold">1,950</td></tr>
                                     </tbody>
                                 </table>
                             </div>
@@ -1448,9 +1513,10 @@
                                     نتطلع قدماً لتطبيق هذه الاستراتيجية الشاملة وتضافر الجهود لرفعة ورقي النشاط الرياضي والأكاديميات بنادي 6 أكتوبر الرياضي.
                                 </p>
                                 <hr class="my-4 mx-auto" style="width: 200px; border-color: var(--blue-accent); border-width: 2px;">
-                                <div class="d-inline-block p-3 px-5 rounded-pill bg-white border border-primary shadow-sm">
+                                <div class="d-inline-block p-4 px-5 rounded-4 bg-white border border-primary shadow-sm">
+                                    <img src="dr mohamed.jpg" alt="الدكتور محمد عبد العزيز" class="author-photo">
                                     <span class="text-muted small d-block mb-1 fw-bold">إعداد التقرير والعرض التقديمي</span>
-                                    <h4 class="fw-bold text-primary m-0"><i class="fa-solid fa-user-doctor me-2"></i>الدكتور / محمد عبد العزيز</h4>
+                                    <h4 class="fw-bold text-primary m-0">الدكتور / محمد عبد العزيز</h4>
                                 </div>
                             </div>
                         </div>

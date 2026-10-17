@@ -478,6 +478,78 @@
         @media (max-width: 576px) { .kpi-grid--3, .kpi-grid--4, .kpi-grid--5 { grid-template-columns: 1fr 1fr; } .kpi-icon { display: none; } }
         @media print { .tab-pane { display: block !important; opacity: 1 !important; } .sport-tabs { display: none; } .heat-wrap, .table-scroll, .dq-list--scroll { max-height: none; } }
 
+        /* ===== PDF export (A4 landscape) ===== */
+        @page {
+            size: A4 landscape;
+            margin: 8mm 8mm 11mm;
+            @bottom-left { content: counter(page) " / " counter(pages); font-family: 'Cairo', sans-serif; font-size: 8pt; font-weight: 700; color: #6b7d8c; }
+            @bottom-right { content: "نادي 6 أكتوبر الرياضي — تقرير الأكاديميات"; font-family: 'Cairo', sans-serif; font-size: 8pt; color: #6b7d8c; }
+        }
+        @page :first { @bottom-left { content: none; } @bottom-right { content: none; } }
+        .pdf-cover-meta, .pdf-pane-head { display: none; }
+        body.pdf-mode { background: #fff !important; }
+        body.pdf-mode, body.pdf-mode * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+        .pdf-mode main.container { width: 281mm; max-width: 281mm; padding: 0; margin: 0 auto !important; }
+        .pdf-mode #presentationWrapper { padding: 0; box-shadow: none; border: none; background: transparent; }
+        .pdf-mode .presentation-header { min-height: 186mm; display: flex; flex-direction: column; justify-content: center; align-items: center; break-after: page; page-break-after: always; border: 2px solid var(--blue-accent); border-radius: 16px; margin: 0 auto; width: 281mm; box-shadow: none; }
+        .pdf-mode .presentation-header .club-logo { width: 150px; height: 150px; }
+        .pdf-mode .pdf-cover-meta { display: block; margin-top: 26px; padding-top: 18px; border-top: 2px solid var(--gold-accent, #c5a365); }
+        .pdf-cover-title { font-size: 1.6rem; font-weight: 800; color: var(--navy-primary); }
+        .pdf-cover-sub { font-size: 1.05rem; color: var(--text-muted); margin-top: 6px; }
+        .pdf-cover-date { font-size: .9rem; color: var(--text-muted); margin-top: 10px; font-weight: 700; }
+        .pdf-mode .presentation-toolbar, .pdf-mode .carousel-control-prev, .pdf-mode .carousel-control-next,
+        .pdf-mode .carousel-dots, .pdf-mode .nav-buttons-container, .pdf-mode .slide-counter-display,
+        .pdf-mode .presentation-progress, .pdf-mode footer, .pdf-mode .sport-tabs { display: none !important; }
+        .pdf-mode .carousel-inner { overflow: visible !important; }
+        .pdf-mode .carousel-item { display: block !important; float: none !important; margin: 0 !important; opacity: 1 !important; transform: none !important; transition: none !important; break-before: page; page-break-before: always; break-after: auto !important; page-break-after: auto !important; }
+        .pdf-mode .slide-card { min-height: 0 !important; box-shadow: none !important; padding: 12px 16px; border-radius: 12px; }
+        .pdf-mode .slide-card > *, .pdf-mode .slide-card * { animation: none !important; transition: none !important; }
+        .pdf-mode .tab-content > .tab-pane { display: block !important; opacity: 1 !important; margin-bottom: 12px; }
+        .pdf-mode .tab-pane, .pdf-mode .chart-panel, .pdf-mode .kpi-grid, .pdf-mode .kpi, .pdf-mode .comment-box,
+        .pdf-mode .table-responsive, .pdf-mode .metric-card, .pdf-mode tr { break-inside: avoid; page-break-inside: avoid; }
+        .pdf-mode .slide-title { break-after: avoid; }
+        .pdf-mode .pdf-pane-head { display: flex; align-items: center; gap: 8px; margin: 2px 0 10px; padding: 6px 12px; border-right: 4px solid var(--blue-accent); background: #f1f7f8; border-radius: 8px; font-weight: 800; color: var(--navy-primary); font-size: .9rem; }
+        .pdf-mode .tab-pane:first-child > .pdf-pane-head { display: none; }
+        .pdf-mode .table-responsive, .pdf-mode .table-scroll, .pdf-mode .heat-wrap, .pdf-mode .dq-list--scroll { max-height: none !important; overflow: visible !important; }
+        .pdf-mode .table-responsive::before { display: none !important; }
+        .pdf-mode .chart-frame canvas { max-width: 100%; }
+        .pdf-mode .metric-card:hover, .pdf-mode .kpi:hover { transform: none !important; }
+        .pdf-mode .row > .col-lg-3 { flex: 0 0 auto; width: 25%; }
+        .pdf-mode .row > .col-lg-4 { flex: 0 0 auto; width: 33.333333%; }
+        .pdf-mode .row > .col-lg-5, .pdf-mode .row > .col-md-5 { flex: 0 0 auto; width: 41.666667%; }
+        .pdf-mode .row > .col-lg-6, .pdf-mode .row > .col-md-6 { flex: 0 0 auto; width: 50%; }
+        .pdf-mode .row > .col-lg-7, .pdf-mode .row > .col-md-7 { flex: 0 0 auto; width: 58.333333%; }
+        .pdf-mode .row > .col-lg-8 { flex: 0 0 auto; width: 66.666667%; }
+        .pdf-mode .kpi-grid--3 { grid-template-columns: repeat(3, minmax(0, 1fr)) !important; }
+        .pdf-mode .kpi-grid--4 { grid-template-columns: repeat(4, minmax(0, 1fr)) !important; }
+        .pdf-mode .kpi-grid--5 { grid-template-columns: repeat(5, minmax(0, 1fr)) !important; }
+        .pdf-mode .kpi-icon { display: flex !important; }
+        .pdf-mode .slide-title h3 { font-size: 1.25rem; }
+        .pdf-mode .presentation-header { padding: 30px; }
+        .pdf-mode .presentation-header .royal-title { font-size: 2.2rem; }
+        .pdf-mode .presentation-header .royal-subtitle { font-size: 1.05rem; }
+        .pdf-mode .table > thead > tr > th:first-child, .pdf-mode .table > tbody > tr > td:first-child { position: static !important; box-shadow: none !important; }
+        .pdf-mode .slide-card .tab-content { display: grid; grid-template-columns: minmax(0, 3fr) minmax(0, 2fr); gap: 0 12px; align-items: start; }
+        .pdf-mode .tab-content > .tab-pane:nth-child(-n+2) { grid-column: 1 / -1; }
+        .pdf-mode .tab-content > .tab-pane:nth-child(3) { break-before: page; page-break-before: always; }
+        .pdf-mode .tab-pane .chart-frame { height: 205px !important; }
+        .pdf-mode .table { font-size: .74rem; margin-bottom: 6px; }
+        .pdf-mode .table > :not(caption) > * > * { padding: .28rem .4rem; }
+        .pdf-mode .kpi { padding: 8px 12px; }
+        .pdf-mode .comment-box { padding: 8px 14px; margin-top: 8px; font-size: .85rem; }
+        .pdf-mode .slide-title { margin-bottom: 10px; padding-bottom: 8px; }
+        .pdf-mode .chart-panel { padding: 10px 12px; }
+        .pdf-mode .tab-content .table { font-size: .7rem; }
+        .pdf-mode .tab-content .table > :not(caption) > * > * { padding: .2rem .35rem; }
+        .pdf-mode .tab-content ~ .comment-box, .pdf-mode .tab-content ~ div .comment-box { font-size: .78rem; padding: 6px 12px; margin-top: 6px; }
+        .pdf-mode .pdf-pane-head { margin-bottom: 6px; padding: 4px 10px; }
+        .pdf-mode .table, .pdf-mode .table-luxury, .pdf-mode .comparison-table, .pdf-mode .revenue-summary, .pdf-mode .heat-table, .pdf-mode .fin-table, .pdf-mode .stat-table { min-width: 0 !important; }
+        .pdf-mode .databar-cell { min-width: 90px; }
+        .pdf-mode .dq-list { font-size: .74rem; line-height: 1.55; }
+        .pdf-mode .dq-list--scroll { column-count: 2; column-gap: 28px; }
+        .pdf-mode .dq-list li { break-inside: avoid; }
+        @media print { #pdfBtn { display: none !important; } }
+
     </style>
 </head>
 <body>
@@ -488,6 +560,7 @@
             <h1 class="royal-title mb-1"><i class="fa-solid fa-building-columns text-primary me-2"></i>نادي 6 أكتوبر الرياضي</h1>
             <p class="royal-subtitle mb-1">عرض استراتيجية تطوير الأكاديميات، اللوائح المالية، والتفاصيل الكاملة للألعاب الرياضية</p>
             <div class="author-tag"><i class="fa-solid fa-user-check me-2"></i>إعداد الدكتور / محمد عبد العزيز</div>
+            <div class="pdf-cover-meta"><div class="pdf-cover-title">تقرير الأداء المالي والتحليل الإحصائي للأكاديميات</div><div class="pdf-cover-sub">مقارنة صيف 2025 · صيف 2026 · المستهدف 2026/2027 — 34 شريحة</div><div class="pdf-cover-date">تاريخ الإصدار: <span class="pdf-date"></span></div></div>
         </div>
     </header>
 
@@ -503,6 +576,7 @@
                     <label for="slideSelect">انتقال إلى</label>
                     <select id="slideSelect" class="form-select" aria-controls="luxuryPresentation"></select>
                     <button class="btn btn-outline-secondary btn-sm rounded-pill px-3" id="fullscreenBtn" type="button" title="عرض ملء الشاشة"><i class="fa-solid fa-expand me-md-1"></i><span class="d-none d-md-inline">ملء الشاشة</span></button>
+                    <button class="btn btn-primary btn-sm rounded-pill px-3" id="pdfBtn" type="button" title="تحميل جميع الشرائح PDF بالعرض (A4 أفقي)"><i class="fa-solid fa-file-pdf me-md-1"></i><span class="d-none d-md-inline">تحميل PDF</span></button>
                 </div>
             </div>
             <div id="luxuryPresentation" class="carousel slide" data-bs-ride="false" data-bs-touch="true" role="region" aria-roledescription="عرض شرائح" aria-label="تقرير النشاط الرياضي">
@@ -1878,7 +1952,64 @@
             document.fonts.ready.then(initActive);
             initActive();
             updateBI();
-            window.addEventListener('beforeprint', () => document.querySelectorAll('canvas[data-chart]').forEach(c => { if (!c._chart) try { c._chart = builders[c.dataset.chart](c); } catch (e) {} }));
+
+            const pdfBtn = document.getElementById('pdfBtn');
+            const baseTitle = document.title;
+            let pdfActive = false;
+            function preparePdf() {
+                if (pdfActive) return;
+                pdfActive = true;
+                document.body.classList.add('pdf-mode');
+                document.title = 'تقرير أكاديميات نادي 6 أكتوبر الرياضي - صيف 2025-2026';
+                const today = new Date().toLocaleDateString('ar-EG', { year: 'numeric', month: 'long', day: 'numeric' });
+                document.querySelectorAll('.pdf-date').forEach(e => { e.textContent = today; });
+                document.querySelectorAll('.tab-content > .tab-pane').forEach(pane => {
+                    if (pane.querySelector(':scope > .pdf-pane-head')) return;
+                    const tab = document.querySelector('[data-bs-target="#' + pane.id + '"]');
+                    if (!tab) return;
+                    const h3 = pane.closest('.slide-card')?.querySelector('.slide-title h3');
+                    const head = document.createElement('div');
+                    head.className = 'pdf-pane-head';
+                    head.textContent = (h3 ? h3.textContent.trim() + ' — ' : '') + tab.textContent.trim();
+                    pane.prepend(head);
+                });
+                const canvases = document.querySelectorAll('canvas[data-chart]');
+                canvases.forEach(c => {
+                    if (!c._chart) { try { c._chart = builders[c.dataset.chart](c); } catch (err) { console.error(c.id, err); } }
+                    if (c._chart) c._chart.options.animation = false;
+                });
+                updateBI();
+                canvases.forEach(c => { if (c._chart) { c._chart.resize(); c._chart.update('none'); } });
+                const pageH = 191 * 96 / 25.4 - 8;
+                document.querySelectorAll('#luxuryPresentation .slide-card').forEach(card => {
+                    card.style.zoom = '';
+                    if (card.querySelector('.tab-content')) return;
+                    const h = card.getBoundingClientRect().height;
+                    if (h > pageH) card.style.zoom = Math.max(0.5, pageH / h).toFixed(3);
+                });
+            }
+            function restorePdf() {
+                if (!pdfActive) return;
+                pdfActive = false;
+                document.body.classList.remove('pdf-mode');
+                document.title = baseTitle;
+                document.querySelectorAll('#luxuryPresentation .slide-card').forEach(card => { card.style.zoom = ''; });
+                document.querySelectorAll('canvas[data-chart]').forEach(c => {
+                    if (!c._chart) return;
+                    c._chart.options.animation = Chart.defaults.animation;
+                    if (c.offsetParent) c._chart.resize();
+                });
+            }
+            window.addEventListener('beforeprint', preparePdf);
+            window.addEventListener('afterprint', restorePdf);
+            if (pdfBtn) pdfBtn.addEventListener('click', () => {
+                pdfBtn.disabled = true;
+                preparePdf();
+                document.fonts.ready.then(() => requestAnimationFrame(() => setTimeout(() => {
+                    window.print();
+                    pdfBtn.disabled = false;
+                }, 200)));
+            });
 
         });
     </script>
